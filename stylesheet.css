@@ -1,0 +1,538 @@
+.aut {
+    font-size: 1.41667em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase
+    }
+.bottom {
+    bottom: 2%;
+    display: block;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: absolute;
+    text-align: center;
+    width: 100%
+    }
+.calibre {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0
+    }
+.calibre1 {
+    display: block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-align: center
+    }
+.calibre2 {
+    height: auto;
+    width: auto
+    }
+.calibre3 {
+    display: block;
+    font-family: "Vollkorn", serif;
+    font-size: 1.3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0
+    }
+.calibre4 {
+    display: block;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: absolute;
+    text-align: center;
+    width: 100%
+    }
+.calibre5 {
+    display: block;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%
+    }
+.calibre6 {
+    display: block;
+    font-family: "Vollkorn";
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0
+    }
+.calibre7 {
+    display: block
+    }
+.calibre8 {
+    font-weight: bold
+    }
+.calibre9 {
+    font-style: italic
+    }
+.calibre10 {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 0
+    }
+.calibre11 {
+    display: block;
+    font-family: "UTM NguyenHa 02";
+    font-size: 1.66667em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 3em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.5em;
+    page-break-before: always;
+    text-align: center
+    }
+.calibre12 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: justify;
+    text-indent: 1.25em
+    }
+.calibre13 {
+    text-decoration: none
+    }
+.calibre14 {
+    display: none;
+    text-decoration: none
+    }
+.calibre15 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: justify;
+    text-indent: 0
+    }
+.calibre16 {
+    display: block;
+    font-family: "UTM NguyenHa 02";
+    font-size: 1.66667em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 3em;
+    margin-left: 0;
+    margin-right: 1em;
+    margin-top: 1.5em;
+    page-break-before: always;
+    text-align: right
+    }
+.calibre17 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: justify;
+    text-indent: 1.25em
+    }
+.calibre18 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super
+    }
+.calibre19 {
+    display: block;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.25em;
+    text-align: center;
+    text-indent: 0
+    }
+.calibre20 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.25em;
+    text-align: justify;
+    text-indent: 0
+    }
+.calibre21 {
+    text-decoration: underline
+    }
+.calibre22 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: left;
+    text-indent: 0
+    }
+.calibre23 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: justify;
+    text-indent: 0
+    }
+.calibre24 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.67em;
+    page-break-before: always
+    }
+.calibre25 {
+    display: block;
+    list-style-type: decimal;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre26 {
+    display: list-item
+    }
+.center {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: center;
+    text-indent: 0
+    }
+.chat {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+    margin-top: 1em
+    }
+.date {
+    font-size: 0.77778em
+    }
+.divider {
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-left-color: white;
+    border-left-style: solid;
+    border-left-width: 0;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 0;
+    border-top-color: white;
+    border-top-style: solid;
+    border-top-width: 0;
+    color: gray;
+    display: block;
+    height: 2px;
+    margin-bottom: 0.15em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.15em;
+    width: 75%
+    }
+.jacket {
+    border-bottom-color: currentColor;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-left-color: currentColor;
+    border-left-style: solid;
+    border-left-width: medium;
+    border-radius: 1em;
+    border-right-color: currentColor;
+    border-right-style: solid;
+    border-right-width: medium;
+    border-top-color: currentColor;
+    border-top-style: solid;
+    border-top-width: medium;
+    display: block;
+    height: 95vh;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: relative;
+    text-align: center;
+    width: 90vw
+    }
+.kobospan {
+    line-height: 1.2
+    }
+.main {
+    display: block;
+    font-family: "Vollkorn";
+    font-size: 0.75em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-transform: uppercase
+    }
+.middle {
+    display: block;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%
+    }
+.pre {
+    font-size: 0.75em
+    }
+.pre1 {
+    font-size: 1em
+    }
+.pre2 {
+    display: block;
+    font-family: "Vollkorn";
+    font-size: 0.75em;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0
+    }
+.quote {
+    display: block;
+    margin-bottom: 1.5em;
+    margin-left: 2.5em;
+    margin-top: 1.5em
+    }
+.right {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.25em;
+    text-align: right;
+    text-indent: 0
+    }
+.right_s {
+    display: block;
+    font-size: 0.75em;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-align: right;
+    text-indent: 0
+    }
+.right1 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: right;
+    text-indent: 1.25em
+    }
+.right2 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: right;
+    text-indent: 0
+    }
+.right3 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: right;
+    text-indent: 0
+    }
+.right4 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: right;
+    text-indent: 1.25em
+    }
+.seen {
+    display: block;
+    font-size: 0.75em;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-align: justify;
+    text-indent: 0
+    }
+.title {
+    display: block;
+    font-family: "UTM NguyenHa 02";
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0;
+    text-transform: uppercase
+    }
+.top {
+    display: block;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: absolute;
+    text-align: center;
+    top: 2%;
+    width: 100%
+    }
+.top1 {
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: left;
+    text-indent: 0
+    }
+.web {
+    border-left-color: currentColor;
+    border-left-style: solid;
+    border-left-width: 1px;
+    display: block;
+    margin-bottom: 1.5em;
+    margin-left: 2em;
+    margin-top: 1.5em
+    }
