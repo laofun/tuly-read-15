@@ -738,7 +738,7 @@ header{
 }
 .list_top ul li a{padding-right: 15px;}
 .chap-content .chap-c{
-    white-space: pre-line;
+    white-space: pre-wrap;
     font-weight: 400;
     color: #262626;
     font-family: "Times New Roman";
