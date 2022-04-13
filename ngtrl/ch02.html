@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<title>ntl - 2.</title>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+		<link rel="stylesheet" href="kte-css/stylehacks.css" />
+
+    <!-- <link rel="stylesheet" href="./stylesheet.css" /> -->
+    <script
+      src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/css">
+     html body {
+        font-family: Consolas, FangSong, Lantinghei SC, Helvetica Neue,
+          Helvetica, Arial, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1,
+          STHeitiSC-Light, simsun, \\5b8b\4f53, WenQuanYi Zen Hei,
+          WenQuanYi Micro Hei, "sans-serif" !important;
+          /* -webkit-font-smoothing: antialiased  !important; */
+          font-size: 18px !important;
+          height: 100% !important;
+      }
+		 	pre {
+        font-size: 20px !important;
+			}
+      .sidebar {
+        font-size: 15px !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        background-color: #324057;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        width: 300px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        -webkit-box-shadow: #ccc 0 0 10px;
+        box-shadow: #ccc 0 0 10px;
+        box-sizing: border-box;
+      }
+      .main {
+        margin-left: 0;
+        height: 100%;
+      }
+
+      /*菜单显示按钮*/
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span:last-child {
+        display: none;
+      }
+      /* Sidebar navigation */
+      .nav-sidebar {
+        margin-right: 30px;
+        padding: 20px 0;
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+      .nav-sidebar > li > a {
+        color: #337ab7;
+      }
+      .menuItem:hover > a {
+        background-color: #eee;
+      }
+      .nav .active > a,
+      .nav-sidebar .active:hover > a {
+        background-color: #428bca;
+        color: #fff;
+      }
+			.lightli {
+
+        color: red;
+			}
+      .index {
+        /* position: relative; */
+        /* top: 45%; */
+        /* text-align: center; */
+        /* font-size: 38px; */
+        /* color: #ccc; */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="list_left">
+      <ul class="nav nav-sidebar ">
+<li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/></svg> </a></li>
+<li><a href="md.html">Mở đầu</a></li>
+<li><a href="ch01.html">1.</a></li>
+<li><a href="ch02.html">2.</a></li>
+<li><a href="ch03.html">3.</a></li>
+<li><a href="ch04.html">4.</a></li>
+<li><a href="ch05.html">5.</a></li>
+<li><a href="ch06.html">6.</a></li>
+<li><a href="ch07.html">7.</a></li>
+<li><a href="ch08.html">8.</a></li>
+<li><a href="ch09.html">9.</a></li>
+<li><a href="ch10.html">10.</a></li>
+<li><a href="pk.html">Phần kết</a></li>
+<li><a href="lb.html">Lời bạt</a></li>
+</ul>
+      <div class="closeMenu">
+        <span class="glyphicon glyphicon-triangle-left"></span>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="index">
+        <div><div id="book-columns"><div id="book-inner">
+  <h1><span class="koboSpan" id="kobo.1.1">2.</span></h1>
+
+  <p><span class="koboSpan" id="kobo.2.1">Đến tòa đường lâu</span><a href="#id21" epub:type="noteref" id="b21"><span class="koboSpan" id="kobo.3.1">*</span></a><span class="koboSpan" id="kobo.4.1"> cao sáu tầng trên phố Nhị ở Tây Doanh Bàn, Di ngó biển số nhà với vẻ mặt đầy nghi ngại.</span></p>
+
+  <aside epub:type="footnote" id="id21">
+    <a href="#b21" style="display: none;"><span class="koboSpan" id="kobo.5.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.6.1">Nghĩa: </span><span class="koboSpan" id="kobo.6.2">Tòa nhà Trung Hoa. </span><span class="koboSpan" id="kobo.6.3">Một kiến trúc cũ, gồm ít nhất hai tầng, để ở và kinh doanh, thịnh hành ở vùng Hoa Nam, Ma Cao, Hồng Kông từ cuối thế kỉ 19 đến thập niên 1960, không có sân, tường mặt tiền tầng một lùi vào một chút so với tường các tầng trên.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.7.1">“Số 151… là đây sao?” </span><span class="koboSpan" id="kobo.7.2">Di nhìn dòng địa chỉ viết tay trên danh thiếp, rồi lại nhìn con số tróc sơn gần hết đề bên cạnh cửa chính. </span><span class="koboSpan" id="kobo.7.3">Tòa đường lâu này dễ phải ngoài bảy mươi năm tuổi, tường màu xám tồi tàn cũ kĩ do lâu năm không tu bổ, xem chừng ban đầu màu trắng nhưng bị bụi bặm và khí thải hun mãi mà ngả màu xấu xí. </span><span class="koboSpan" id="kobo.7.4">Gờ xi măng cạnh mái hiên tầng hai bong tróc từng mảng, lộ ra cốt thép gỉ sét. </span><span class="koboSpan" id="kobo.7.5">Cửa chính không lắp cánh cửa, cũng chẳng có thùng thư, thông thống mở thẳng vào một cầu thang dẫn lên tầng hai tăm tối. </span><span class="koboSpan" id="kobo.7.6">Tòa nhà không có tên, cửa chỉ gắn biển “151”, nửa dưới số “5” gần như mờ hẳn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.8.1">Gặp thám tử Mạc hôm trước thì 11 giờ sáng hôm sau, Di đến quận Tây Hoàn đảo Hồng Kông theo địa chỉ ông ghi trên danh thiếp. </span><span class="koboSpan" id="kobo.8.2">Cô những tưởng mình sẽ tới một cao ốc văn phòng, nhưng đến nơi chỉ thấy tòa đường lâu cũ nát này. </span><span class="koboSpan" id="kobo.8.3">Nghĩ cũng phải thôi, Nem là thám tử chui, dĩ nhiên không thể đường hoàng tác nghiệp trong một tòa nhà thương mại được.</span></p>
+
+  <p><span class="koboSpan" id="kobo.9.1">Di ngước lên nhìn, ngoại trừ tầng cao nhất, cửa sổ các tầng khác đều đóng chặt, cũng không thấy lắp cục nóng điều hòa nào. </span><span class="koboSpan" id="kobo.9.2">Đối diện số 151 là một đường lâu cao năm tầng sơn màu vàng đất, cứ so sánh với nó là dễ dàng thấy sự khác biệt: </span><span class="koboSpan" id="kobo.9.3">tầng nào cũng lắp đặt điều hòa đủ kích cỡ và nhãn hiệu, khung cửa sổ kiểu dáng đa dạng, phía ngoài tầng ba và tầng năm còn lắp thêm giá phơi đồ, đầy nhóc quần áo và chăn ga. </span><span class="koboSpan" id="kobo.9.4">Nhìn lại, số 151 giống như nhà hoang lâu năm chỉ có du thủ du thực hoặc hồn ma bóng quế đến thăm viếng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.10.1">Phố Nhị là con phố thoai thoải nằm ở khu phố cũ Tây Doanh Bàn. </span><span class="koboSpan" id="kobo.10.2">Hai đầu phố đều có nhà cao tầng mới toanh, nhưng gần số 151 thì toàn các tòa nhà lâu đời, hàng quán thưa thớt, khác hẳn đường Queen’s Road West sầm uất cách đó hai dãy phố. </span><span class="koboSpan" id="kobo.10.3">Trừ một hàng buôn giấy và hai hàng kim khí ra, còn lại hơn chục nhà cửa hai bên và đối diện số 151 đều đóng kín mít, không rõ là không kinh doanh hay tạm nghỉ nữa. </span><span class="koboSpan" id="kobo.10.4">Phố xá vắng vẻ, lòng đường rất hẹp chỉ đủ hai xe tránh nhau, nhưng lúc này, một chiếc xe van màu đen đỗ cách Di vài mét đã choán hẳn một làn đường.</span></p>
+
+  <p><span class="koboSpan" id="kobo.11.1">Di còn đang ngó nghiêng thì tiếng bước chân khô khốc vang lên trong nhà 151 đã thu hút sự chú ý của cô. </span><span class="koboSpan" id="kobo.11.2">Một phụ nữ tầm 50 tuổi đang chậm rãi bước xuống từ cầu thang tù mù, tay cầm xô nhựa đỏ, bên trong đựng nước tẩy rửa, găng tay và dụng cụ vệ sinh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.12.1">“Tôi muốn hỏi có phải trên tầng sáu…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.13.1">“Cô tìm Nem à?” </span><span class="koboSpan" id="kobo.13.2">Người phụ nữ ngó danh thiếp trên tay Di, “Đúng tầng sáu rồi. </span><span class="koboSpan" id="kobo.13.3">Tòa nhà này mỗi tầng chỉ một căn hộ, cô cứ đi lên là thấy, không nhầm được đâu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.14.1">Người phụ nữ quay lưng đi về phố Water. </span><span class="koboSpan" id="kobo.14.2">Di thì dò dẫm bước lên theo cầu thang tối om.</span></p>
+
+  <p><span class="koboSpan" id="kobo.15.1">Cửa vào căn hộ tầng sáu nằm ngay cạnh cầu thang. </span><span class="koboSpan" id="kobo.15.2">Lớp ngoài là cửa sắt, lớp trong là cửa gỗ màu trắng, không treo biển hay dán giấy đỏ cầu bình an gì cả. </span><span class="koboSpan" id="kobo.15.3">Cạnh cửa có nút bấm chuông màu đen kiểu cổ, trông như lắp từ những năm 1960 đến tận bây giờ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.16.1">Di bấm chuông.</span></p>
+
+  <p><span class="koboSpan" id="kobo.17.1">Tè… Đến tiếng chuông nghe cũng cũ kĩ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.18.1">Đợi hơn mười giây, bên kia cánh cửa không có động tĩnh gì.</span></p>
+
+  <p><span class="koboSpan" id="kobo.19.1">Tèèè… Di bấm chuông lần nữa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.20.1">Đợi thêm ba mươi giây, cánh cửa vẫn đóng chặt. </span><span class="koboSpan" id="kobo.20.2">Không phải đi vắng chứ, Di nghĩ thầm. </span><span class="koboSpan" id="kobo.20.3">Trong nhà có tiếng sột soạt mà.</span></p>
+
+  <p><span class="koboSpan" id="kobo.21.1">Tèèèèè… Di ấn giữ liên tục, tiếng chuông phiền nhiễu dội mạnh vào màng nhĩ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.22.1">“Đủ rồi!” </span><span class="koboSpan" id="kobo.22.2">Cánh cửa gỗ màu trắng sau cửa sắt đột ngột mở hé, một gương mặt lấp ló qua khe cửa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.23.1">“Chào, chào anh! </span><span class="koboSpan" id="kobo.23.2">Tôi là…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.24.1">Cửa đóng “rầm” một cái.</span></p>
+
+  <p><span class="koboSpan" id="kobo.25.1">Di sửng sốt. </span><span class="koboSpan" id="kobo.25.2">Tiếp tục bấm chuông.</span></p>
+
+  <p><span class="koboSpan" id="kobo.26.1">“Đã bảo đủ rồi kia mà!” </span><span class="koboSpan" id="kobo.26.2">Cánh cửa mở ra lần nữa, gương mặt bên trong cũng lộ ra nhiều hơn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.27.1">“Anh Nem! </span><span class="koboSpan" id="kobo.27.2">Xin chờ một lát!” </span><span class="koboSpan" id="kobo.27.3">Di hét lên.</span></p>
+
+  <p><span class="koboSpan" id="kobo.28.1">“Không phải xin, hôm nay tôi không tiếp khách!” </span><span class="koboSpan" id="kobo.28.2">Nói đoạn lại đóng cửa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.29.1">“Tôi được thám tử Mạc giới thiệu tới!” </span><span class="koboSpan" id="kobo.29.2">Di rối rít vớt vát.</span></p>
+
+  <p><span class="koboSpan" id="kobo.30.1">Có vẻ ba chữ “thám tử Mạc” đã phát huy tác dụng. </span><span class="koboSpan" id="kobo.30.2">Người kia dừng động tác, dềnh dàng mở cửa gỗ. </span><span class="koboSpan" id="kobo.30.3">Di lấy danh thiếp trong túi áo ra đưa qua cửa sắt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.31.1">“Quỷ tha ma bắt. </span><span class="koboSpan" id="kobo.31.2">Lại quẳng cái của nợ gì sang đây…” Người kia nhận danh thiếp, mở cửa sắt cho Di.</span></p>
+
+  <p><span class="koboSpan" id="kobo.32.1">Vào nhà rồi, Di mới nhìn rõ mặt mũi anh ta. </span><span class="koboSpan" id="kobo.32.2">Người đàn ông này khoảng 40 tuổi, vóc dáng rất đỗi bình thường, không cao ráo cũng chẳng to con. </span><span class="koboSpan" id="kobo.32.3">Tóc tai rối bù như tổ quạ, mái dài rủ trước trán che lấp cả mắt, nhìn rất không ăn nhập với cánh mũi cao thẳng. </span><span class="koboSpan" id="kobo.32.4">Quanh môi và dưới cắm tua tủa râu. </span><span class="koboSpan" id="kobo.32.5">Mình mặc áo phông xám nhàu nhĩ cáu bẩn và quần lửng kẻ ca rô trắng xanh tuột chỉ gấu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.33.1">Phòng ốc cũng lôi thôi không kém chủ nhân.</span></p>
+
+  <p><span class="koboSpan" id="kobo.34.1">Cạnh cửa ra vào, đồ đạc linh tinh chất thành đống: </span><span class="koboSpan" id="kobo.34.2">sách báo tạp chí, quần áo giày dép, rồi cả thùng các tông lớn nhỏ. </span><span class="koboSpan" id="kobo.34.3">Đi qua sảnh nhỏ vào phòng khách sẽ thấy cảnh tượng lộn xộn y hệt: </span><span class="koboSpan" id="kobo.34.4">bức tường đối diện cửa kê hai cái giá to bự ngổn ngang sách, trước giá sách là bàn tròn, bên trên đặt ba hộp gỗ cỡ hộp giày đựng dây điện, bảng mạch và đủ thứ linh kiện điện tử Di chưa thấy bao giờ. </span><span class="koboSpan" id="kobo.34.5">Cạnh bàn kê vài chiếc ghế thì ghế nào cũng bị trưng dụng, cái chất đống đĩa quang, cái chứa nguyên một màn hình máy tính CRT ố vàng đặt lộn ngược.</span></p>
+
+  <p><span class="koboSpan" id="kobo.35.1">Bàn làm việc ở góc trái phòng khách thì bừa bộn giấy bút sách vở, lon bia rỗng, túi đựng thanh ngũ cốc dinh dưỡng và hai máy tính xách tay. </span><span class="koboSpan" id="kobo.35.2">Trước bàn làm việc là hai sofa màu xanh lục thẫm kê đối diện nhau, một bên đặt guitar điện, bên kia đặt va li màu hồng. </span><span class="koboSpan" id="kobo.35.3">Giữa hai sofa kê một bàn trà nhỏ, đây có lẽ là vật dụng duy nhất trong phòng không chất đồ bừa bãi. </span><span class="koboSpan" id="kobo.35.4">Bên phải bàn làm việc là tủ đa năng trưng dàn loa đã hơi có tuổi, các ngăn xung quanh lèn chặt CD, đĩa than và băng cassette, ngăn dưới cùng để ampli guitar điện, dây điện xoắn thành nùi như cuộn len dưới đất. </span><span class="koboSpan" id="kobo.35.5">Bên phải tủ là chậu cây cảnh cao chừng một mét. </span><span class="koboSpan" id="kobo.35.6">Mặt tường bên này có cửa sổ rất lớn, rèm chớp lật mòn vẹt dù buông xuống một nửa vẫn không ngăn được ánh nắng chói chang rọi qua cửa sổ vào phòng. </span><span class="koboSpan" id="kobo.35.7">Ánh nắng hắt vào làm nổi rõ lớp bụi bám trên nhiều đồ nội thất và đồ trang trí trong phòng, mặt sàn gần cửa sổ có mảng ố két lại.</span></p>
+
+  <p><span class="koboSpan" id="kobo.36.1">Gã đàn ông nhếch nhác sống ở nơi như ổ lợn thế này mà lại là thám tử sao?</span></p>
+
+  <p><span class="koboSpan" id="kobo.37.1">“Xin, xin hỏi anh là anh Nem phải không? </span><span class="koboSpan" id="kobo.37.2">Tôi…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.38.1">“Cô ngồi xuống đi đã, tôi vừa ngủ dậy.” </span><span class="koboSpan" id="kobo.38.2">Di hỏi một đằng, người đàn ông trả lời một nẻo, ngáp một cái rồi đi chân đất vào nhà tắm đằng sảnh nhỏ. </span><span class="koboSpan" id="kobo.38.3">Di ngó quanh quất, không thấy chỗ nào ngồi được đành đứng ngây ra cạnh sofa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.39.1">Tiếng xả nước ồ ồ và tiếng rửa mặt rộ lên. </span><span class="koboSpan" id="kobo.39.2">Di nghển cổ nhìn, thấy cửa nhà tắm không đóng, bất giác quay người nhìn đi chỗ khác. </span><span class="koboSpan" id="kobo.39.3">Cạnh giá sách có một cánh cửa không khóa dẫn vào phòng ngủ, giường bên trong ngổn ngang chăn gối, cạnh giường bày bừa nào thùng đồ, nào quần áo, nào túi nylon. </span><span class="koboSpan" id="kobo.39.4">Mọi thứ làm Di rất mất tự nhiên. </span><span class="koboSpan" id="kobo.39.5">Tuy không mắc bệnh sạch sẽ, cô vẫn thấy căn hộ này thừa sức sánh ngang với nhà chứa rác. </span><span class="koboSpan" id="kobo.39.6">Được cái đường lâu xây trần tương đối cao nên còn cảm giác có không gian, không đến nỗi quá bí bách nghẹt thở.</span></p>
+
+  <p><span class="koboSpan" id="kobo.40.1">Một lý do khác cũng làm Di mất tự nhiên, chính là người vừa bước ra từ nhà tắm.</span></p>
+
+  <p><span class="koboSpan" id="kobo.41.1">“Cô đứng đực ra đó làm gì?” </span><span class="koboSpan" id="kobo.41.2">Người đàn ông luộm thuộm vừa gãi nách vừa nói với Di. </span><span class="koboSpan" id="kobo.41.3">“Tôi bảo cô ngồi chờ cơ mà?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.42.1">“Anh là anh Nem phải không?” </span><span class="koboSpan" id="kobo.42.2">Di muốn xác nhận danh tính đã. </span><span class="koboSpan" id="kobo.42.3">Thú thật, cô rất mong người này phủ nhận và nói “Vị thám tử tài ba đó đi vắng mất rồi, tôi chỉ là bạn cùng nhà của anh ta thôi”.</span></p>
+
+  <p><span class="koboSpan" id="kobo.43.1">Nem giơ tấm danh thiếp Di đưa khi nãy lên, “Phải không phải không! </span><span class="koboSpan" id="kobo.43.2">Mạc Đại Mao chẳng đã viết rõ rồi sao?” </span><span class="koboSpan" id="kobo.43.3">Anh ta nhấc đàn guitar ra khỏi sofa rồi ngồi phịch xuống, đánh mắt về chiếc va li ra hiệu cho Di nhấc nó khỏi sofa. </span><span class="koboSpan" id="kobo.43.4">Di làm theo. </span><span class="koboSpan" id="kobo.43.5">Va li xách lên nhẹ bỗng, bên trong chắc rỗng không.</span></p>
+
+  <p><span class="koboSpan" id="kobo.44.1">“Lão Mạc bảo cô tới tìm tôi có việc gì? </span><span class="koboSpan" id="kobo.44.2">Cho cô năm phút trình bày.” </span><span class="koboSpan" id="kobo.44.3">Nem ngồi ườn ra ngáp, bộ dạng thờ ơ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.45.1">Di chỉ chực bỏ về ngay lập tức. </span><span class="koboSpan" id="kobo.45.2">Nhưng rốt cuộc lý trí vẫn lấn át cảm tính.</span></p>
+
+  <p><span class="koboSpan" id="kobo.46.1">“Tôi tên là Âu Nhã Di, muốn thuê anh tìm giúp một người.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.47.1">Di kể lại vắn tắt toàn bộ sự việc: </span><span class="koboSpan" id="kobo.47.2">từ lúc Tiểu Văn bị sàm sỡ trên tàu điện ngầm đến lúc tự sát.</span></p>
+
+  <p><span class="koboSpan" id="kobo.48.1">“Tôi thuê thám tử Mạc tìm cháu trai Bình để đối chất với gã… Nhưng sau khi điều tra, thám tử Mạc phát hiện Bình không có chị em, nhân vật cháu trai không hề tồn tại.” </span><span class="koboSpan" id="kobo.48.2">Di lôi xấp báo cáo của thám tử Mạc từ trong túi xách ra. </span><span class="koboSpan" id="kobo.48.3">Nem nhận lấy, liếc qua, lại giở thêm vài trang, cuối cùng đặt bịch cả xấp xuống bàn trà.</span></p>
+
+  <p><span class="koboSpan" id="kobo.49.1">“Với khả năng của lão Mạc, điều tra đến đây là giỏi lắm rồi, hê.” </span><span class="koboSpan" id="kobo.49.2">Nem nói với giọng bỡn cợt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.50.1">“Thám tử Mạc nói không có đồ nghề để tìm tác giả chỉ qua một bài viết trên diễn đàn, nên bảo tôi sang nhờ anh.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.51.1">“Tôi không nhận mấy vụ kiểu này.” </span><span class="koboSpan" id="kobo.51.2">Nem nói dứt khoát.</span></p>
+
+  <p><span class="koboSpan" id="kobo.52.1">Di ngớ người, căng thẳng hỏi lại, “Vì sao? </span><span class="koboSpan" id="kobo.52.2">Tôi còn chưa đề cập thù lao…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.53.1">“Quá đơn giản, không nhận.” </span><span class="koboSpan" id="kobo.53.2">Nem đứng lên, tỏ vẻ muốn tiễn khách.</span></p>
+
+  <p><span class="koboSpan" id="kobo.54.1">“Quá đơn giản?” </span><span class="koboSpan" id="kobo.54.2">Di trợn mắt kinh ngạc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.55.1">“Quá đơn giản, siêu cấp đơn giản.” </span><span class="koboSpan" id="kobo.55.2">Mặt không đổi sắc, Nem trả lời dửng dưng. </span><span class="koboSpan" id="kobo.55.3">“Tôi không quan tâm những vụ án nhàm chán. </span><span class="koboSpan" id="kobo.55.4">Dù sao cũng là thám tử chứ không phải kĩ thuật viên, tôi không đời nào nhận mấy vụ tào lao không cần động não. </span><span class="koboSpan" id="kobo.55.5">Thời giờ của tôi rất quý giá, không thể lãng phí vào vụ án rác rưởi này.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.56.1">“Rác, rác rưởi…?” </span><span class="koboSpan" id="kobo.56.2">Cảm thấy bị sỉ nhục, Di chỉ còn biết bàng hoàng lặp lại lời bình phẩm cay nghiệt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.57.1">“Đúng, rác rưởi, nhạt nhẽo, vô nghĩa. </span><span class="koboSpan" id="kobo.57.2">Tìm mấy kẻ trên mạng để trả thù toàn chuyện vặt vãnh. </span><span class="koboSpan" id="kobo.57.3">Mấy vụ kiểu này hằng ngày nhan nhản. </span><span class="koboSpan" id="kobo.57.4">Tôi mà nhận lời thì quá mất giá…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.58.1">Nghe đến đây, Di không khỏi phát cáu, “Anh không làm được nên mới kiếm cớ đùn đẩy chứ gì?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.59.1">“Ô hay, định khích tướng à?” </span><span class="koboSpan" id="kobo.59.2">Nem không bị chọc giận, trái lại còn cười tươi. </span><span class="koboSpan" id="kobo.59.3">“Vụ này đơn giản đến mức nhắm mắt cũng phá được. </span><span class="koboSpan" id="kobo.59.4">Nói cho cô biết, máy chủ mọi diễn đàn đều có lịch sử IP, tôi chỉ cần vài phút là có thể mở mã nguồn diễn đàn Củ Lạc, lôi file ra, ném địa chỉ IP cần tìm vào cơ sở dữ liệu, tra ngược ISP, rồi sàng lọc vị trí thực tế của máy khách từ lịch sử đăng nhập ISP. </span><span class="koboSpan" id="kobo.59.5">Cô tưởng cảnh sát điều tra những kẻ tung tin thất thiệt, kêu gọi biểu tình phi pháp trên mạng khó lắm à? </span><span class="koboSpan" id="kobo.59.6">Dễ như bỡn. </span><span class="koboSpan" id="kobo.59.7">Cảnh sát còn làm được, nữa là tôi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.60.1">Di không hiểu gì về “máy chủ, máy khách”, nhưng nhìn vẻ nhơn nhơn của Nem, cô tin lời anh ta nói là thật. </span><span class="koboSpan" id="kobo.60.2">Thế nên cô càng tức giận. </span><span class="koboSpan" id="kobo.60.3">Thừa sức giúp cô tìm ra kidkit727 trong chớp mắt, ấy vậy mà anh ta từ chối.</span></p>
+
+  <p><span class="koboSpan" id="kobo.61.1">“Nếu đơn giản thế, tôi sẽ thuê người khác!” </span><span class="koboSpan" id="kobo.61.2">Không chịu thua kém, Di đứng bật dậy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.62.1">“Cô nhầm rồi.” </span><span class="koboSpan" id="kobo.62.2">Nem giở giọng phách lối. </span><span class="koboSpan" id="kobo.62.3">“Chuyện này đơn giản </span><i><span class="koboSpan" id="kobo.63.1">với tôi</span></i><span class="koboSpan" id="kobo.64.1">, chứ chưa chắc đã đơn giản với người khác. </span><span class="koboSpan" id="kobo.64.2">Hồng Kông chỉ có khoảng hai trăm hacker đủ khả năng hack máy chủ diễn đàn Củ Lạc, nhưng hack mà không để lại dấu vết, không bại lộ hành tung chắc chưa đầy mười người. </span><span class="koboSpan" id="kobo.64.3">Chúc cô may mắn tìm được một trong số mười người kia… À không, một trong số chín người chứ, dù sao tôi cũng từ chối rồi mà.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.65.1">Giờ Di mới hiểu ra nghề nghiệp của Nem. </span><span class="koboSpan" id="kobo.65.2">Hacker, tội phạm điện tử nấp trong bóng tối không gian mạng, nhấc ngón tay là cướp được món tiền khổng lồ và đánh cắp bí mật đời tư người khác. </span><span class="koboSpan" id="kobo.65.3">Cô đâm ra sợ người đàn ông trông không có gì nổi bật này. </span><span class="koboSpan" id="kobo.65.4">Nhưng ngẫm lại, cô biết anh ta là lựa chọn tốt nhất để giúp mình. </span><span class="koboSpan" id="kobo.65.5">Không muốn Tiểu Văn chết không rõ ràng, Di cố nén cáu giận, kiên trì đề nghị.</span></p>
+
+  <p><span class="koboSpan" id="kobo.66.1">“Anh Nem… Nem ơi, anh giúp tôi điều tra đi mà. </span><span class="koboSpan" id="kobo.66.2">Tôi thực sự không còn cách nào khác, nếu anh từ chối, tôi chẳng biết phải đi đâu nhờ vả nữa.” </span><span class="koboSpan" id="kobo.66.3">Di mềm mỏng nói. </span><span class="koboSpan" id="kobo.66.4">“Anh muốn tôi quỳ xuống hoặc làm bất cứ điều gì cũng được, tôi chỉ không chịu nổi việc em mình chết đi mà kẻ hại nó là ai tôi cũng không biết…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.67.1">“Rồi.” </span><span class="koboSpan" id="kobo.67.2">Nem đột nhiên vỗ tay một cái.</span></p>
+
+  <p><span class="koboSpan" id="kobo.68.1">“Rồi?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.69.1">“Hết năm phút rồi.” </span><span class="koboSpan" id="kobo.69.2">Nem đi ra sau bàn làm việc, lấy áo khoác thể thao màu đỏ vắt trên lưng ghế mặc vào người. </span><span class="koboSpan" id="kobo.69.3">“Mời cô đi cho, tôi muốn ra ngoài ăn sáng.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.70.1">“Nhưng…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.71.1">“Cô không đi, tôi sẽ báo cảnh sát có đồ điên tự tiện xông vào nhà dân đấy.” </span><span class="koboSpan" id="kobo.71.2">Nem ra xỏ xăng đan, mở cửa gỗ và cửa sắt, hất cằm ra ngoài.</span></p>
+
+  <p><span class="koboSpan" id="kobo.72.1">Di không biết phải làm sao, đành nhặt xấp tài liệu trên bàn nhét vào túi xách rồi bước ra, đứng lúng túng ở cầu thang. </span><span class="koboSpan" id="kobo.72.2">Không hề đếm xỉa đến cô, Nem cứ thế đóng cửa lại, mải mốt đi xuống.</span></p>
+
+  <p><span class="koboSpan" id="kobo.73.1">Di dõi theo bóng lưng Nem, cảm giác rã rời dâng lên trong lòng. </span><span class="koboSpan" id="kobo.73.2">Thám tử Mạc đã cảnh báo chưa chắc Nem sẽ nhận lời, nhưng chẳng ngờ anh ta không những không nhận lời, lại còn đối xử với cô rất sỗ sàng. </span><span class="koboSpan" id="kobo.73.3">Di bỗng có cảm giác dù mình vùng vẫy đến mấy, chung quy vẫn không thoát khỏi số phận định sẵn. </span><span class="koboSpan" id="kobo.73.4">Thái độ xua đuổi của Nem là cảnh cáo trời cao dành cho cô, bảo cô đừng ôm mộng kháng cự nữa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.74.1">Câu nói “ngậm bồ hòn làm ngọt” của trưởng ban ở Sở Nhà đất lại văng vâng bên tai.</span></p>
+
+  <p><span class="koboSpan" id="kobo.75.1">Rời khỏi cầu thang âm u bước ra đường lớn, ánh nắng chói chang làm Di tỉnh táo lại. </span><span class="koboSpan" id="kobo.75.2">Cô giơ tay che nắng, bất chợt nghe tiếng bước chân dồn dập.</span></p>
+
+  <p><span class="koboSpan" id="kobo.76.1">“Mấy người… hợ!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.77.1">Ngay trước mặt Di, Nem bất thình lình bị hai gã đàn ông túm chặt. </span><span class="koboSpan" id="kobo.77.2">Gã cao hơn vạm vỡ xăm trổ. </span><span class="koboSpan" id="kobo.77.3">Gã thấp hơn không xăm trổ, nhưng để đầu moi nhuộm vàng gớm ghiếc, trông đều chẳng hiền lành gì.</span></p>
+
+  <p><span class="koboSpan" id="kobo.78.1">Gã xăm trổ ôm Nem từ phía sau, cánh tay phải kẹp lấy cổ, ép khí quản làm Nem không cất tiếng kêu cứu được. </span><span class="koboSpan" id="kobo.78.2">Gã tóc vàng thoi vào bụng Nem hai cái rồi chạy về cạnh xe van màu đen đỗ bên đường, giữ cửa xe để gã xăm trổ lôi Nem lên.</span></p>
+
+  <p><span class="koboSpan" id="kobo.79.1">Chứng kiến cảnh tượng bất ngờ đó, đầu óc Di rối loạn, nhất thời không kịp nghĩ ngợi gì. </span><span class="koboSpan" id="kobo.79.2">Mà cũng không có cơ hội để nghĩ ngợi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.80.1">“Hình như con ả này đi cùng hắn?” </span><span class="koboSpan" id="kobo.80.2">Tóc vàng nhìn Di.</span></p>
+
+  <p><span class="koboSpan" id="kobo.81.1">“Bắt luôn đi!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.82.1">Xăm trổ quát lớn. </span><span class="koboSpan" id="kobo.82.2">Di chưa kịp chạy trốn, tóc vàng đã sải bước đến tóm lấy cổ tay cô.</span></p>
+
+  <p><span class="koboSpan" id="kobo.83.1">“Buông tôi ra!” </span><span class="koboSpan" id="kobo.83.2">Di hét.</span></p>
+
+  <p><span class="koboSpan" id="kobo.84.1">Tóc vàng bịt miệng Di lại, ghì lấy cô kéo về phía xe van. </span><span class="koboSpan" id="kobo.84.2">Di suýt vấp ngã, nhưng gã không buông tay mà đẩy thẳng cô lên xe.</span></p>
+
+  <p><span class="koboSpan" id="kobo.85.1">“Lái đi!” </span><span class="koboSpan" id="kobo.85.2">Tóc vàng vừa đóng cửa, xăm trổ liền lớn tiếng ra lệnh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.86.1">Ngã vào trong xe rồi, Di mới xác định được tình hình hiện tại: </span><span class="koboSpan" id="kobo.86.2">xăm trổ và tóc vàng là xã hội đen đến trả thù Nem, còn cô là thành phần vạ lây, nằm không trúng đạn. </span><span class="koboSpan" id="kobo.86.3">Cô ra sức phản kháng, nhưng tóc vàng ấn bả vai cô xuống, đè đầu gối lên đùi cô làm cô hết đường ngọ nguậy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.87.1">Nem thì ngồi gập người tới trước, ôm bụng nôn khan trông rất khổ sở, cuối cùng nhổ ra thứ chất lỏng không rõ là dịch vị hay nước bọt, “Khụ… mẹ kiếp, ra tay mạnh thế…” Đoạn ngả mình ra lưng ghế, mặt mày tái mét.</span></p>
+
+  <p><span class="koboSpan" id="kobo.88.1">Tóc vàng vẫn giữ chặt Di, đưa mắt nhìn xăm trổ. </span><span class="koboSpan" id="kobo.88.2">Xăm trổ đanh mặt nói, “Nem! </span><span class="koboSpan" id="kobo.88.3">Anh Hổ tao muốn gặp mày.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.89.1">Nem không đáp, chỉ chậm rãi thò tay vào túi áo khoác trái. </span><span class="koboSpan" id="kobo.89.2">Xăm trổ lập tức nhảy xổ tới giữ chặt tay Nem, “Mày đừng manh động, tao…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.90.1">“Cứ bình tĩnh, tôi không sờ vào là được chứ gì.” </span><span class="koboSpan" id="kobo.90.2">Nem giơ cao hai tay đầu hàng. </span><span class="koboSpan" id="kobo.90.3">“Tự cậu lấy đi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.91.1">“Cái gì?” </span><span class="koboSpan" id="kobo.91.2">Xăm trổ không hiểu ý Nem.</span></p>
+
+  <p><span class="koboSpan" id="kobo.92.1">“Khụ… thứ trong túi, phiền cậu lấy giúp.” </span><span class="koboSpan" id="kobo.92.2">Nem chỉ chỉ túi áo khoác bên trái.</span></p>
+
+  <p><span class="koboSpan" id="kobo.93.1">Xăm trổ thắc mắc thò tay vào túi áo Nem, rút ra được một phong bì màu trắng. </span><span class="koboSpan" id="kobo.93.2">Vừa lật mặt trước lên xem, gã tái mét mặt như gặp ma giữa ban ngày.</span></p>
+
+  <p><span class="koboSpan" id="kobo.94.1">“Đây, đây là cái gì!” </span><span class="koboSpan" id="kobo.94.2">Xăm trổ hét lên.</span></p>
+
+  <p><span class="koboSpan" id="kobo.95.1">“Anh D, sao thế?” </span><span class="koboSpan" id="kobo.95.2">Tóc vàng căng thẳng hỏi, lực đè lên Di cũng nhẹ bớt phần nào.</span></p>
+
+  <p><span class="koboSpan" id="kobo.96.1">“Tao hỏi mày! </span><span class="koboSpan" id="kobo.96.2">Cái gì đây!” </span><span class="koboSpan" id="kobo.96.3">Phớt lờ tóc vàng, xăm trổ túm lấy cổ áo Nem, giọng rất thiếu kiên nhẫn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.97.1">“Khụ, là thư cho cậu đấy.” </span><span class="koboSpan" id="kobo.97.2">Nem ho một tiếng rồi dửng dưng đáp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.98.1">“Tao không hỏi cái đó! </span><span class="koboSpan" id="kobo.98.2">Sao mày biết tên tao!” </span><span class="koboSpan" id="kobo.98.3">Xăm trổ càng túm áo Nem chặt hơn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.99.1">Di liếc phong bì trong tay xăm trổ, thấy mặt trước viết “Ngô Quảng Đạt” bằng bút bi xanh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.100.1">“Cậu mở ra là biết ngay thôi.” </span><span class="koboSpan" id="kobo.100.2">Nem trả lời.</span></p>
+
+  <p><span class="koboSpan" id="kobo.101.1">Xăm trổ đẩy Nem về chỗ, căng thẳng xé phong bì. </span><span class="koboSpan" id="kobo.101.2">Một tấm ảnh rơi ra, Di và tóc vàng không nhìn được nhưng đều thấy mặt xăm trổ trắng bệch, hai mắt mở thô lố.</span></p>
+
+  <p><span class="koboSpan" id="kobo.102.1">“Mày…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.103.1">“Cậu đừng làm bừa.” </span><span class="koboSpan" id="kobo.103.2">Xăm trổ đang định xông lên, nghe Nem cảnh cáo liền khựng lại. </span><span class="koboSpan" id="kobo.103.3">“Có ảnh trong tay, chứng tỏ tôi đã chuẩn bị từ trước. </span><span class="koboSpan" id="kobo.103.4">Bây giờ cậu có vùi tôi vào xi măng rồi ném xuống vịnh Hậu Hải</span><a href="#id22" epub:type="noteref" id="b22"><span class="koboSpan" id="kobo.104.1">*</span></a><span class="koboSpan" id="kobo.105.1">, bạn bè tôi ngoài kia cũng sẽ tiếp quản phần việc, ảnh vẫn sẽ bị tung ra thôi.”</span></p>
+
+  <aside epub:type="footnote" id="id22">
+    <a href="#b22" style="display: none;"><span class="koboSpan" id="kobo.106.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.107.1">Vịnh nối liền Thâm Quyến và Hồng Kông, còn có tên gọi khác là vịnh Thâm Quyến.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.108.1">“Anh D, chuyện gì vậy?” </span><span class="koboSpan" id="kobo.108.2">Tóc vàng buông Di ra, rướn tới hỏi han xăm trổ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.109.1">“Không! </span><span class="koboSpan" id="kobo.109.2">Chẳng có chuyện gì hết!” </span><span class="koboSpan" id="kobo.109.3">Xăm trổ căng thẳng nhét cả ảnh lẫn phong bì vào túi quần.</span></p>
+
+  <p><span class="koboSpan" id="kobo.110.1">Tóc vàng hoài nghi, liên tục ngó Nem và đàn anh mình.</span></p>
+
+  <p><span class="koboSpan" id="kobo.111.1">“Cậu cũng có đấy.” </span><span class="koboSpan" id="kobo.111.2">Nem lôi một phong bì khác từ túi áo bên kia, đưa cho tóc vàng. </span><span class="koboSpan" id="kobo.111.3">Lần này Di thấy rõ trên phong bì viết ba chữ “Hoàng Tử Hưng”.</span></p>
+
+  <p><span class="koboSpan" id="kobo.112.1">“Sao… sao mày biết… tên tao…” Giống hệt xăm trổ, tóc vàng cũng chết điếng khi thấy tên mình trên phong bì. </span><span class="koboSpan" id="kobo.112.2">Gã nhận lấy rồi mở ra, nội tâm hoảng loạn, mặt cắt không còn hột máu. </span><span class="koboSpan" id="kobo.112.3">Di rướn cổ nhìn thì thấy trong phong bì cũng có một tấm ảnh, chụp tóc vàng nằm trên sofa màu nâu, hai mắt nhắm nghiền, tay phải cầm lon bia, có vẻ đang ngủ say lắm.</span></p>
+
+  <p><span class="koboSpan" id="kobo.113.1">“Thằng khốn!” </span><span class="koboSpan" id="kobo.113.2">Tóc vàng không đếm xỉa đến Di nữa, quàng tay kẹp cổ Nem giữa khoang xe chật hẹp, miệng quát tháo, “Sao mày vào được nhà tao! </span><span class="koboSpan" id="kobo.113.3">Mày chụp ảnh này từ bao giờ! </span><span class="koboSpan" id="kobo.113.4">Không nói tao giết!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.114.1">Xăm trổ kéo tóc vàng lại, làm Di ngạc nhiên, không hiểu tại sao gã lại giải vây cho Nem.</span></p>
+
+  <p><span class="koboSpan" id="kobo.115.1">“Khụ khụ… Con nít con nôi bây giờ xốc nổi quá, mở mồm ra là đánh với giết.” </span><span class="koboSpan" id="kobo.115.2">Nem vuốt vuốt cái cổ đỏ ửng, “Hoàng Tử Hưng… hay muốn tôi gọi là Hưng đen? </span><span class="koboSpan" id="kobo.115.3">Sao cũng được. </span><span class="koboSpan" id="kobo.115.4">Cậu đừng quan tâm tôi vào ổ lợn nhà cậu, rình cậu ngủ say lao ra chụp ảnh từ bao giờ. </span><span class="koboSpan" id="kobo.115.5">Điều cậu nên lo lắng là tôi có thể tiếp cận lúc cậu không hề hay biết, không hề đề phòng. </span><span class="koboSpan" id="kobo.115.6">Bia cậu uống hằng ngày có phải bia bình thường không, mì tôm cậu ăn có phải mì tôm bình thường không, ‘hàng’ cậu giấu trong két nước bồn cầu có bị đánh tráo thành thuốc giảm đau bình thường không, cậu đã bao giờ tự hỏi chưa?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.116.1">“Mày!” </span><span class="koboSpan" id="kobo.116.2">Tóc vàng vẫn muốn xông lên xử Nem.</span></p>
+
+  <p><span class="koboSpan" id="kobo.117.1">“Nếu tôi thực sự ra tay, cậu chết chín lần cũng không hết.” </span><span class="koboSpan" id="kobo.117.2">Nem bất chợt đổi sang vẻ mặt như người điên, kề sát tóc vàng nhìn thẳng vào mắt gã. </span><span class="koboSpan" id="kobo.117.3">“Tôi thừa sức móc mắt, xẻo thận cậu trong lúc cậu ngủ say, cũng có thể thả trùng cong</span><a href="#id23" epub:type="noteref" id="b23"><span class="koboSpan" id="kobo.118.1">*</span></a><span class="koboSpan" id="kobo.119.1"> vào nước uống để chúng kí sinh vào cái đầu não lợn của cậu rồi từ từ chén sạch bộ óc. </span><span class="koboSpan" id="kobo.119.2">Đừng tưởng càn quét vài địa bàn giúp đại ca là cậu có số má lắm. </span><span class="koboSpan" id="kobo.119.3">So độ độc địa tàn nhẫn, cậu còn thua xa tôi. </span><span class="koboSpan" id="kobo.119.4">Cậu có thể xử tôi ngay tại đây, nhưng tôi đảm bảo từ nay trở đi, cậu sẽ sống-không-bằng-chết.”</span></p>
+
+  <aside epub:type="footnote" id="id23">
+    <a href="#b23" style="display: none;"><span class="koboSpan" id="kobo.120.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.121.1">Toxoplasma gondii. </span><span class="koboSpan" id="kobo.121.2">Một trong những loại kí sinh trùng phổ biến nhất, chủ yếu gây bệnh ở não và hệ cơ, trong đó có cơ tim.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.122.1">Lúc này Di mới nhận ra tình thế trong xe đã đảo ngược. </span><span class="koboSpan" id="kobo.122.2">Nem từ kẻ bị vũ lực khống chế trở thành kẻ uy hiếp chỉ trong vài phút ngắn ngủi. </span><span class="koboSpan" id="kobo.122.3">Ánh mắt của xăm trổ và tóc vàng ngập tràn sợ hãi như thể đang chứng kiến một sự vật khác thường không thể lý giải, không thể kiểm soát.</span></p>
+
+  <p><span class="koboSpan" id="kobo.123.1">“Còn anh nữa, anh Dư lái xe!” </span><span class="koboSpan" id="kobo.123.2">Nem gào lên với đầu xe, “Cho tôi về phố Whitty, dừng trước tiệm mì Lai Ký. </span><span class="koboSpan" id="kobo.123.3">Nếu anh không nghe lời, tôi không dám đảm bảo năm phút nữa trường mẫu giáo Minh Dục quận Thuyền Loan sẽ không xảy ra tai nạn lạ lùng nào đâu…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.124.1">Xe van bỗng phanh kít lại, Di gần như ngã nhào xuống sàn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.125.1">“Mày, mày mà dám động đến sợi tóc con gái tao…” Tài xế quay đầu lại, mặt mày nhăn nhúm vì tức giận.</span></p>
+
+  <p><span class="koboSpan" id="kobo.126.1">“Sao tôi không dám?” </span><span class="koboSpan" id="kobo.126.2">Nem lấy lại vẻ mặt ngẩn ngơ ban đầu, “Anh Dư, có nghề nghiệp tử tế không làm lại đi lái xe cho đám cặn bã kiếm thêm vài đồng lẻ, gây liên lụy vợ con, đáng đời anh lắm. </span><span class="koboSpan" id="kobo.126.3">Khôn hồn thì quay đầu xe lại, chậm thêm vài giây nữa tôi cũng hết cách.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.127.1">Lúc này, xe đang đỗ ven đường gần Trung tâm Tín Đức đường Connaught Tây, khu Thượng Hoàn. </span><span class="koboSpan" id="kobo.127.2">Tài xế Dư sốt ruột nhìn xăm trổ, xăm trổ đành nói, “Làm theo lời hắn đi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.128.1">Chưa đầy năm phút sau, xe van đã quay lại Tây Doanh Bàn và đỗ gần phố Whitty. </span><span class="koboSpan" id="kobo.128.2">Suốt lộ trình ngắn ngủi đó, xăm trổ và tóc vàng một mực im lặng, trân trân nhìn Nem với ánh mắt sợ sệt, cứ như thể rời mắt đi một cái là Nem (và Di) sẽ biến thành quái vật nhe nanh múa vuốt nuốt chửng lấy họ vậy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.129.1">“Này, cầm lấy.” </span><span class="koboSpan" id="kobo.129.2">Vừa xuống xe, Nem rút phong bì thứ ba trong túi quần đưa cho xăm trổ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.130.1">“Đây là gì?” </span><span class="koboSpan" id="kobo.130.2">Xăm trổ lưỡng lự chốc lát, không biết có nên nhận không.</span></p>
+
+  <p><span class="koboSpan" id="kobo.131.1">“Đưa cho đại ca mấy người.” </span><span class="koboSpan" id="kobo.131.2">Nem nói, “Hôm nay mấy người không hoàn thành nhiệm vụ, đúng không? </span><span class="koboSpan" id="kobo.131.3">Mang cái này về đưa Trương Vĩnh Thừa, lão sẽ không trách mấy người, sau này mấy người cũng khỏi phải đến làm phiền tôi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.132.1">Xăm trổ nhận phong bì, mặt bán tín bán nghi, nhưng Nem chưa buông tay.</span></p>
+
+  <p><span class="koboSpan" id="kobo.133.1">“Có điều, tôi khuyên mấy người đừng đọc lén.” </span><span class="koboSpan" id="kobo.133.2">Khóe miệng Nem khẽ nhếch lên, “Cái giá phải trả cho sự tò mò có thể rất lớn, tội gì phải lấy mạng hèn của mình ra đặt cược kia chứ.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.134.1">Xăm trổ và tóc vàng sững người. </span><span class="koboSpan" id="kobo.134.2">Nem buông phong bì ra, không đếm xỉa tới họ nữa, đóng cửa xe lại rồi đập thân xe hai cái, ý bảo lái xe đi đi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.135.1">Xe đi xa rồi mà Di vẫn chưa định hình được chuyện gì vừa xảy ra.</span></p>
+
+  <p><span class="koboSpan" id="kobo.136.1">“Anh N… Nem…” Di muốn hỏi nhưng không biết hỏi từ đâu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.137.1">“Cô còn ở đây làm gì? </span><span class="koboSpan" id="kobo.137.2">Tôi đã bảo tôi không nhận đơn hàng rồi, mời cô đi tìm cao nhân khác cho!” </span><span class="koboSpan" id="kobo.137.3">Nem nhíu mày ghét bỏ. </span><span class="koboSpan" id="kobo.137.4">Nhìn thái độ của anh ta, Di tự nhiên có ảo giác chuyện vừa rồi chỉ là giấc mơ, họ chỉ đi nhờ xe từ phố Nhị đến phố Whitty mà thôi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.138.1">“Không, tôi, tôi muốn hỏi, chuyện vừa rồi là sao?” </span><span class="koboSpan" id="kobo.138.2">Nhớ lại khoảnh khắc thô bạo bị đẩy vào xe, tới giờ Di vẫn còn sợ hãi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.139.1">“Cô là bò đội nón à? </span><span class="koboSpan" id="kobo.139.2">Còn chưa rõ ràng sao? </span><span class="koboSpan" id="kobo.139.3">Xã hội đen đến gây sự đấy.” </span><span class="koboSpan" id="kobo.139.4">Nem trả lời nhẹ bẫng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.140.1">“Sao họ lại nhằm vào anh? </span><span class="koboSpan" id="kobo.140.2">Anh làm gì họ à?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.141.1">“Chẳng làm gì. </span><span class="koboSpan" id="kobo.141.2">Mấy tên gian thương đần độn bị lỗ vốn nên nhờ xã hội đen ra tay hộ ấy mà. </span><span class="koboSpan" id="kobo.141.3">‘Anh Hổ’ Trương Vĩnh Thừa mới lên cầm trịch ở Loan Tể</span><a href="#id24" epub:type="noteref" id="b24"><span class="koboSpan" id="kobo.142.1">*</span></a><span class="koboSpan" id="kobo.143.1"> không lâu, làm việc không biết chừng mực…”</span></p>
+
+  <aside epub:type="footnote" id="id24">
+    <a href="#b24" style="display: none;"><span class="koboSpan" id="kobo.144.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.145.1">Wan Chai. </span><span class="koboSpan" id="kobo.145.2">Một quận rất sầm uất và phát triển của Hồng Kông, còn được coi là Hồng Kông thu nhỏ.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.146.1">“Sao họ lại tha cho chúng ta?” </span><span class="koboSpan" id="kobo.146.2">Di ngắt lời Nem.</span></p>
+
+  <p><span class="koboSpan" id="kobo.147.1">“Ai mà chẳng có điểm yếu, miễn nắm được điểm yếu của họ là tha hồ thao túng.” </span><span class="koboSpan" id="kobo.147.2">Nem nhún vai.</span></p>
+
+  <p><span class="koboSpan" id="kobo.148.1">“Điểm yếu gì? </span><span class="koboSpan" id="kobo.148.2">Tấm ảnh anh đưa cho gã xăm trổ là gì?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.149.1">“Gã cặp kè với vợ đại ca, đó là ảnh giường chiếu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.150.1">Di trân trối nhìn Nem.</span></p>
+
+  <p><span class="koboSpan" id="kobo.151.1">“Sao anh có tấm ảnh đó?” </span><span class="koboSpan" id="kobo.151.2">Ngừng một lúc, Di nhớ ra một điều còn kì lạ hơn. </span><span class="koboSpan" id="kobo.151.3">“Không, họ đều sững sờ khi thấy tên mình trên phong bì, anh đã biết trước họ sẽ tới bắt anh sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.152.1">“Tất nhiên. </span><span class="koboSpan" id="kobo.152.2">Giống như thám tử điều tra theo dõi, xã hội đen trước khi hành động cũng cần thăm dò trước. </span><span class="koboSpan" id="kobo.152.3">Chúng rình rập quanh nhà tôi cả tuần rồi, tôi chậm lụt đến mấy cũng phải phát hiện ra chứ.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.153.1">“Làm sao anh biết tên họ? </span><span class="koboSpan" id="kobo.153.2">Còn truy ra lai lịch từng tên rồi lén vào nhà chụp ảnh nữa?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.154.1">Nem cười khẩy, “Cái đó là chút mánh vặt, nhưng là bí mật làm ăn, tôi không việc gì phải cho cô biết.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.155.1">“Nếu đã nắm được điểm yếu của họ, sao anh còn để bị bắt lên xe? </span><span class="koboSpan" id="kobo.155.2">Tại sao không lấy ra đe dọa họ ngay từ đầu?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.156.1">“Ban đầu cứ ngọt nhạt trước để chúng tưởng bản thân trên cơ, như vậy lúc đánh trả sẽ càng thuận lợi, càng chí tử. </span><span class="koboSpan" id="kobo.156.2">Cô đã nghe câu lạt mềm buộc chặt chưa?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.157.1">“Nhưng…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.158.1">“Nói tới đây thôi, buổi gặp mặt kết thúc, cảm ơn rất nhiều, chúc cô đi đường bình an.” </span><span class="koboSpan" id="kobo.158.2">Nem vẫy tay, xoay người đi vào tiệm mì bên cạnh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.159.1">“A! </span><span class="koboSpan" id="kobo.159.2">Chào Nem! </span><span class="koboSpan" id="kobo.159.3">Cả tuần rồi không thấy mặt!” </span><span class="koboSpan" id="kobo.159.4">Một người trông có vẻ là chủ tiệm reo lên.</span></p>
+
+  <p><span class="koboSpan" id="kobo.160.1">“Dạo này hơi bận.” </span><span class="koboSpan" id="kobo.160.2">Nem cười đáp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.161.1">“Như mọi khi hả?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.162.1">“Không ông chủ ơi, vừa nãy ăn hai đấm nên hơi buồn nôn. </span><span class="koboSpan" id="kobo.162.2">Cho một bát vằn thắn không là được rồi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.163.1">“Hả, thằng ngốc nào có mắt như mù lại dám nện cậu thế…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.164.1">Đứng bên ngoài nhìn Nem chuyện trò vui vẻ với chủ tiệm, Di như thấy một người khác hẳn kẻ hung hăng xảo quyệt trên xe ban nãy. </span><span class="koboSpan" id="kobo.164.2">Tiệm mì khá khiêm tốn, chưa đầy mười chỗ ngồi, lại đúng giờ ăn trưa nên chật kín khách. </span><span class="koboSpan" id="kobo.164.3">Do dự chốc lát, nghĩ hôm nay có tiếp tục đeo bám cũng vô ích, Di đành bỏ đi, cuốc bộ dọc phố Whitty đến ga tàu điện ngầm.</span></p>
+
+  <p><span class="koboSpan" id="kobo.165.1">Chứng kiến Nem dễ dàng thoát hiểm, nhanh tay sắp đặt đường đi nước bước trước cả xã hội đen, Di tin là Nem thừa sức moi ra kidkit727 cũng như động cơ của gã.</span></p>
+
+  <p class="center"><span class="koboSpan" id="kobo.166.1">* * *</span></p>
+
+  <p><span class="koboSpan" id="kobo.167.1">Tự nhủ ngày nào chân tướng còn chưa sáng tỏ, ngày đó mình còn chưa thể loại bỏ khúc mắc trong lòng, bởi thế suốt một tuần tiếp theo, hằng ngày Di đều đến Tây Doanh Bàn. </span><span class="koboSpan" id="kobo.167.2">Vì ca kíp không cố định, có lúc cô sẽ ghé qua trước khi đi làm, có khi lại đến sau buổi tan ca. </span><span class="koboSpan" id="kobo.167.3">Lần thứ hai tới tìm Nem, Di bấm chuông rõ lâu nhưng không ai trả lời, chẳng biết có phải chủ nhà đi vắng không. </span><span class="koboSpan" id="kobo.167.4">Lần thứ ba thì rõ ràng là Nem cố tình cho cô đứng ngoài, đó là tối thứ Hai mùng 8 tháng Sáu. </span><span class="koboSpan" id="kobo.167.5">Di leo cầu thang tối mù lên tầng sáu, bấm chuông lia lịa, bên trong bỗng vọng ra tiếng nhạc ầm ĩ. </span><span class="koboSpan" id="kobo.167.6">Cô càng đập cửa mạnh, âm lượng loa càng lớn, nghe là đủ biết Nem muốn dùng tiếng nhạc át đi tiếng quấy nhiễu của Di. </span><span class="koboSpan" id="kobo.167.7">Di đứng ngoài cửa đợi ba mươi phút, bản nhạc rock tiếng Anh cũng phát liên tục đủ nửa tiếng. </span><span class="koboSpan" id="kobo.167.8">Cuối cùng Di nản lòng bỏ đi, ra tới đường cái vẫn nghe văng vẳng tiếng trống dồn dập và lời hát lặp đi lặp lại: </span><span class="koboSpan" id="kobo.167.9">You can’t always get what you want (Không phải cứ muốn là được).</span></p>
+
+  <p><span class="koboSpan" id="kobo.168.1">Sợ các phản ứng cực đoan của Nem khiến hàng xóm tầng dưới chú ý, coi mình là thành phần quấy rối rồi đi báo cảnh sát, Di đành chuyển sang phục kích dưới phố, sẵn sàng chặn đường năn nỉ nếu bắt gặp Nem ra ngoài hoặc về nhà. </span><span class="koboSpan" id="kobo.168.2">Nhưng chờ ở phố Nhị một thời gian rồi mà Di chưa hề gặp Nem. </span><span class="koboSpan" id="kobo.168.3">Ngày nào cô cũng ngẩng đầu nhìn cửa sổ tầng sáu, nhưng bất kể ngày hay đêm, cửa mở hay đóng, đèn sáng hay tắt, chưa bao giờ cô thấy bóng dáng Nem cả.</span></p>
+
+  <p><span class="koboSpan" id="kobo.169.1">Việc này mất của Di hai, ba tiếng mỗi ngày, nhưng cô không định bỏ cuộc. </span><span class="koboSpan" id="kobo.169.2">Cô tin trước sau gì mình cũng tóm được Nem thôi, dù vẫn chưa nghĩ ra nên thuyết phục anh ta thế nào.</span></p>
+
+  <p><span class="koboSpan" id="kobo.170.1">Nhá nhem tối 12 tháng Sáu, tan làm Di lại chạy tới phố Nhị, tiếp tục công cuộc ôm cây đợi thỏ. </span><span class="koboSpan" id="kobo.170.2">Trời đổ mưa to, ống quần ướt hết, nhưng cô vẫn cầm ô đứng ngoạm burger McDonald’s thay cho bữa tối dưới cột đèn ven đường, ngó lom lom số 151. </span><span class="koboSpan" id="kobo.170.3">Ngày mai được nghỉ thời gian thư thả, đang tính toán xem có nên đội mưa chờ suốt đêm không, điện thoại Di bỗng đổ chuông. </span><span class="koboSpan" id="kobo.170.4">Cô chật vật lôi chiếc Nokia đã dùng gần mười năm ra xem, không thấy hiển thị số máy gọi đến.</span></p>
+
+  <p><span class="koboSpan" id="kobo.171.1">“Alô?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.172.1">“Cô làm ơn đừng rình mò nhà tôi nữa, ngứa mắt lắm.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.173.1">Bình tĩnh lại, Di mới nhận ra giọng nói trong điện thoại.</span></p>
+
+  <p><span class="koboSpan" id="kobo.174.1">“Anh Nem hả? </span><span class="koboSpan" id="kobo.174.2">Sao anh có số điện thoại của tôi?” </span><span class="koboSpan" id="kobo.174.3">Di ngạc nhiên hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.175.1">“Đã bảo là bí mật làm ăn.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.176.1">“Anh Nem, xin hãy nghe tôi nói.” </span><span class="koboSpan" id="kobo.176.2">Bỏ qua việc số điện thoại của mình bị lộ, Di chỉ tâm niệm phải tận dụng hết nhẽ cú điện này. </span><span class="koboSpan" id="kobo.176.3">“Xin anh, anh ra điều kiện gì tôi cũng bằng lòng, tôi chỉ muốn anh tìm giúp một cái tên thôi… Anh Nem, cả đời này tôi chỉ có duy nhất một thỉnh cầu, xin anh…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.177.1">“Điếc cả tai, tôi nhận lời.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.178.1">“Xin anh hãy nghĩ lại, tôi… Hả?” </span><span class="koboSpan" id="kobo.178.2">Di chợt nhận ra hồi đáp không như mình tưởng. </span><span class="koboSpan" id="kobo.178.3">“Anh vừa nói… nhận lời?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.179.1">“Cô lên đây đi, để xem cô trả nổi tiền không.” </span><span class="koboSpan" id="kobo.179.2">Nói đoạn Nem dập máy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.180.1">Di vừa mừng vừa sốc, ăn vội ăn vàng hamburger rồi chạy một mạch lên tầng sáu. </span><span class="koboSpan" id="kobo.180.2">Cô còn chưa bấm chuông, Nem đã mở cửa cho cô vào, bề ngoài vẫn luộm thuộm không khác gì lần trước, nhưng mặt đã bớt râu ria.</span></p>
+
+  <p><span class="koboSpan" id="kobo.181.1">“Anh Nem… Anh đồng ý nhận yêu cầu tìm kidkit727 giúp tôi sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.182.1">“Xem cô đáp ứng được mức giá tôi đưa ra không đã.” </span><span class="koboSpan" id="kobo.182.2">Nem vòng ra sau bàn làm việc, ngồi xuống ghế.</span></p>
+
+  <p><span class="koboSpan" id="kobo.183.1">“Bao nhiêu?” </span><span class="koboSpan" id="kobo.183.2">Di căng thẳng. </span><span class="koboSpan" id="kobo.183.3">Cô đặt cái ô ướt sũng cạnh cửa ra vào, theo Nem đi tới bàn làm việc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.184.1">“Không nhiều lắm. </span><span class="koboSpan" id="kobo.184.2">Chỉ 82.</span><span class="koboSpan" id="kobo.184.3">629,5 đô.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.185.1">Nghe báo giá, Di chết điếng, vung ra hơn 80 nghìn để tìm một người là quá đắt. </span><span class="koboSpan" id="kobo.185.2">Nhưng nghĩ lại, nếu Nem cố tình gây khó dễ cho cô tự động rút lui thì có thể ra giá 1 triệu, 10 triệu, chắc chắn cô không trả nổi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.186.1">Tại sao Nem đưa ra cái giá lẻ như thế? </span><span class="koboSpan" id="kobo.186.2">Đang nghĩ mông lung, chợt một hình ảnh lóe lên trong óc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.187.1">“82.</span><span class="koboSpan" id="kobo.187.2">629,5 đô không phải là…” Di lắp bắp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.188.1">“Phải. </span><span class="koboSpan" id="kobo.188.2">Là toàn bộ tài sản trong tài khoản của cô.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.189.1">Sáng nay rút tiền ở ATM, số dư quả đúng là 82.</span><span class="koboSpan" id="kobo.189.2">629,5.</span></p>
+
+  <p><span class="koboSpan" id="kobo.190.1">“Anh… sao anh…” Di buột miệng, muốn nói lại thôi, cảm giác như bị người đàn ông thô lỗ trước mặt lột trần và săm soi từng ngóc ngách. </span><span class="koboSpan" id="kobo.190.2">Giờ cô đã hiểu tâm trạng của xăm trổ và tóc vàng khi nhìn thấy tên mình trên phong bì.</span></p>
+
+  <p><span class="koboSpan" id="kobo.191.1">“Cô có trả không?” </span><span class="koboSpan" id="kobo.191.2">Nem ngả người ra ghế.</span></p>
+
+  <p><span class="koboSpan" id="kobo.192.1">“Trả!” </span><span class="koboSpan" id="kobo.192.2">Di dứt khoát đáp, bụng bảo dạ, khó khăn lắm anh ta mới đổi ý, cơ hội này không bỏ được.</span></p>
+
+  <p><span class="koboSpan" id="kobo.193.1">Nem mỉm cười chìa tay phải, “Được, bắt tay giao kèo. </span><span class="koboSpan" id="kobo.193.2">Việc tôi làm chẳng đứng đắn gì nên đừng mong tôi sẽ kí hợp đồng tử tế với cô.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.194.1">Di tiến lên một bước bắt tay Nem. </span><span class="koboSpan" id="kobo.194.2">Anh ta gầy gò nhưng lực nắm không hề yếu. </span><span class="koboSpan" id="kobo.194.3">Cảm nhận sức mạnh tác động lên tay mình, Di tin tưởng nhất định anh ta sẽ tìm ra kẻ đầu sỏ hại chết Tiểu Văn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.195.1">“Tôi không thu tiền đặt cọc, cô phải trả toàn bộ trước, tôi mới bắt tay vào việc.” </span><span class="koboSpan" id="kobo.195.2">Nem nói tiếp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.196.1">“Được.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.197.1">“Hơn nữa, tôi chỉ nhận tiền mặt.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.198.1">“Tiền mặt? </span><span class="koboSpan" id="kobo.198.2">Có phải đủ đến cả số lẻ không?” </span><span class="koboSpan" id="kobo.198.3">Di hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.199.1">“Có. </span><span class="koboSpan" id="kobo.199.2">Thiếu một cắc tôi cũng không nhận.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.200.1">“Hiểu rồi.” </span><span class="koboSpan" id="kobo.200.2">Di gật đầu. </span><span class="koboSpan" id="kobo.200.3">“Nhưng…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.201.1">“Nhưng nhị gì? </span><span class="koboSpan" id="kobo.201.2">Bất mãn hủy kèo.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.202.1">“Không, tôi chỉ thắc mắc vì sao anh đổi ý thôi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.203.1">“Cô Di, cô biết vì sao tôi báo giá đó không?” </span><span class="koboSpan" id="kobo.203.2">Nem hỏi ngược lại.</span></p>
+
+  <p><span class="koboSpan" id="kobo.204.1">Di lắc đầu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.205.1">“Vì tôi muốn xác nhận xem cô có thực sự đặt yêu cầu này lên trên tất thảy không. </span><span class="koboSpan" id="kobo.205.2">Kết quả là, cô không do dự lấy một giây. </span><span class="koboSpan" id="kobo.205.3">Tôi từng gặp rất nhiều khách hàng bỏ cuộc ngay khi vừa nghe ra giá. </span><span class="koboSpan" id="kobo.205.4">Chính bản thân họ còn chẳng tha thiết đến cùng lại muốn người ngoài cuộc như tôi dốc sức điều tra? </span><span class="koboSpan" id="kobo.205.5">Nằm mơ đi!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.206.1">“Vậy… mấy ngày qua anh thử tôi?” </span><span class="koboSpan" id="kobo.206.2">Di hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.207.1">“Ai rảnh!” </span><span class="koboSpan" id="kobo.207.2">Nem cười nhạt. </span><span class="koboSpan" id="kobo.207.3">“Chẳng qua nhận ra vụ này hay ho hơn tôi nghĩ thôi. </span><span class="koboSpan" id="kobo.207.4">Nhưng nếu cô không tỉnh táo, đi đặt nặng tiền bạc hơn vụ án, thì hay đến mấy tôi cũng không giúp.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.208.1">“Hay ho?” </span><span class="koboSpan" id="kobo.208.2">Di không hiểu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.209.1">“Hay ho. </span><span class="koboSpan" id="kobo.209.2">Nếu chỉ là mấy vụ nhàm chán làm theo cách thông thường là ra như tôi nói hôm trước, có đánh chết tôi cũng không nhận, cô rình dưới đường đến mọc nấm lên men tôi cũng mặc kệ.” </span><span class="koboSpan" id="kobo.209.3">Nem gạt túi lạc nguyên vỏ hiệu Rùa Vàng và hai chai bia trên bàn sang bên, mở máy tính xách tay, xoay màn hình về phía Di. </span><span class="koboSpan" id="kobo.209.4">Trên màn hình lúc này là bài viết “Con khốn 14 tuổi hại cậu tôi ngồi tù” trên diễn đàn Củ Lạc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.210.1">“Đây là dữ liệu đăng nhập diễn đàn Củ Lạc cùng ngày, ghi chép lại vị trí người dùng.” </span><span class="koboSpan" id="kobo.210.2">Nem mở một cửa sổ khác chi chít kí tự.</span></p>
+
+  <p><span class="koboSpan" id="kobo.211.1">“Anh… anh đã kiểm tra giúp tôi?” </span><span class="koboSpan" id="kobo.211.2">Di ngỡ ngàng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.212.1">“Này, tỉnh hộ cái, không phải tôi ‘kiểm tra giúp cô’, mà là chán đời ngó thử một cái xem sao.” </span><span class="koboSpan" id="kobo.212.2">Nem châm biếm. </span><span class="koboSpan" id="kobo.212.3">“Dù điều tra ra tên tuổi, địa chỉ, nghề nghiệp, mười tám đời tổ tông đối phương, tôi cũng không định nói cho cô biết.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.213.1">Di chửi thề trong bụng nhưng không nổi cáu ra ngoài. </span><span class="koboSpan" id="kobo.213.2">Dù gì Nem cũng là người có khả năng tìm ra kidkit727, cô cứ tạm thời nhịn đã.</span></p>
+
+  <p><span class="koboSpan" id="kobo.214.1">“Đây là IP của kidkit727.” </span><span class="koboSpan" id="kobo.214.2">Nem chỉ một dãy số. </span><span class="koboSpan" id="kobo.214.3">212.</span><span class="koboSpan" id="kobo.214.4">117.</span><span class="koboSpan" id="kobo.214.5">180.</span><span class="koboSpan" id="kobo.214.6">21.</span></p>
+
+  <p><span class="koboSpan" id="kobo.215.1">“IP là gì?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.216.1">Nem nhìn Di như nhìn sinh vật lạ, “IP mà không biết?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.217.1">“Tôi không thạo máy tính.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.218.1">“Âm lịch.” </span><span class="koboSpan" id="kobo.218.2">Nem hứ một tiếng khinh thường. </span><span class="koboSpan" id="kobo.218.3">“Địa chỉ IP, viết tắt của ‘Internet Protocol address’, nghĩa là địa chỉ giao thức Internet, nói đơn giản thì là số hiệu nhận dạng vị trí máy khi lên mạng. </span><span class="koboSpan" id="kobo.218.4">Giống như khi đi ngân hàng hoặc bệnh viện cô đều phải lấy số, thì khi cô kết nối mạng, nhà cung cấp dịch vụ Internet sẽ gán cho cô một dãy số độc nhất dùng để nhận dạng mỗi lúc cô lên mạng lướt web, chơi game hay chat với người khác.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.219.1">“Cả lúc vào diễn đàn sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.220.1">“Cứ vào mạng là sẽ được gán số. </span><span class="koboSpan" id="kobo.220.2">Mỗi khi viết gì trên diễn đàn, thì server… hừm, thì ‘máy’ của diễn đàn sẽ ghi lại địa chỉ IP của người viết. </span><span class="koboSpan" id="kobo.220.3">Có địa chỉ IP là truy ngược lại được vị trí máy tính của người viết. </span><span class="koboSpan" id="kobo.220.4">Hiểu chưa?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.221.1">Di căng thẳng gật đầu, “Thế nên anh đã biết nơi kidkit727 đăng bài?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.222.1">Nem cười hậm hực, “Biết, thị trấn Steinsel miền Trung Luxembourg.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.223.1">“Châu Âu?” </span><span class="koboSpan" id="kobo.223.2">Di thảng thốt. </span><span class="koboSpan" id="kobo.223.3">“kidkit727 không ở Hồng Kông ư?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.224.1">“Không, gã giở mánh thôi.” </span><span class="koboSpan" id="kobo.224.2">Nem chỉ vào dòng địa chỉ IP trên màn hình. </span><span class="koboSpan" id="kobo.224.3">“Địa chỉ này là một relay.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.225.1">“Relay?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.226.1">“Đại để là ‘trạm trung chuyển’. </span><span class="koboSpan" id="kobo.226.2">Có rất nhiều cách che giấu thân phận trên mạng, trong đó cách đơn giản và hữu hiệu nhất là sử dụng trạm trung chuyển. </span><span class="koboSpan" id="kobo.226.3">Trước tiên người dùng sẽ kết nối với máy tính ở nước ngoài, rồi thông qua máy tính đó kết nối với web truy cập, thế nên trang web truy cập chỉ ghi lại địa chỉ máy tính nước ngoài mà không hề biết rằng máy tính nước ngoài sẽ chuyển thông tin về lại máy khách thực sự.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.227.1">“Vậy chẳng phải chúng ta chỉ việc tìm bản ghi lịch sử máy tính ở Luxembourg hôm đó là có thể biết địa chỉ IP thật của kidkit727 sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.228.1">Nem nhướng một bên mày. </span><span class="koboSpan" id="kobo.228.2">“Xem ra không dốt lắm nhỉ! </span><span class="koboSpan" id="kobo.228.3">Cô nói đúng, về lý thuyết có thể làm thế. </span><span class="koboSpan" id="kobo.228.4">Nhưng thực tế thì không.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.229.1">“Tại sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.230.1">“Bởi tôi cá chắc đối phương không chỉ dùng một trạm trung chuyển. </span><span class="koboSpan" id="kobo.230.2">IP Luxembourg này đã vào cơ sở dữ liệu của tôi từ lâu, là một trong những trạm trung chuyển mà các hacker làng nhàng hay dùng, trạm này thuộc dạng Tor Network, có nghĩa là ‘mạng lưới định tuyến củ hành’.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.231.1">“Củ hành?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.232.1">“Nguồn gốc cái tên này liên quan tới nguyên lý của mạng Internet, tôi sẽ không đề cập chi tiết. </span><span class="koboSpan" id="kobo.232.2">Tóm lại đây là một mạng máy tính nặc danh khổng lồ. </span><span class="koboSpan" id="kobo.232.3">Rất nhiều người sử dụng nó cho mục đích duy nhất là xem ‘web đen’</span><a href="#id25" epub:type="noteref" id="b25"><span class="koboSpan" id="kobo.233.1">*</span></a><span class="koboSpan" id="kobo.234.1">, tức các trang web cung cấp thông tin kín, như khiêu dâm hoặc buôn bán ma túy. </span><span class="koboSpan" id="kobo.234.2">Ban đầu Tor được nghiên cứu phát triển nhằm giúp người dùng che giấu hành tung trên mạng. </span><span class="koboSpan" id="kobo.234.3">Cách tiện nhất để lướt web bằng Tor là dùng một phần mềm tự do</span><a href="#id26" epub:type="noteref" id="b26"><span class="koboSpan" id="kobo.235.1">*</span></a><span class="koboSpan" id="kobo.236.1"> có tên ‘mạng lưới định tuyến củ hành’. </span><span class="koboSpan" id="kobo.236.2">Nó có thể tự động nhảy cóc giữa mấy nghìn trạm trung chuyển trên toàn cầu, nên dù tôi hack được nhà mạng bên Luxembourg, lấy được bản ghi hôm đó, đối chiếu cẩn thận từng đoạn thông tin trong khoảng thời gian này của địa chỉ IP, chắc sẽ tìm ra vị trí người dùng là ở Mỹ, Pháp hoặc Brazil gì đó, rồi phải lặp đi lặp lại công đoạn điều tra này vài lần nữa, đi qua nhiều trạm trung chuyển nữa mới có thể tìm ra vị trí thực sự của máy khách. </span><span class="koboSpan" id="kobo.236.3">Nhưng chỉ một trạm trung chuyển trong số đó không lưu giữ bản ghi thôi là chúng ta mất dấu điều tra tiếp, tính ra còn phức tạp hơn mò kim đáy bể.”</span></p>
+
+  <aside epub:type="footnote" id="id25">
+    <a href="#b25" style="display: none;"><span class="koboSpan" id="kobo.237.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.238.1">Dark web. </span><span class="koboSpan" id="kobo.238.2">Những trang mạng đã được mã hóa, không thể truy ra bảng công cụ tìm kiếm thông thường mà phải sử dụng phần mềm chuyên biệt.</span></p>
+  </aside>
+
+  <aside epub:type="footnote" id="id26">
+    <a href="#b26" style="display: none;"><span class="koboSpan" id="kobo.239.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.240.1">Free software. </span><span class="koboSpan" id="kobo.240.2">Phần mềm máy tính cho phép người dùng tự do xem, thay đổi, sử dụng và phân phối mà không gặp bất cứ hạn chế nào.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.241.1">Di nghe xong không khỏi nhụt chí.</span></p>
+
+  <p><span class="koboSpan" id="kobo.242.1">“Điều tra IP không xong, tôi đành thử tìm manh mối khác. </span><span class="koboSpan" id="kobo.242.2">kidkit727 mới đăng kí tài khoản trên diễn đàn Củ Lạc đúng hôm đăng bài.” </span><span class="koboSpan" id="kobo.242.3">Nem chỉ một dòng chữ trên màn hình, “Hộp thư điện tử gã dùng là rat10934@yandex.</span><span class="koboSpan" id="kobo.242.4">com, một dịch vụ email miễn phí của Nga, đăng kí mà không cần xác nhận bằng tin nhắn SMS. </span><span class="koboSpan" id="kobo.242.5">Tôi cá đây là hộp thư gã chỉ dùng một lần.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.243.1">Nem di chuyển ngón trỏ men theo dòng kidkit727 sang bên phải, dừng lại ở một cột.</span></p>
+
+  <p><span class="koboSpan" id="kobo.244.1">“Đáng khen hơn cả, kidkit727 còn cẩn thận xóa đi một thông tin khác. </span><span class="koboSpan" id="kobo.244.2">Khi người dùng lướt web, trình duyệt web sẽ cung cấp một dãy chữ số tiết lộ đặc trưng của thiết bị mà người dùng sử dụng, gọi là ‘user agent</span><a href="#id28" epub:type="noteref" id="b28"><span class="koboSpan" id="kobo.245.1">*</span></a><span class="koboSpan" id="kobo.246.1">’. </span><span class="koboSpan" id="kobo.246.2">Dãy số này sẽ cho biết người ta dùng hệ điều hành Microsoft Windows hay Mac OS, dùng điện thoại di động hay máy tính bảng, thậm chí biết cả số phiên bản cập nhật của hệ điều hành và trình duyệt, ví dụ, Windows NT 6.</span><span class="koboSpan" id="kobo.246.3">1 là mã số của Microsoft Windows 7, OPiOS thể hiện sử dụng trình duyệt Opera trên iOS của Apple. </span><span class="koboSpan" id="kobo.246.4">Nhưng theo bản ghi của diễn đàn Củ Lạc, user agent của kidkit727 chỉ có một chữ.”</span></p>
+
+  <aside epub:type="footnote" id="id28">
+    <a href="#b28" style="display: none;"><span class="koboSpan" id="kobo.247.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.248.1">Lịch sử thao tác người dùng.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.249.1">Di nhìn màn hình, thấy cột HTTP_USER_AGENT chứa rất nhiều số và chữ tiếng Anh loằng ngoằng, xen lẫn các thuật ngữ Mozilla/5.</span><span class="koboSpan" id="kobo.249.2">0, AppleWebkit, Chrome… Riêng dòng của kidkit727 chỉ có độc một chữ “X”.</span></p>
+
+  <p><span class="koboSpan" id="kobo.250.1">“X?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.251.1">“Chưa từng có user agent nào ngắn như vậy, đây là do người dùng tự nhập thủ công. </span><span class="koboSpan" id="kobo.251.2">Một số trình duyệt web cho phép người dùng thay đổi user agent, ngụy trang thành nền tảng hoặc trình duyệt web khác, củ hành là một trong số đó.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.252.1">“Anh bảo củ hành là một trong số đó, vậy kidkit727 cũng có thể dùng trình duyệt web khác? </span><span class="koboSpan" id="kobo.252.2">Hoặc gã không dùng nhiều trạm trung chuyển mà chỉ dùng ‘một trạm’ thì sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.253.1">“Cô Di, cô vẫn chưa hiểu à.” </span><span class="koboSpan" id="kobo.253.2">Nem ngả người ra ghế, mười ngón tay đan vào nhau đặt trên bàn. </span><span class="koboSpan" id="kobo.253.3">“Có dùng củ hành hay không vẫn không thể chối bỏ một điều là, gã ra sức xóa dấu vết của mình. </span><span class="koboSpan" id="kobo.253.4">kidkit727 đăng kí tài khoản trên diễn đàn Củ Lạc đúng ngày tung bài minh oan lên mạng, gã chỉ đăng nhập một lần để đăng bài, sau đó không thấy ghi lại bất kì hoạt động nào khác. </span><span class="koboSpan" id="kobo.253.5">Chưa kể gã còn dùng trạm trung chuyển khi đăng nhập và đăng bài, ngay cả dữ liệu về trình duyệt và nền tảng máy tính cũng bị xóa sạch, gần như che giấu hoàn toàn lai lịch bản thân. </span><span class="koboSpan" id="kobo.253.6">Nếu đăng bài chỉ để giải oan cho Bình, tại sao phải tốn thời gian thao tác thừa thãi như thế? </span><span class="koboSpan" id="kobo.253.7">Gã làm vậy chủ yếu vì muốn nói, ‘Tôi thừa biết bài viết sẽ gây rúng động dư luận, khiến mọi người truy tìm thân phận tôi, nhưng tôi không muốn lộ mặt.’</span><span class="koboSpan" id="kobo.253.8">”</span></p>
+
+  <p><span class="koboSpan" id="kobo.254.1">Đến lúc này mới bắt kịp suy nghĩ của Nem, Di chết sững.</span></p>
+
+  <p><span class="koboSpan" id="kobo.255.1">“Người đăng bài viết cố tình dựng chuyện tạo lùm xùm, hơn nữa gã còn có trình độ IT và am hiểu kĩ thuật máy tính. </span><span class="koboSpan" id="kobo.255.2">Vấn đề duy nhất bây giờ là, nhân vật bí hiểm này thật lòng muốn tẩy trắng cho Bình, hay muốn châm ngòi bạo lực mạng, lợi dụng vụ việc để hãm hại em cô?”</span></p>
+</div></div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // shrink  menu
+      // $(document).ready(function() {
+      // $('li').click(function(e) {
+      // e.stopPropagation();
+      // $(this).next('ul').slideToggle(100);
+      // });
+      // });
+
+      $(document).ready(function() {
+
+
+				window.addEventListener("beforeprint", function(event) {
+					$(".main").animate({ margin: "0 auto", marginLeft: 0 }, "linear");
+					$(".sidebar").hide()
+
+				});
+				window.addEventListener("afterprint", function(event) { 
+					$(".sidebar").show()
+					$(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+				});
+      //fixed定位 高度满屏
+      $(".sidebar").height($(window).height());
+
+      //实现显示隐藏可以删除
+      $(".sidebar").on("mouseover", function() {
+        $(".closeMenu > span").css({
+          opacity: 1
+        });
+      });
+      $(".sidebar").on("mouseleave blur", function() {
+        $(".closeMenu > span").css({
+          opacity: 0
+        });
+      });
+
+      var moveLeft = $("#list_left").width();
+
+      //设置内容快初始位置
+      $(".main").css({ marginLeft: moveLeft });
+
+      //判断隐藏显示核心代码
+      var isShow = true;
+      $(".closeMenu span").click(function() {
+        $(this)
+          .hide()
+          .siblings()
+          .show();
+        if (isShow) {
+          $("#list_left").animate(
+            {
+              marginLeft: -(moveLeft - 30) //30 刚好显示icon图标
+            },
+            200,
+            "linear",
+            function() {
+              isShow = false;
+              $(".closeMenu > span").css({
+                opacity: 1
+              });
+            }
+          );
+          $(".main").animate({ margin: "0 auto", marginLeft: 15 }, "linear");
+        } else {
+          $("#list_left").animate(
+            {
+              marginLeft: 0
+            },
+            200,
+            "linear",
+            function() {
+              isShow = true;
+            }
+          );
+          $(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+        }
+      });
+
+      $(window).resize(function() {
+        $("#list_left").height($(window).height());
+      });
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<title>ntl - Lời bạt</title>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+		<link rel="stylesheet" href="kte-css/stylehacks.css" />
+
+    <!-- <link rel="stylesheet" href="./stylesheet.css" /> -->
+    <script
+      src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/css">
+     html body {
+        font-family: Consolas, FangSong, Lantinghei SC, Helvetica Neue,
+          Helvetica, Arial, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1,
+          STHeitiSC-Light, simsun, \\5b8b\4f53, WenQuanYi Zen Hei,
+          WenQuanYi Micro Hei, "sans-serif" !important;
+          /* -webkit-font-smoothing: antialiased  !important; */
+          font-size: 18px !important;
+          height: 100% !important;
+      }
+		 	pre {
+        font-size: 20px !important;
+			}
+      .sidebar {
+        font-size: 15px !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        background-color: #324057;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        width: 300px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        -webkit-box-shadow: #ccc 0 0 10px;
+        box-shadow: #ccc 0 0 10px;
+        box-sizing: border-box;
+      }
+      .main {
+        margin-left: 0;
+        height: 100%;
+      }
+
+      /*菜单显示按钮*/
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span:last-child {
+        display: none;
+      }
+      /* Sidebar navigation */
+      .nav-sidebar {
+        margin-right: 30px;
+        padding: 20px 0;
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+      .nav-sidebar > li > a {
+        color: #337ab7;
+      }
+      .menuItem:hover > a {
+        background-color: #eee;
+      }
+      .nav .active > a,
+      .nav-sidebar .active:hover > a {
+        background-color: #428bca;
+        color: #fff;
+      }
+			.lightli {
+
+        color: red;
+			}
+      .index {
+        /* position: relative; */
+        /* top: 45%; */
+        /* text-align: center; */
+        /* font-size: 38px; */
+        /* color: #ccc; */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="list_left">
+      <ul class="nav nav-sidebar ">
+<li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/></svg> </a></li>
+<li><a href="md.html">Mở đầu</a></li>
+<li><a href="ch01.html">1.</a></li>
+<li><a href="ch02.html">2.</a></li>
+<li><a href="ch03.html">3.</a></li>
+<li><a href="ch04.html">4.</a></li>
+<li><a href="ch05.html">5.</a></li>
+<li><a href="ch06.html">6.</a></li>
+<li><a href="ch07.html">7.</a></li>
+<li><a href="ch08.html">8.</a></li>
+<li><a href="ch09.html">9.</a></li>
+<li><a href="ch10.html">10.</a></li>
+<li><a href="pk.html">Phần kết</a></li>
+<li><a href="lb.html">Lời bạt</a></li>
+</ul>
+      <div class="closeMenu">
+        <span class="glyphicon glyphicon-triangle-left"></span>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="index">
+        <div><div id="book-columns"><div id="book-inner">
+  <h1 style="text-align: center; margin-right: 0;" title="Lời bạt"><span class="koboSpan" id="kobo.1.1">LỜI BẠT</span></h1>
+
+  <p><span class="koboSpan" id="kobo.2.1">Không ngờ tác phẩm lại “nặng” thế này.</span></p>
+
+  <p><span class="koboSpan" id="kobo.3.1">Sau khi hoàn thành một cuốn tiểu thuyết khác năm 2015, tôi bắt đầu cấu tứ cốt truyện </span><i><span class="koboSpan" id="kobo.4.1">Người trong lưới</span></i><span class="koboSpan" id="kobo.5.1"> (dĩ nhiên lúc đó còn chưa nghĩ ra tên sách</span><a href="#id113" epub:type="noteref" id="b113"><span class="koboSpan" id="kobo.6.1">*</span></a><span class="koboSpan" id="kobo.7.1">), bụng bảo dạ viết một tác phẩm gọn gàng thôi, tầm 80-90 nghìn chữ. </span><span class="koboSpan" id="kobo.7.2">Rút kinh nghiệm từ </span><i><span class="koboSpan" id="kobo.8.1">13.</span><span class="koboSpan" id="kobo.8.2">67</span></i><span class="koboSpan" id="kobo.9.1">, sách quá dày thì rất bất tiện cho việc xuất bản, mất thời gian hiệu đính, sắp chữ, khó khăn khi cân đối chi phí in ấn, giá thành…. </span><span class="koboSpan" id="kobo.9.2">Trên phương châm đó, tôi nhanh chóng quyết định đề tài, việc lập dàn ý cơ bản và xây dựng các nhân vật.</span></p>
+
+  <aside epub:type="footnote" id="id113">
+    <a href="#b113" style="display: none;"><span class="koboSpan" id="kobo.10.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.11.1">Nguyên văn: </span><span class="koboSpan" id="kobo.11.2">Võng nội nhân. </span><span class="koboSpan" id="kobo.11.3">“Võng” trong tiếng Trung là từ đa nghĩa (mạng Internet, cái lưới). </span><span class="koboSpan" id="kobo.11.4">Tính đến 2020, </span><i><span class="koboSpan" id="kobo.12.1">Người trong lưới</span></i><span class="koboSpan" id="kobo.13.1"> đã xuất bản ở Hàn Quốc, Đài Loan, Trung Quốc và Mỹ. </span><span class="koboSpan" id="kobo.13.2">Phiên bản Hàn cũng để </span><i><span class="koboSpan" id="kobo.14.1">Võng nội nhân</span></i><span class="koboSpan" id="kobo.15.1">. </span><span class="koboSpan" id="kobo.15.2">Phiên bản Mỹ để </span><i><span class="koboSpan" id="kobo.16.1">Second Sister</span></i><span class="koboSpan" id="kobo.17.1"> (Em gái). </span><span class="koboSpan" id="kobo.17.2">Tuy nhiên Chan Ho Kei đặt tên tiếng Anh cho tác phẩm này là </span><i><span class="koboSpan" id="kobo.18.1">In the Net</span></i><span class="koboSpan" id="kobo.19.1">, mang âm na ná “Internet”, lại mang nghĩa “trong lưới”. </span><span class="koboSpan" id="kobo.19.2">Theo đó, “net” ở đây chỉ mạng Internet (hiện trường gây án và công cụ phá án trực quan trong tác phẩm), đồng thời chỉ cái lưới Nem giăng ra để bắt thủ phạm lẫn cái lưới vô hình (chính sách, nếp sống công nghệ) đang ràng buộc thói quen, quan hệ, tư tưởng của con người Hồng Kông hiện đại.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.20.1">Tháng Chín năm ấy, khi đến Đài Loan tham dự Giải thưởng Tiểu thuyết Trinh thám Soji Shimada, tôi đã giới thiệu nội dung cuốn tiểu thuyết này với tổng biên tập một nhà xuất bản ở một góc hội trường. </span><span class="koboSpan" id="kobo.20.2">“Bốn tháng,” tôi nói, “Khoảng bốn tháng là tôi viết xong.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.21.1">Trời ạ, tôi chủ quan quá.</span></p>
+
+  <p><span class="koboSpan" id="kobo.22.1">Trước khi đến Đài Loan, tôi đã viết xong phần mở đầu, thầm nhủ với nhịp độ này bốn tháng thừa sức viết 80 nghìn chữ. </span><span class="koboSpan" id="kobo.22.2">Bốn tháng sau, tôi viết được gần 80 nghìn chữ thật, nhưng tình tiết truyện chẳng biết đã tăng thêm tự khi nào, nội dung đã hoàn thành thậm chí chưa được nửa cốt truyện. </span><span class="koboSpan" id="kobo.22.3">Tôi chỉ còn nước mặt dày xin xỏ nhà xuất bản cho thêm thời gian. </span><span class="koboSpan" id="kobo.22.4">Tôi không nhớ mình đã khất bản thảo bao nhiêu lần, độ dài truyện cũng ngày một dài thêm. </span><span class="koboSpan" id="kobo.22.5">“Xem ra phải viết 150 nghìn chữ mới xong”, “Không được, 200 nghìn chữ mới kể hết chuyện”, “260 nghìn chữ vẫn không đủ”… Bản thảo cuối cùng vượt quá 300 nghìn chữ, nhỉnh hơn cả 13.</span><span class="koboSpan" id="kobo.22.6">67. </span><span class="koboSpan" id="kobo.22.7">Gay quá đi mất!</span></p>
+
+  <p><span class="koboSpan" id="kobo.23.1">Sở dĩ có sự thay đổi này là vì tôi không thể viết với nhịp điệu như trước kia được. </span><span class="koboSpan" id="kobo.23.2">Ở 13.</span><span class="koboSpan" id="kobo.23.3">67, tôi tập trung chủ yếu vào sự kiện, để manh mối chính dẫn dắt cốt truyện, tránh mô tả nội tâm không cần thiết nên chỉ cần 290 nghìn chữ là viết được cuốn tiểu thuyết gồm sáu sự kiện trải dài suốt bốn mươi sáu năm. </span><span class="koboSpan" id="kobo.23.4">Nhưng với cuốn tiểu thuyết này, càng viết tôi càng cảm thấy không thể làm như thế. </span><span class="koboSpan" id="kobo.23.5">Tôi cần số trang nhiều hơn để miêu tả tính cách và suy nghĩ của từng nhân vật. </span><span class="koboSpan" id="kobo.23.6">Nói nghe có vẻ tham vọng, nhưng tôi mong sao truyền tải được máu thịt và tâm hồn mỗi nhân vật đến cho độc giả.</span></p>
+
+  <p><i><span class="koboSpan" id="kobo.24.1">Người trong lưới</span></i><span class="koboSpan" id="kobo.25.1"> là câu chuyện liên quan đến “người”.</span></p>
+
+  <p><span class="koboSpan" id="kobo.26.1">Đây là tiểu thuyết trinh thám nên không thể thiếu câu đố và mưu kế, nhưng bên cạnh đó, tôi còn tập trung miêu tả cả lập trường, suy nghĩ cùng cảm xúc của từng nhân vật. </span><span class="koboSpan" id="kobo.26.2">Mặc dù trong truyện có sử dụng thủ pháp cá trích đỏ</span><a href="#id114" epub:type="noteref" id="b114"><span class="koboSpan" id="kobo.27.1">*</span></a><span class="koboSpan" id="kobo.28.1"> để đánh lạc hướng suy luận, song tôi vẫn gắng viết về các nhân vật như những thực thể sống động chứ không phải “công cụ” phục vụ phá án đơn thuần, cốt để độc giả nhìn nhận họ như những người dân đang thực sự sống trong lòng Hồng Kông năm 2015.</span></p>
+
+  <aside epub:type="footnote" id="id114">
+    <a href="#b114" style="display: none;"><span class="koboSpan" id="kobo.29.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.30.1">Thuật ngữ chỉ những chi tiết được tạo ra với mục đích gây hiểu nhầm, đánh lạc hướng người đọc hoặc người nghe khỏi điều quan trọng.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.31.1">Nhân vật trong truyện của tôi đến từ nhiều tầng lớp xã hội, tuy không thể đại diện toàn bộ người dân Hồng Kông, nhưng coi như cũng có diện mạo của các giai tầng khác nhau, tôi đã thử trình bày sự khác biệt giữa họ qua tình tiết truyện (thành công hay không, xin nhường lại cho độc giả quyết định).</span></p>
+
+  <p><span class="koboSpan" id="kobo.32.1">Một phóng viên từng hỏi tôi, sau khi sáng tác </span><i><span class="koboSpan" id="kobo.33.1">13.</span><span class="koboSpan" id="kobo.33.2">67 </span></i><span class="koboSpan" id="kobo.34.1">về đề tài “Hồng Kông xưa”, liệu có định sáng tác về “Hồng Kông nay” không, tôi nghĩ tác phẩm này chính là câu trả lời.</span></p>
+
+  <p><span class="koboSpan" id="kobo.35.1">Lại nói về tiến độ sáng tác. </span><span class="koboSpan" id="kobo.35.2">Tôi cứ lần lữa mãi, rốt cuộc vẫn không thể nộp đúng hạn chót tháng Mười hai năm 2016. </span><span class="koboSpan" id="kobo.35.3">Lúc ấy đang viết tới chương 8, tôi chán nản vô cùng. </span><span class="koboSpan" id="kobo.35.4">Vì muốn hoàn thành bản thảo trước thời hạn, tôi càng viết càng cẩu thả, cảm giác chỉ muốn “viết cho xong” chứ không phải “viết cho hay”, đi ngược lại tôn chỉ của bản thân. </span><span class="koboSpan" id="kobo.35.5">Sau khi được nhà xuất bản thông cảm, cho lùi hạn nộp thêm lần nữa, tôi hạ quyết tâm giam mình lại, cắt đứt mọi liên lạc, gạt bỏ mọi phiền nhiễu, dành cả cuộc sống chỉ để tập trung vào sáng tác. </span><span class="koboSpan" id="kobo.35.6">Khoảng thời gian đó, tinh thần tôi dâng cao đến đỉnh điểm. </span><span class="koboSpan" id="kobo.35.7">Hơn ba tháng sau, cuối cùng tôi cũng hoàn thành tiểu thuyết theo đúng tiến độ của mình, đồng thời cũng mắc cả đống bệnh, giảm cả đống cân, tới giờ vẫn chưa hồi phục.</span></p>
+
+  <p><span class="koboSpan" id="kobo.36.1">Tôi muốn nói rất nhiều điều qua </span><i><span class="koboSpan" id="kobo.37.1">Người trong lưới, </span></i><span class="koboSpan" id="kobo.38.1">nhưng như mọi khi, tôi xin nhường quyền cảm nhận lại cho bạn đọc. </span><span class="koboSpan" id="kobo.38.2">Vì nếu tác giả giải thích tường tận thì còn gì thú vị nữa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.39.1">Tôi chỉ chú thích một điều này, cái tên “tiệm mì Lai Ký” bán mì vằn thắn trong sách là tôi mượn từ tiểu thuyết khoa học viễn tưởng </span><i><span class="koboSpan" id="kobo.40.1">Phần mềm hình nhân</span></i><span class="koboSpan" id="kobo.41.1"> của anh Đàm Kiếm. </span><span class="koboSpan" id="kobo.41.2">Có lần tôi cười bảo anh, bối cảnh hai tác phẩm của anh em mình đều là khu Tây Hoàn đảo Hồng Kông, nhưng ở hai vũ trụ song song. </span><span class="koboSpan" id="kobo.41.3">Tất nhiên tiệm này không có thật ngoài đời, nếu muốn thưởng thức hương vị của nó, các bạn có thể tham khảo vài tiệm mì nhỏ ở quận Tây đảo Hồng Kông, càng sớm càng tốt, vì tôi không biết sau này còn bao nhiêu tiệm chịu được mức giá thuê cắt cổ để tiếp tục tồn tại. </span><span class="koboSpan" id="kobo.41.4">Có lẽ chẳng bao lâu nữa thế chỗ chúng sẽ là đại lý bất động sản, nhà hàng cao cấp hay cửa hàng mỹ phẩm phục vụ khách đại lục.</span></p>
+
+  <p><span class="koboSpan" id="kobo.42.1">Tác phẩm này xuất bản được là nhờ công sức của rất nhiều người, nhà xuất bản, biên tập viên, người đại diện bản quyền và các cộng sự, nhờ mọi người mà tiểu thuyết Hoa ngữ mới có thể từng bước tiến ra thế giới. </span><i><span class="koboSpan" id="kobo.43.1">Người trong lưới</span></i><span class="koboSpan" id="kobo.44.1"> được phía Hàn Quốc hỏi mua bản quyền từ khi chưa xuất bản, đúng là làm tôi hết hồn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.45.1">Cảm ơn những người tiến cử, cảm ơn các đồng nghiệp cùng là thành viên Hiệp hội Trinh thám Đài Loan với tôi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.46.1">Tất nhiên phải cảm ơn cả thầy Soji Shimada, nếu không có Giải thưởng Soji Shimada, chúng tôi đã không tiến xa được nhường này.</span></p>
+
+  <p><span class="koboSpan" id="kobo.47.1">Cuối cùng, cảm ơn bạn vì đã đọc đến đây.</span></p>
+
+  <p class="right"><b><span class="koboSpan" id="kobo.48.1">Chan Ho Kei</span></b><br><span class="koboSpan" id="kobo.49.1"> 20/06/2017</span></p>
+</div></div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // shrink  menu
+      // $(document).ready(function() {
+      // $('li').click(function(e) {
+      // e.stopPropagation();
+      // $(this).next('ul').slideToggle(100);
+      // });
+      // });
+
+      $(document).ready(function() {
+
+
+				window.addEventListener("beforeprint", function(event) {
+					$(".main").animate({ margin: "0 auto", marginLeft: 0 }, "linear");
+					$(".sidebar").hide()
+
+				});
+				window.addEventListener("afterprint", function(event) { 
+					$(".sidebar").show()
+					$(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+				});
+      //fixed定位 高度满屏
+      $(".sidebar").height($(window).height());
+
+      //实现显示隐藏可以删除
+      $(".sidebar").on("mouseover", function() {
+        $(".closeMenu > span").css({
+          opacity: 1
+        });
+      });
+      $(".sidebar").on("mouseleave blur", function() {
+        $(".closeMenu > span").css({
+          opacity: 0
+        });
+      });
+
+      var moveLeft = $("#list_left").width();
+
+      //设置内容快初始位置
+      $(".main").css({ marginLeft: moveLeft });
+
+      //判断隐藏显示核心代码
+      var isShow = true;
+      $(".closeMenu span").click(function() {
+        $(this)
+          .hide()
+          .siblings()
+          .show();
+        if (isShow) {
+          $("#list_left").animate(
+            {
+              marginLeft: -(moveLeft - 30) //30 刚好显示icon图标
+            },
+            200,
+            "linear",
+            function() {
+              isShow = false;
+              $(".closeMenu > span").css({
+                opacity: 1
+              });
+            }
+          );
+          $(".main").animate({ margin: "0 auto", marginLeft: 15 }, "linear");
+        } else {
+          $("#list_left").animate(
+            {
+              marginLeft: 0
+            },
+            200,
+            "linear",
+            function() {
+              isShow = true;
+            }
+          );
+          $(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+        }
+      });
+
+      $(window).resize(function() {
+        $("#list_left").height($(window).height());
+      });
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

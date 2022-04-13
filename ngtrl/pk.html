@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<title>ntl - Phần kết</title>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+		<link rel="stylesheet" href="kte-css/stylehacks.css" />
+
+    <!-- <link rel="stylesheet" href="./stylesheet.css" /> -->
+    <script
+      src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/css">
+     html body {
+        font-family: Consolas, FangSong, Lantinghei SC, Helvetica Neue,
+          Helvetica, Arial, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1,
+          STHeitiSC-Light, simsun, \\5b8b\4f53, WenQuanYi Zen Hei,
+          WenQuanYi Micro Hei, "sans-serif" !important;
+          /* -webkit-font-smoothing: antialiased  !important; */
+          font-size: 18px !important;
+          height: 100% !important;
+      }
+		 	pre {
+        font-size: 20px !important;
+			}
+      .sidebar {
+        font-size: 15px !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        background-color: #324057;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        width: 300px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        -webkit-box-shadow: #ccc 0 0 10px;
+        box-shadow: #ccc 0 0 10px;
+        box-sizing: border-box;
+      }
+      .main {
+        margin-left: 0;
+        height: 100%;
+      }
+
+      /*菜单显示按钮*/
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span:last-child {
+        display: none;
+      }
+      /* Sidebar navigation */
+      .nav-sidebar {
+        margin-right: 30px;
+        padding: 20px 0;
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+      .nav-sidebar > li > a {
+        color: #337ab7;
+      }
+      .menuItem:hover > a {
+        background-color: #eee;
+      }
+      .nav .active > a,
+      .nav-sidebar .active:hover > a {
+        background-color: #428bca;
+        color: #fff;
+      }
+			.lightli {
+
+        color: red;
+			}
+      .index {
+        /* position: relative; */
+        /* top: 45%; */
+        /* text-align: center; */
+        /* font-size: 38px; */
+        /* color: #ccc; */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="list_left">
+      <ul class="nav nav-sidebar ">
+<li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/></svg> </a></li>
+<li><a href="md.html">Mở đầu</a></li>
+<li><a href="ch01.html">1.</a></li>
+<li><a href="ch02.html">2.</a></li>
+<li><a href="ch03.html">3.</a></li>
+<li><a href="ch04.html">4.</a></li>
+<li><a href="ch05.html">5.</a></li>
+<li><a href="ch06.html">6.</a></li>
+<li><a href="ch07.html">7.</a></li>
+<li><a href="ch08.html">8.</a></li>
+<li><a href="ch09.html">9.</a></li>
+<li><a href="ch10.html">10.</a></li>
+<li><a href="pk.html">Phần kết</a></li>
+<li><a href="lb.html">Lời bạt</a></li>
+</ul>
+      <div class="closeMenu">
+        <span class="glyphicon glyphicon-triangle-left"></span>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="index">
+        <div><div id="book-columns"><div id="book-inner">
+  <h1 style="text-align: center; margin-right: 0;" title="Phần kết"><span class="koboSpan" id="kobo.1.1">PHẦN KẾT</span></h1>
+
+  <p><span class="koboSpan" id="kobo.2.1">“Di ơi, mấy cái tách này để ở đâu?” </span><span class="koboSpan" id="kobo.2.2">Wendy lôi tách trà trong thùng các tông ra hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.3.1">“À, cứ đặt trên giá cạnh tủ lạnh là được ạ, phiền chị quá.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.4.1">Sáng Chủ nhật 12 tháng Bảy, Wendy phụ Di chuyển nhà, còn nhờ cả chú họ là thám tử Mạc đến giúp một tay. </span><span class="koboSpan" id="kobo.4.2">Ông ta lái xe tải cỡ nhỏ, chở những thùng đồ đạc linh tinh Di đã đóng sẵn, bê giúp đống thùng các tông lên tầng bốn rồi cáo lui trước do bận việc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.5.1">Wendy ở lại, bận rộn với việc dỡ thùng, sắp xếp đồ đạc, luôn miệng tấm tắc khen nhà mới của Di, rằng nhìn bên ngoài rõ ràng là một đường lâu cũ nát, thế mà phòng ốc bên trong sáng sủa sạch sẽ, lại còn bày biện gọn gàng ngăn nắp. </span><span class="koboSpan" id="kobo.5.2">Mấy ngày trước, lần đầu bước chân vào căn hộ này, Di cũng kinh ngạc y hệt. </span><span class="koboSpan" id="kobo.5.3">Nội thất cơ bản đều có đủ, bàn ghế phủ vải trắng, rõ ràng không có ai ở nhưng sàn nhà, phòng tắm khá sạch sẽ. </span><span class="koboSpan" id="kobo.5.4">Các thiết bị điện gia dụng và đồ đạc cần thiết đều có sẵn, cô đỡ phải khuân giá đựng, giường với tủ quần áo sang nữa. </span><span class="koboSpan" id="kobo.5.5">Mấy món đồ cũ bán cũng chẳng được mấy đồng, Di quyết định tặng cho hàng xóm nào cần, coi như quà chia tay.</span></p>
+
+  <p><span class="koboSpan" id="kobo.6.1">Di hơi luyến tiếc nơi ở cũ, nhưng cũng biết đây là cơ hội để bắt đầu cuộc sống mới. </span><span class="koboSpan" id="kobo.6.2">Báo chí đưa tin sau khi Nam bị bắt, đã có vài nữ sinh bị hại ra mặt làm chứng, khiến gã phải chịu trách nhiệm hình sự khá nặng. </span><span class="koboSpan" id="kobo.6.3">Di không hứng thú tiếp tục theo dõi diễn biến sự việc, cô quyết định quên đi quá khứ, tiến bước tới tương lai, sống thật tốt thay phần bố mẹ và em gái.</span></p>
+
+  <p><span class="koboSpan" id="kobo.7.1">“Xem ra vị khách thuê trước rất ưa sạch sẽ!” </span><span class="koboSpan" id="kobo.7.2">Wendy trầm trồ khi thăm nhà bếp. </span><span class="koboSpan" id="kobo.7.3">“Di này, em may mắn quá đi mất. </span><span class="koboSpan" id="kobo.7.4">Tuy không có thang máy, nhưng thời buổi bây giờ tìm được căn hộ tốt thế này trong nội thành không dễ đâu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.8.1">Di chỉ cười không đáp, cũng không giải thích rằng trước kia dù không ai ở đây nhưng vẫn luôn có người dọn dẹp. </span><span class="koboSpan" id="kobo.8.2">Sáng hôm qua, Di vừa mua thêm ít đồ dùng hằng ngày mang đến nhà mới thì lại tình cờ gặp chị Hương.</span></p>
+
+  <p><span class="koboSpan" id="kobo.9.1">“A, cô Di, chào buổi sáng.” </span><span class="koboSpan" id="kobo.9.2">Giống như lần đầu gặp gỡ, chị Hương đi từ cầu thang xuống đường đúng lúc Di đang chuẩn bị lên tầng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.10.1">“Chào chị. </span><span class="koboSpan" id="kobo.10.2">Chị Hương vừa quét dọn xong à? </span><span class="koboSpan" id="kobo.10.3">Dọn nhiều phòng như thế, vất vả cho chị quá.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.11.1">“Ừ.” </span><span class="koboSpan" id="kobo.11.2">Chị Hương cười. </span><span class="koboSpan" id="kobo.11.3">“Nhưng sau này không cần dọn tầng bốn nữa, tiết kiệm ối thời gian.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.12.1">Vậy là Nem đã cho chị biết Di dọn vào đây ở rồi. </span><span class="koboSpan" id="kobo.12.2">Di vẫn nhớ như in lần thứ hai gặp chị Hương, hôm ấy cô ngủ lại nhà Nem đến sáng mới rời đi, bây giờ còn sống ở tầng bốn nữa, ai nhìn vào cũng sẽ hiểu lầm quan hệ giữa hai người.</span></p>
+
+  <p><span class="koboSpan" id="kobo.13.1">“Ấy, đừng hiểu lầm nhé, em và Nem…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.14.1">“Tôi biết mà, cô cũng là khách hàng của Nem chứ gì?” </span><span class="koboSpan" id="kobo.14.2">Chị Hương cười hớn hở. </span><span class="koboSpan" id="kobo.14.3">“Cậu ấy bề ngoài lạnh lùng xa lánh, thực chất con người rất nhân hậu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.15.1">“Cũng là khách hàng?” </span><span class="koboSpan" id="kobo.15.2">Di bắt được trọng điểm. </span><span class="koboSpan" id="kobo.15.3">“Chị nợ tiền thuê Nem điều tra nên mới làm việc không công cho anh ta sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.16.1">“Làm việc không công?” </span><span class="koboSpan" id="kobo.16.2">Chị Hương lộ vẻ khó hiểu. </span><span class="koboSpan" id="kobo.16.3">“Đâu có, ngược lại chứ, cậu ta còn không nhận phần thù lao mình đáng được nhận…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.17.1">Đang nói dở, chị chợt im bặt, ngó nghiêng xung quanh một hồi, xác nhận không có ai khác trên đường mới thì thầm, “Di này, cô là bạn của Nem, cậu ấy còn cho cô ở lại đây nữa nên tôi nghĩ nói cho cô biết cũng không sao. </span><span class="koboSpan" id="kobo.17.2">Nem ấy à, rõ ràng được hưởng thù lao 10 triệu, cuối cùng lại không lấy một xu, chia hết cho tôi và các khách hàng khác. </span><span class="koboSpan" id="kobo.17.3">Cô xem, trên đời làm gì có chàng trai nào vừa tốt bụng vừa hào hiệp như vậy?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.18.1">“10… 10 triệu!” </span><span class="koboSpan" id="kobo.18.2">Chẳng ngờ chị Hương lắm tiền thế, Di sửng sốt không thốt nên lời.</span></p>
+
+  <p><span class="koboSpan" id="kobo.19.1">“Hì, không phải là tiền của tôi cả đâu.” </span><span class="koboSpan" id="kobo.19.2">Nhận thấy ánh mắt Di, chị Hương cười xòa. </span><span class="koboSpan" id="kobo.19.3">“Đằng nào cũng mào đầu rồi, để kể thêm cho trót. </span><span class="koboSpan" id="kobo.19.4">Tôi sống tại một tòa nhà cũ có tuổi đời năm mươi năm ở Thượng Hoàn, hàng xóm chủ yếu là người cao tuổi. </span><span class="koboSpan" id="kobo.19.5">Vì chính phủ ra lệnh sửa chữa mặt tường ngoài tòa nhà, hơn hai mươi hộ chúng tôi góp tiền thuê một công ty tư vấn về giúp lên kế hoạch tổng thể. </span><span class="koboSpan" id="kobo.19.6">Cuối cùng, một đám già đầu chúng tôi bị ăn quả lừa, chi phí ban đầu hơn 1 triệu tăng vọt lên thành 10 triệu. </span><span class="koboSpan" id="kobo.19.7">Một phần lỗi cũng do chúng tôi chưa tìm hiểu cặn kẽ trước khi kí hợp đồng, nhưng gã gian thương trời đánh này rõ ràng đã âm mưu từ trước, đến cả tiền mua quan tài của chúng tôi cũng dám cướp mất. </span><span class="koboSpan" id="kobo.19.8">Về sau, tôi vô tình kể với Nem, cậu ấy bèn bày mưu tính kế bắt gã gian thương bồi thường tận 20 triệu. </span><span class="koboSpan" id="kobo.19.9">Suốt bốn năm làm giúp việc ở đây, tôi cứ tưởng cậu ấy là dân SOHO</span><a href="#id111" epub:type="noteref" id="b111"><span class="koboSpan" id="kobo.20.1">*</span></a><span class="koboSpan" id="kobo.21.1"> kiếm tiền bằng cách viết phần mềm di động… Chúng tôi vốn chỉ muốn lấy lại tiền gốc, phần thừa coi như tiền công cho Nem, nhưng cậu ta lại không nhận đồng nào, nói đây chỉ là tiền lẻ, bảo chúng tôi giữ lại dưỡng già…”</span></p>
+
+  <aside epub:type="footnote" id="id111">
+    <a href="#b111" style="display: none;"><span class="koboSpan" id="kobo.22.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.23.1">Small Office – Home Office. </span><span class="koboSpan" id="kobo.23.2">Loại căn hộ vừa sử dụng cho mục đích sinh hoạt vừa dùng dùng làm văn phòng làm việc. </span><span class="koboSpan" id="kobo.23.3">Cụm từ “dân SOHO” chỉ những người làm việc tại nhà.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.24.1">“Chuyện xảy ra khi nào?” </span><span class="koboSpan" id="kobo.24.2">Nghe đến số tiền, Di thấy ngờ ngợ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.25.1">“Việc xây sửa tiến hành năm ngoái, nhưng hai, ba tháng trước chúng tôi mới lấy lại được tiền.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.26.1">Hai người tiếp tục đứng nói chuyện phiếm bên ngoài đường lâu số 151 trên phố Nhị, nhưng đầu óc Di đã không còn ở đây nữa. </span><span class="koboSpan" id="kobo.26.2">10 triệu chị Hương kể chắc là ví dụ Nem nói đến lúc ở khách sạn Thiên Cảnh. </span><span class="koboSpan" id="kobo.26.3">Tức là, Nem bị xã hội đen theo dõi chính vì nhúng tay giúp chị Hương. </span><span class="koboSpan" id="kobo.26.4">Trước đây, Di chỉ cảm thấy Nem thật bản lĩnh khi một mình xử gọn hai tên giang hồ. </span><span class="koboSpan" id="kobo.26.5">Nhưng sau nhiều ngày tiếp xúc, cô không khỏi thắc mắc: </span><span class="koboSpan" id="kobo.26.6">Nem không thiếu gì cách thoát khỏi tai mắt xã hội đen, cớ sao lại sơ ý tiết lộ việc mình sống trên phố Nhị?</span></p>
+
+  <p><span class="koboSpan" id="kobo.27.1">“Tôi chẳng nói rồi còn gì nữa? </span><span class="koboSpan" id="kobo.27.2">Anh Hổ mới lên làm trùm ở Loan Tể.” </span><span class="koboSpan" id="kobo.27.3">Chiều hôm qua, lúc chạy lên tầng sáu vì vấn đề tiền điện nước, Di tiện thể hỏi luôn Nem chuyện này. </span><span class="koboSpan" id="kobo.27.4">“Tôi biết gã gian thương là anh em với anh Hổ. </span><span class="koboSpan" id="kobo.27.5">Đằng nào tôi cũng phải phủ đầu đám xã hội đen mới lên, đúng lúc này chị Hương lại đang muốn trả thù, tôi bèn gộp hai việc với nhau, giăng bẫy để lần lượt từng tên một sa chân. </span><span class="koboSpan" id="kobo.27.6">Gom hết rắc rối lại xử lý một thể chẳng tiện quá à?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.28.1">Lối kể chuyện hời hợt của Nem làm Di ngỡ ngàng. </span><span class="koboSpan" id="kobo.28.2">Cô luôn thấy mình không thể nhìn thấu con người này. </span><span class="koboSpan" id="kobo.28.3">Anh ta thích tỏ ra nguy hiểm tàn nhẫn, nhưng bụng dạ lại tử tế hơn vô số người. </span><span class="koboSpan" id="kobo.28.4">Tự nhiên Di nảy ra một suy nghĩ khó tin. </span><span class="koboSpan" id="kobo.28.5">Đêm hôm đó, việc anh trai Du xuất hiện đúng lúc, phải chăng là do Nem lén thả tin nhắn cầu cứu của Du cho gã, tạo cơ hội để Di hoàn toàn từ bỏ việc trả thù.</span></p>
+
+  <p><span class="koboSpan" id="kobo.29.1">Dĩ nhiên Di không định hỏi thẳng Nem. </span><span class="koboSpan" id="kobo.29.2">Cô biết dù mình đoán đúng, anh ta cũng không đời nào thừa nhận sự thật.</span></p>
+
+  <p><span class="koboSpan" id="kobo.30.1">“Di ơi, đây là em gái em à?” </span><span class="koboSpan" id="kobo.30.2">Wendy lôi một khung ảnh ra khỏi thùng các tông, tấm ảnh trong khung chính là bức hình selfie Tiểu Văn chụp cả Di và mẹ Trăn bằng điện thoại của mình. </span><span class="koboSpan" id="kobo.30.3">Sau khi lấy lại điện thoại từ chỗ Nem, cô chợt nảy ra ý tưởng đến hiệu ảnh nhờ người ta in ra.</span></p>
+
+  <p><span class="koboSpan" id="kobo.31.1">“Đúng ạ.” </span><span class="koboSpan" id="kobo.31.2">Dù vẫn rất đau lòng mỗi lần nhắc tới Tiểu Văn, nhưng giờ Di đã có thể thẳng thắn đối mặt với hiện thực là mình không còn người thân bên cạnh nữa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.32.1">Wendy đặt khung ảnh lên kệ bên cạnh, chắp tay nói, “Em gái hãy phù hộ cho chị mình nhé, chị cũng sẽ hết lòng chăm sóc chị của em.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.33.1">Wendy tính phổi bò, nhắc tới người quá cố mà không hề kiêng kị người thân đang có mặt ở đây. </span><span class="koboSpan" id="kobo.33.2">Di lại thấy ứng xử như thế rất hay, và cũng thầm cảm kích chị. </span><span class="koboSpan" id="kobo.33.3">Có lẽ quả thật Tiểu Văn đang dõi theo cô từ một nơi nào đó cũng nên.</span></p>
+
+  <p><span class="koboSpan" id="kobo.34.1">Trong lúc Di và Wendy sắp xếp lại mấy món đồ linh tinh, Wendy mở trình phát nhạc trên điện thoại của mình để vừa nghe nhạc vừa quét dọn. </span><span class="koboSpan" id="kobo.34.2">Ngoài nhạc tiếng Hoa, còn thấy cả K-pop và nhạc rock Âu Mỹ. </span><span class="koboSpan" id="kobo.34.3">Thi thoảng Wendy lại nghêu ngao vài chữ tiếng Hàn làm Di bật cười.</span></p>
+
+  <p><span class="koboSpan" id="kobo.35.1">“A, lại là bài hát này!” </span><span class="koboSpan" id="kobo.35.2">Di đang ép bẹp thùng các tông rỗng thì máy chạy tới một giai điệu quen thuộc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.36.1">“Ồ, em cũng nghe The Rolling Stones hả?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.37.1">“À, chỉ là em tình cờ nghe bài này quá nhiều lần thôi.” </span><span class="koboSpan" id="kobo.37.2">Di bĩu môi nhớ lại khoảng thời gian đầu Nem toàn làm khó dễ cô. </span><span class="koboSpan" id="kobo.37.3">“Lời bài hát này đáng ghét thật, cứ nhai đi nhai lại mãi một câu ‘Không phải lúc nào bạn cũng có được điều mình muốn’.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.38.1">Wendy ngây ra nhìn Di, “Em nói gì thế? </span><span class="koboSpan" id="kobo.38.2">Em không nghe cho hẳn hoi đoạn tiếp theo đúng không?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.39.1">“Đoạn tiếp theo?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.40.1">Wendy đến cạnh điện thoại, chỉnh âm lượng lớn lên. </span><span class="koboSpan" id="kobo.40.2">Di chú ý lắng nghe lời ca vọng ra từ loa, mới vỡ lẽ lâu nay mình luôn hiểu nhầm ý nghĩa của nó.</span></p>
+
+  <p><i><span class="koboSpan" id="kobo.41.1">You can’t always get what you want</span></i></p>
+
+  <i> 
+
+  </i><p><span class="koboSpan" id="kobo.42.1">But if you try sometimes</span></p>
+
+  
+
+  <p><i><span class="koboSpan" id="kobo.43.1">You just might find, you get what you need</span></i><a href="#id112" epub:type="noteref" id="b112"><span class="koboSpan" id="kobo.44.1">*</span></a><i><span class="koboSpan" id="kobo.45.1">…</span></i></p>
+
+  <aside epub:type="footnote" id="id112">
+    <a href="#b112" style="display: none;"><span class="koboSpan" id="kobo.46.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.47.1">Không phải lúc nào bạn cũng đạt được điều mình muốn, nhưng nếu thử, biết đâu lại nhận được thứ bạn cần.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.48.1">“A… Chị Wendy này, em chạy đằng này tí, sẽ về ngay.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.49.1">“Em đi đâu?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.50.1">“Tìm chủ nhà hỏi mấy chuyện.” </span><span class="koboSpan" id="kobo.50.2">Di mỉm cười, chỉ lên trần.</span></p>
+
+  <p><span class="koboSpan" id="kobo.51.1">Trong lúc leo cầu thang, Di nhớ lại nửa sau cuộc trò chuyện với chị Hương.</span></p>
+
+  <p><span class="koboSpan" id="kobo.52.1">“Năm xưa tôi thất nghiệp, ông chủ tiệm mì Lai Ký đã giới thiệu tôi cho Nem. </span><span class="koboSpan" id="kobo.52.2">Nhờ cậu ta cho dọn vệ sinh cả tòa đường lâu này, tôi mới vượt qua đận kinh tế khó khăn. </span><span class="koboSpan" id="kobo.52.3">Hồi mới gặp, tôi cũng thấy tính tình cậu ấy quái gở, không chịu tiết lộ tên thật, kêu người ta gọi mình là Nem. </span><span class="koboSpan" id="kobo.52.4">Tôi từng thử gọi ông Nem thì bị cậu ấy quạt cho một trận. </span><span class="koboSpan" id="kobo.52.5">Sau này thân quen rồi, tôi hỏi cậu ấy vì sao không thích người khác xưng hô lịch sự với mình. </span><span class="koboSpan" id="kobo.52.6">Nem nói gọi ông hay gọi cô đều chỉ là cái vỏ giả dối, nhiều khi ngoài mặt tỏ ra tôn trọng nhau lắm nhưng trong lòng lại coi thường người ta. </span><span class="koboSpan" id="kobo.52.7">Thà gọi thẳng tên, ít nhất nghe còn chân thành hơn, quan hệ giữa người với người thì nên bình đẳng…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.53.1">Di bước vào căn hộ tầng sáu, thấy Nem đang ngồi sau bàn làm việc, ngón tay lướt như bay trên bàn phím.</span></p>
+
+  <p><span class="koboSpan" id="kobo.54.1">“Chuyện gì?” </span><span class="koboSpan" id="kobo.54.2">Nem ngẩng đầu lên, ngón tay vẫn gõ nhoay nhoáy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.55.1">“Sau này đừng gọi tôi là cô Di nữa, gọi Di thôi.” </span><span class="koboSpan" id="kobo.55.2">Di tiến tới trước bàn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.56.1">Nem dừng tay, nhìn xoáy vào mặt Di, bất chợt trề môi phì cười, “Cô và bạn cô đã ăn trưa chưa?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.57.1">“Chưa ăn…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.58.1">Nem giơ ra một tờ tiền giấy, sai phái, “Sen lớn thêm xanh ít bánh nước riêng cải trụng rưới không dầu, Di ạ.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.59.1">Di nhận lấy tờ tiền, hừ một tiếng, mặt xị ra, song chẳng thấy bực bội chút nào.</span></p>
+
+  <p><span class="koboSpan" id="kobo.60.1">Cô không hề bất ngờ về sự biến chuyển cảm xúc này. </span><span class="koboSpan" id="kobo.60.2">Bởi sáng nay khi rời khỏi nhà, cô đã biết hôm nay sẽ là ngày thay đổi cuộc đời cô.</span></p>
+</div></div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // shrink  menu
+      // $(document).ready(function() {
+      // $('li').click(function(e) {
+      // e.stopPropagation();
+      // $(this).next('ul').slideToggle(100);
+      // });
+      // });
+
+      $(document).ready(function() {
+
+
+				window.addEventListener("beforeprint", function(event) {
+					$(".main").animate({ margin: "0 auto", marginLeft: 0 }, "linear");
+					$(".sidebar").hide()
+
+				});
+				window.addEventListener("afterprint", function(event) { 
+					$(".sidebar").show()
+					$(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+				});
+      //fixed定位 高度满屏
+      $(".sidebar").height($(window).height());
+
+      //实现显示隐藏可以删除
+      $(".sidebar").on("mouseover", function() {
+        $(".closeMenu > span").css({
+          opacity: 1
+        });
+      });
+      $(".sidebar").on("mouseleave blur", function() {
+        $(".closeMenu > span").css({
+          opacity: 0
+        });
+      });
+
+      var moveLeft = $("#list_left").width();
+
+      //设置内容快初始位置
+      $(".main").css({ marginLeft: moveLeft });
+
+      //判断隐藏显示核心代码
+      var isShow = true;
+      $(".closeMenu span").click(function() {
+        $(this)
+          .hide()
+          .siblings()
+          .show();
+        if (isShow) {
+          $("#list_left").animate(
+            {
+              marginLeft: -(moveLeft - 30) //30 刚好显示icon图标
+            },
+            200,
+            "linear",
+            function() {
+              isShow = false;
+              $(".closeMenu > span").css({
+                opacity: 1
+              });
+            }
+          );
+          $(".main").animate({ margin: "0 auto", marginLeft: 15 }, "linear");
+        } else {
+          $("#list_left").animate(
+            {
+              marginLeft: 0
+            },
+            200,
+            "linear",
+            function() {
+              isShow = true;
+            }
+          );
+          $(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+        }
+      });
+
+      $(window).resize(function() {
+        $("#list_left").height($(window).height());
+      });
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<title>ntl - 1.</title>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+		<link rel="stylesheet" href="kte-css/stylehacks.css" />
+
+    <!-- <link rel="stylesheet" href="./stylesheet.css" /> -->
+    <script
+      src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/css">
+     html body {
+        font-family: Consolas, FangSong, Lantinghei SC, Helvetica Neue,
+          Helvetica, Arial, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1,
+          STHeitiSC-Light, simsun, \\5b8b\4f53, WenQuanYi Zen Hei,
+          WenQuanYi Micro Hei, "sans-serif" !important;
+          /* -webkit-font-smoothing: antialiased  !important; */
+          font-size: 18px !important;
+          height: 100% !important;
+      }
+		 	pre {
+        font-size: 20px !important;
+			}
+      .sidebar {
+        font-size: 15px !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        background-color: #324057;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        width: 300px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        -webkit-box-shadow: #ccc 0 0 10px;
+        box-shadow: #ccc 0 0 10px;
+        box-sizing: border-box;
+      }
+      .main {
+        margin-left: 0;
+        height: 100%;
+      }
+
+      /*菜单显示按钮*/
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span:last-child {
+        display: none;
+      }
+      /* Sidebar navigation */
+      .nav-sidebar {
+        margin-right: 30px;
+        padding: 20px 0;
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+      .nav-sidebar > li > a {
+        color: #337ab7;
+      }
+      .menuItem:hover > a {
+        background-color: #eee;
+      }
+      .nav .active > a,
+      .nav-sidebar .active:hover > a {
+        background-color: #428bca;
+        color: #fff;
+      }
+			.lightli {
+
+        color: red;
+			}
+      .index {
+        /* position: relative; */
+        /* top: 45%; */
+        /* text-align: center; */
+        /* font-size: 38px; */
+        /* color: #ccc; */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="list_left">
+      <ul class="nav nav-sidebar ">
+<li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/></svg> </a></li>
+<li><a href="md.html">Mở đầu</a></li>
+<li><a href="ch01.html">1.</a></li>
+<li><a href="ch02.html">2.</a></li>
+<li><a href="ch03.html">3.</a></li>
+<li><a href="ch04.html">4.</a></li>
+<li><a href="ch05.html">5.</a></li>
+<li><a href="ch06.html">6.</a></li>
+<li><a href="ch07.html">7.</a></li>
+<li><a href="ch08.html">8.</a></li>
+<li><a href="ch09.html">9.</a></li>
+<li><a href="ch10.html">10.</a></li>
+<li><a href="pk.html">Phần kết</a></li>
+<li><a href="lb.html">Lời bạt</a></li>
+</ul>
+      <div class="closeMenu">
+        <span class="glyphicon glyphicon-triangle-left"></span>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="index">
+        <div><div id="book-columns"><div id="book-inner">
+  <h1><span class="koboSpan" id="kobo.1.1">1.</span></h1>
+
+  <p><span class="koboSpan" id="kobo.2.1">“Em gái cô tự sát.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.3.1">Tại nhà xác công cộng Phú Sơn quận Sa Điền, nghe cảnh sát nói vậy, Di nổi nóng cãi ngay, “Không thể nào”, “Các anh chưa điều tra kĩ”, “Tiểu Văn việc gì phải tự sát”…</span></p>
+
+  <p><span class="koboSpan" id="kobo.4.1">Cảnh viên Trình phụ trách vụ án là một ông chú gầy còm khoảng 50 tuổi, tóc lấm tấm bạc, bề ngoài ngang tàng nhưng ánh mắt hồn hậu. </span><span class="koboSpan" id="kobo.4.2">Trước phản ứng dữ dội của Di, ông vẫn bình tĩnh an ủi bằng giọng trầm đều đều, còn hỏi một câu khiến Di cứng họng, “Cô Âu Nhã Di, cô </span><i><span class="koboSpan" id="kobo.5.1">thực sự</span></i><span class="koboSpan" id="kobo.6.1"> cho rằng em cô không thể tự sát ư?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.7.1">Dù không muốn, Di vẫn phải thừa nhận Tiểu Văn có lý do tìm đến cái chết. </span><span class="koboSpan" id="kobo.7.2">Áp lực đè trĩu suốt nửa năm qua đã vượt quá sức chịu đựng của một cô bé 15 tuổi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.8.1">Mà mọi chuyện, phải kể lại từ nỗi bất hạnh đeo bám nhà họ Âu bao năm ròng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.9.1">Sinh ra trong thập niên 1960, bố mẹ Di là thế hệ thứ hai của làn sóng di cư. </span><span class="koboSpan" id="kobo.9.2">Năm 1946, nội chiến Quốc-Cộng</span><a href="#id6" epub:type="noteref" id="b6"><span class="koboSpan" id="kobo.10.1">*</span></a><span class="koboSpan" id="kobo.11.1"> nổ ra, tháng nào cũng có dân đại lục tràn sang Hồng Kông. </span><span class="koboSpan" id="kobo.11.2">Sau khi Đảng Cộng sản giành chính quyền và thực hiện cải cách chế độ, phát động vận động chính trị, số người chạy sang đây chỉ tăng chứ không giảm. </span><span class="koboSpan" id="kobo.11.3">Ông bà Di là dân Quảng Châu trốn sang, thời đó xã hội Hồng Kông cần lao động giá rẻ số lượng lớn nên hầu như không chối bỏ dân di cư trái phép, bởi vậy ông bà mới có cơ hội bám rễ xứ Cảng, giành quyền tạm trú trở thành người Hồng Kông. </span><span class="koboSpan" id="kobo.11.4">Mang tiếng đủ tư cách ở lại, song cuộc sống của “người Hồng Kông mới” thường rất vất vả. </span><span class="koboSpan" id="kobo.11.5">Họ phải làm các công việc chân tay nặng nhọc với giờ lao động dài, tiền lương thấp và điều kiện sinh hoạt tệ hại. </span><span class="koboSpan" id="kobo.11.6">Tuy nhiên nền kinh tế Hồng Kông giai đoạn ấy đang trên đà phát triển, chỉ cần chịu thương chịu khó ắt có cơ hội cải thiện cuộc sống. </span><span class="koboSpan" id="kobo.11.7">Thậm chí một số người còn nhân lúc này lập nghiệp từ hai bàn tay trắng, đặt chân vào hàng ngũ những người thành đạt.</span></p>
+
+  <aside epub:type="footnote" id="id6">
+    <a href="#b6" style="display: none;"><span class="koboSpan" id="kobo.12.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.13.1">Cuộc nội chiến lần thứ hai giữa Đảng Cộng sản Trung Quốc và Quốc dân Đảng Trung Quốc tranh chấp quyền kiểm soát Trung Quốc đại lục với chiến thắng thuộc về phe Đảng Cộng sản, dẫn tới sự ra đời của nhà nước Cộng hòa Nhân dân Trung Hoa. </span><span class="koboSpan" id="kobo.13.2">Sau sự kiện này, rất nhiều người dân đã ồ ạt tìm đến Hồng Kông sinh sống vì không muốn chịu quyền kiểm soát của chính quyền Đảng Cộng sản.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.14.1">Ngặt nỗi, ông bà Di không có duyên với cơ hội đó.</span></p>
+
+  <p><span class="koboSpan" id="kobo.15.1">Tháng Hai năm 1976, cháy lớn bùng phát tại khu nhà gỗ vịnh Tiêu Cơ</span><a href="#id7" epub:type="noteref" id="b7"><span class="koboSpan" id="kobo.16.1">*</span></a><span class="koboSpan" id="kobo.17.1"> và vịnh Aldrich, thiêu rụi hơn nghìn căn nhà, đẩy hơn ba nghìn người vào cảnh vô gia cư. </span><span class="koboSpan" id="kobo.17.2">Ông bà Di đều mất mạng trong vụ hỏa hoạn, để lại cậu con trai mới 12 tuổi là Âu Huy. </span><span class="koboSpan" id="kobo.17.3">Huy không còn người thân nào khác ở Hồng Kông, đành nương nhờ một người hàng xóm mất vợ trong hỏa hoạn. </span><span class="koboSpan" id="kobo.17.4">Người này có con gái 7 tuổi tên Châu Khởi Trăn.</span></p>
+
+  <aside epub:type="footnote" id="id7">
+    <a href="#b7" style="display: none;"><span class="koboSpan" id="kobo.18.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.19.1">Shau Kei Wan, thuộc quận Đông, đảo Hồng Kông.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.20.1">Do gia cảnh nghèo khó, Huy và Trăn đều không có điều kiện học lên cao mà phải lăn lộn ra đời từ sớm. </span><span class="koboSpan" id="kobo.20.2">Huy làm công nhân kho bãi tại một kho hàng, còn Trăn làm nhân viên tạp vụ ở quán trà</span><a href="#id8" epub:type="noteref" id="b8"><span class="koboSpan" id="kobo.21.1">*</span></a><span class="koboSpan" id="kobo.22.1">. </span><span class="koboSpan" id="kobo.22.2">Hai người mến nhau rồi tiến tới cưới gả vào năm 1989, trước khi cha Trăn qua đời vì bạo bệnh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.23.1">Ba năm sau, Trăn sinh hạ một bé gái, đặt tên là “Nhã Di”</span><a href="#id9" epub:type="noteref" id="b9"><span class="koboSpan" id="kobo.24.1">*</span></a><span class="koboSpan" id="kobo.25.1">. </span><span class="koboSpan" id="kobo.25.2">Gia đình ba người thuê một căn hộ đơn tại tòa nhà cũ ở vịnh Thổ Qua. </span><span class="koboSpan" id="kobo.25.3">Trăn tảo tần, Di ngoan ngoãn, Huy cần cù dốc lòng kiếm tiền để sau này con gái được học đại học, không phải bỏ ngang đi làm như vợ chồng anh. </span><span class="koboSpan" id="kobo.25.4">Chưa kể mỗi thời mỗi khác, giờ không phải cứ bán sức là có việc làm nữa, xã hội Hồng Kông ngày càng coi trọng bằng cấp rồi.</span></p>
+
+  <aside epub:type="footnote" id="id8">
+    <a href="#b8" style="display: none;"><span class="koboSpan" id="kobo.26.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.27.1">Một hình thức nhà hàng cổ truyền, phục vụ trà và đồ ăn Trung Hoa.</span></p>
+  </aside>
+
+  <aside epub:type="footnote" id="id9">
+    <a href="#b9" style="display: none;"><span class="koboSpan" id="kobo.28.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.29.1">“Nhã” nghĩa là “thanh cao, tốt đẹp”, “Di” là “vui vẻ hài hòa”.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.30.1">Khi Di 6 tuổi, vận may lần đầu đến với gia đình họ: </span><span class="koboSpan" id="kobo.30.2">đơn đăng kí nhà ở xã hội Huy gửi đi bao nhiêu năm cuối cùng cũng có hồi đáp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.31.1">Ở nơi đất chật người đông như Hồng Kông, nhà ở luôn là vấn đề nan giải. </span><span class="koboSpan" id="kobo.31.2">Các gia đình thu nhập thấp được thuê nhà ở xã hội với giá rẻ, nhưng do cung không đủ cầu, nộp đơn xong thường phải chờ rất nhiều năm mới được duyệt. </span><span class="koboSpan" id="kobo.31.3">Năm 1998, Sở Nhà đất phân cho gia đình Huy một căn hộ tại tòa nhà Hoán Hoa thuộc cư xá Lạc Hoa, quận Quan Đường. </span><span class="koboSpan" id="kobo.31.4">Đây coi như may mắn trời ban giữa khi châu Á nói chung và gia đình Huy nói riêng đang lao đao vì khủng hoảng kinh tế. </span><span class="koboSpan" id="kobo.31.5">Tiền thuê nhà ở xã hội chỉ bằng nửa tiền thuê nhà tư nhân, miễn là ăn tiêu dè sẻn, họ vẫn có thể tiết kiệm một khoản nho nhỏ phòng khi cần đến.</span></p>
+
+  <p><span class="koboSpan" id="kobo.32.1">Chuyển vào cư xá Lạc Hoa được hai năm, gia đình chào đón thêm thành viên mới: </span><span class="koboSpan" id="kobo.32.2">Âu Nhã Văn</span><a href="#id10" epub:type="noteref" id="b10"><span class="koboSpan" id="kobo.33.1">*</span></a><span class="koboSpan" id="kobo.34.1">. </span><span class="koboSpan" id="kobo.34.2">Căn hộ vốn thiết kế cho gia đình hạt nhân hai đến ba người, giờ bỗng thành chật chội. </span><span class="koboSpan" id="kobo.34.3">Huy xin đổi sang căn lớn hơn, Sở Nhà đất hồi đáp rằng nguồn cung nhà ở eo hẹp, trong cư xá này, thậm chí là trong cả quận này, không kiếm đâu ra căn hộ phù hợp để phân cho họ nữa. </span><span class="koboSpan" id="kobo.34.4">Nếu vẫn muốn đổi nhà, chỉ còn cách đi xa hơn, đến quận Đại Bộ</span><a href="#id11" epub:type="noteref" id="b11"><span class="koboSpan" id="kobo.35.1">*</span></a><span class="koboSpan" id="kobo.36.1"> hoặc Nguyên Lãng</span><a href="#id12" epub:type="noteref" id="b12"><span class="koboSpan" id="kobo.37.1">*</span></a><span class="koboSpan" id="kobo.38.1">. </span><span class="koboSpan" id="kobo.38.2">Huy bàn với vợ, Trăn vốn an phận, liền bảo, “Chúng ta ở đây quen rồi, giờ chuyển nhà, anh đi làm bất tiện mà con lại phải chuyển trường, tội gì. </span><span class="koboSpan" id="kobo.38.3">Ở đây chật mấy cũng còn hơn năm xưa chen chúc trong khu nhà gỗ, phải không nào?”</span></p>
+
+  <aside epub:type="footnote" id="id10">
+    <a href="#b10" style="display: none;"><span class="koboSpan" id="kobo.39.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.40.1">“Văn” nghĩa là “vân mây”.</span></p>
+  </aside>
+
+  <aside epub:type="footnote" id="id11">
+    <a href="#b11" style="display: none;"><span class="koboSpan" id="kobo.41.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.42.1">Tai Po, một trong 18 quận của Hồng Kông nằm ở Tân Giới.</span></p>
+  </aside>
+
+  <aside epub:type="footnote" id="id12">
+    <a href="#b12" style="display: none;"><span class="koboSpan" id="kobo.43.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.44.1">Yuen Long, một trong 18 quận của Hồng Kông nằm ở phía Tây Bắc Tân Giới.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.45.1">Huy vẫn cho rằng khi các con lên trung học thì cần có phòng riêng, tiện lợi mà cũng tự lập hơn. </span><span class="koboSpan" id="kobo.45.2">Nhưng anh không biết phản bác vợ thế nào, và cũng không ngờ là mình chẳng có cơ hội nhìn hai con lên trung học.</span></p>
+
+  <p><span class="koboSpan" id="kobo.46.1">Năm 2004, Âu Huy qua đời vì tai nạn lao động, hưởng dương 40 tuổi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.47.1">Sau cuộc khủng hoảng tài chính châu Á năm 1997 và đại dịch SARS bùng phát năm 2003, kinh tế Hồng Kông chịu ảnh hưởng nặng nề, rất nhiều chủ doanh nghiệp phải chuyển sang thuê ngoài hoặc thuê nhân công hợp đồng, trốn tránh trách nhiệm của người sử dụng lao động nhằm giảm thiểu chi phí. </span><span class="koboSpan" id="kobo.47.2">Công ty lớn thuê công ty nhỏ phụ trách một vài khâu với chi phí thấp, công ty nhỏ lại chia tiếp việc cho công ty khác nhỏ hơn để ăn tiền trung gian. </span><span class="koboSpan" id="kobo.47.3">Mối quan hệ thuê mướn nhiều tầng khiến lương công nhân bị cắt giảm mạnh, nhưng vì kinh tế trì trệ, công nhân sợ mất cần câu cơm nên chỉ còn cách im lặng chịu bóc lột.</span></p>
+
+  <p><span class="koboSpan" id="kobo.48.1">Huy đã qua tay một số “công ty nhỏ” như vậy, phải gắt gao tranh suất công việc có hạn với nhiều công nhân khác. </span><span class="koboSpan" id="kobo.48.2">Cũng may trong những năm làm ở kho hàng, Huy thi được giấy phép điều khiển xe nâng hàng nặng nên có lợi thế hơn khi tìm việc. </span><span class="koboSpan" id="kobo.48.3">Không chỉ ngành kho vận mà cả các cảng container cũng có nhu cầu thuê người biết lái và sử dụng xe nâng. </span><span class="koboSpan" id="kobo.48.4">Để tăng thu nhập, Huy kiêm luôn hai việc, vừa bốc vác cho kho ở vịnh Cửu Long, vừa lái xe nâng tại cảng container Quỳ Dũng, một lòng một dạ muốn tranh thủ kiếm tiền khi còn sức lực.</span></p>
+
+  <p><span class="koboSpan" id="kobo.49.1">Một tối lất phất mưa phùn tháng Bảy năm 2004, quản lý kho hàng số 4 cảng container Quỳ Dũng phát hiện mất một xe nâng. </span><span class="koboSpan" id="kobo.49.2">Sau khi tra hỏi công nhân, ông ta mới biết không chỉ xe mà cả lái xe cũng mất tích. </span><span class="koboSpan" id="kobo.49.3">Có ông lái cần cẩu bảo thấy Huy lái xe nâng tới khu Q31 rồi không về nữa. </span><span class="koboSpan" id="kobo.49.4">Quản lý kho bèn dẫn người đến xem xét. </span><span class="koboSpan" id="kobo.49.5">Họ phát hiện dấu vết khác thường tại một trụ neo tàu ven bờ: </span><span class="koboSpan" id="kobo.49.6">bên trái trụ neo có vết xước sâu, trên mặt đất gần đó vương vãi nhiều mảnh nhựa màu vàng. </span><span class="koboSpan" id="kobo.49.7">Thoáng trông đã biết là các mảnh vỡ của xe nâng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.50.1">Quản lý cuống quýt báo cảnh sát. </span><span class="koboSpan" id="kobo.50.2">Đội phòng cháy chữa cháy và cứu nạn cứu hộ lặn xuống tìm kiếm. </span><span class="koboSpan" id="kobo.50.3">Nửa giờ sau, suy đoán không may của các công nhân được chứng thực. </span><span class="koboSpan" id="kobo.50.4">Huy gặp tai nạn, cả người và xe rơi xuống biển, xe lún phân nửa vào đáy cát, người thì mắc kẹt giữa giá nâng và càng nâng. </span><span class="koboSpan" id="kobo.50.5">Khi người ta cẩu được chiếc xe nặng trĩu bùn đất lên khỏi mặt nước, Huy đã vô phương cứu chữa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.51.1">Di mất cha khi mới 12 tuổi, còn Tiểu Văn chỉ có 4 tuổi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.52.1">Trăn đứt từng khúc ruột trước cái chết của chồng, nhưng không để bản thân suy sụp, vì chị biết từ giờ hai con gái chỉ có mẹ là chỗ dựa duy nhất.</span></p>
+
+  <p><span class="koboSpan" id="kobo.53.1">Theo lý mà nói, vì Huy chết khi làm nhiệm vụ nên gia quyến sẽ được đền bù 60 tháng lương theo đúng Luật Lao động, ba mẹ con Trăn có thể cầm cự vài năm nhờ khoản bồi thường này. </span><span class="koboSpan" id="kobo.53.2">Nhưng xui xẻo lại đến với nhà họ Âu lần nữa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.54.1">“Chị ơi, không phải tôi không muốn giúp chị, nhưng công ty chỉ chi trả được ngần này thôi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.55.1">“Anh Ngưu à! </span><span class="koboSpan" id="kobo.55.2">Anh Huy làm việc bạt mạng cho công ty Vũ Hải các anh, ngày đi làm từ tờ mờ sáng, tối về bọn trẻ đã ngủ say, hai con gái chẳng có cơ hội thấy mặt bố. </span><span class="koboSpan" id="kobo.55.3">Giờ anh ấy gặp nạn, mẹ góa con côi chúng tôi không nơi nương tựa, công ty lại chỉ đưa vài đồng bạc thôi sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.56.1">“Hầy, tình hình công ty khó khăn, chưa biết chừng sang năm phá sản ấy chứ, đến lúc đó khéo vài đồng còn chẳng có.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.57.1">“Vì sao Vũ Hải phải trả tiền? </span><span class="koboSpan" id="kobo.57.2">Anh Huy có bảo hiểm lao động cơ mà? </span><span class="koboSpan" id="kobo.57.3">Tiền phải do hãng bảo hiểm trả chứ?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.58.1">“Bảo hiểm của anh Huy… hình như không qua được cửa phòng giám định.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.59.1">Ngưu là đàn anh của Huy trong Công ty Vận tải và xếp dỡ Vũ Hải, từng gặp Trăn vài lần, bởi vậy ông chủ Hải mới phân công anh ta làm người trung gian đến “đàm phán” với Trăn. </span><span class="koboSpan" id="kobo.59.2">Theo như anh ta nói, công ty có mua bảo hiểm lao động cho Huy, nhưng sau khi ủy thác cho văn phòng giám định tai nạn, hãng bảo hiểm cho rằng trường hợp này không được áp dụng bảo hiểm. </span><span class="koboSpan" id="kobo.59.3">Bởi vì Huy gặp tai nạn khi đã hết ca làm, không thể chứng minh lúc anh điều khiển xe nâng là đang làm việc. </span><span class="koboSpan" id="kobo.59.4">Ngoài ra, sau khi kiểm tra, người ta xác nhận xe nâng không hề trục trặc, nên không thể loại trừ khả năng Huy mất ý thức trong lúc điều khiển xe do “vấn đề sức khỏe cá nhân”, dẫn đến tai nạn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.60.1">“Ý của họ là, có thể Huy mắc bệnh nhưng giấu, hôm đó hết ca tiện lái luôn xe nâng cho đỡ phải cuốc bộ, đi ngang qua khu Q31 thì lên cơn bệnh, làm xe nâng rơi xuống biển… Thậm chí có người còn nói phải truy cứu trách nhiệm phá hoại xe nâng nữa. </span><span class="koboSpan" id="kobo.60.2">Nhưng ông chủ bảo làm người không thể giậu đổ bìm leo, Huy làm việc ở công ty không có công cũng có cán, bên bảo hiểm không bồi thường thì công ty cũng phải làm gì đó. </span><span class="koboSpan" id="kobo.60.3">Khoản tiền tuất nghĩa tình này là tấm lòng của công ty, chẳng thấm tháp gì, nhưng mong chị nhận tạm.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.61.1">Lúc anh Ngưu đưa chi phiếu, tay Trăn run lẩy bẩy. </span><span class="koboSpan" id="kobo.61.2">Câu nói “truy cứu trách nhiệm phá hoại xe nâng” làm chị ức phát khóc. </span><span class="koboSpan" id="kobo.61.3">Nhưng chị biết tính tình anh Ngưu chính trực, chỉ thuật lại đúng những gì được bảo, nổi cáu với anh ta cũng vô ích. </span><span class="koboSpan" id="kobo.61.4">Khoản tiền tuất nghĩa tình bằng đúng ba tháng lương của Huy, chỉ như muối bỏ bể so với khó khăn kinh tế mà nhà họ Âu đang phải đối mặt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.62.1">Trăn mơ hồ cảm thấy bên Vũ Hải vẫn còn điều giấu giếm. </span><span class="koboSpan" id="kobo.62.2">Nhưng chị không biết làm cách nào đòi quyền lợi cho mình và con gái, cuối cùng đành nhận chi phiếu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.63.1">Trực giác của Trăn đã đúng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.64.1">Để đảm bảo quyền lợi công nhân và đề phòng công ty sụp đổ vì những khoản đền bù khổng lồ, Luật Lao động quy định mọi công ty phải mua bảo hiểm cho công nhân, như thế hãng bảo hiểm sẽ gánh lấy các rủi ro liên quan, công nhân bị thương hay qua đời trong lúc làm việc đều không ảnh hưởng tới tình trạng tài chính của công ty. </span><span class="koboSpan" id="kobo.64.2">Vấn đề là, ông chủ Vũ Hải không phải bỏ tiền đền bù, mà cũng không muốn hãng bảo hiểm phải đền bù quá nhiều. </span><span class="koboSpan" id="kobo.64.3">Bởi điều này sẽ ảnh hưởng đến “lịch sử tín dụng” của công ty, hễ hãng bảo hiểm phải chi trả một khoản lớn, sau này họ sẽ yêu cầu công ty đóng phí rất cao.</span></p>
+
+  <p><span class="koboSpan" id="kobo.65.1">Trăn thì tưởng công ty sẽ đòi bên bảo hiểm mức bồi thường tối đa cho công nhân, nào ngờ hai bên lại cá mè một lứa. </span><span class="koboSpan" id="kobo.65.2">Hồng Kông ngoài mặt phồn hoa, bên trong chà đạp xương máu những kẻ yếu thế. </span><span class="koboSpan" id="kobo.65.3">Xí nghiệp lớn bóc lột xí nghiệp nhỏ, xí nghiệp nhỏ bóc lột công nhân. </span><span class="koboSpan" id="kobo.65.4">Đối với các ông chủ, lợi ích kinh doanh quan trọng hơn tương lai của gia đình lao động.</span></p>
+
+  <p><span class="koboSpan" id="kobo.66.1">Nhà mất đi trụ cột kinh tế, tiền bồi thường lại không đủ chi trả sinh hoạt phí, Trăn buộc phải quay lại quán trà làm việc. </span><span class="koboSpan" id="kobo.66.2">Mười năm đã qua, giá cả tăng vọt, không ngờ tiền lương vẫn như cũ. </span><span class="koboSpan" id="kobo.66.3">Lương quán trà không đủ nuôi thân và các con, Trăn đành xin trực ca đêm ở cửa hàng tiện lợi ba ngày một tuần. </span><span class="koboSpan" id="kobo.66.4">Hết ca lúc 6 giờ sáng, ngả lưng chưa đầy năm tiếng đã phải đến quán trà làm việc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.67.1">Rất nhiều hàng xóm khuyên Trăn nghỉ việc, nộp đơn xin trợ cấp an sinh</span><a href="#id13" epub:type="noteref" id="b13"><span class="koboSpan" id="kobo.68.1">*</span></a><span class="koboSpan" id="kobo.69.1">, song Trăn một mực từ chối, “Đúng là thu nhập của tôi hiện giờ chỉ nhỉnh hơn tiền trợ cấp một chút. </span><span class="koboSpan" id="kobo.69.2">Nghỉ việc xin trợ cấp thì có thể toàn tâm toàn ý chăm sóc Di và Văn. </span><span class="koboSpan" id="kobo.69.3">Nhưng các bác bảo tôi sau này phải dạy hai đứa trở thành người có trách nhiệm như thế nào đây?”</span></p>
+
+  <aside epub:type="footnote" id="id13">
+    <a href="#b13" style="display: none;"><span class="koboSpan" id="kobo.70.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.71.1">Ủy ban Phúc lợi Xã hội Hồng Kông có một hạng mục là Hỗ trợ An sinh Xã hội Toàn diện (Comprehensive Social Security Assistance/CSSA), dành cho người thu nhập thấp. </span><span class="koboSpan" id="kobo.71.2">Nhà nào khó khăn có thể nộp đơn xin, sẽ được xem xét nhận trợ cấp.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.72.1">Cứ thế, mẹ bận bịu tối ngày nên mọi công việc nội trợ từ quét tước dọn dẹp, đi chợ nấu cơm đến chăm lo cho em gái 4 tuổi đều do Di quán xuyến. </span><span class="koboSpan" id="kobo.72.2">Chưa đầy 13 tuổi, Di đã biết cách săn sóc gia đình, tiết kiệm chi tiêu, đảm bảo nhu cầu cuộc sống với mức sinh hoạt phí có hạn. </span><span class="koboSpan" id="kobo.72.3">Ngoài giờ học, Di từ chối mọi lời rủ đi chơi, cũng hoàn toàn vắng mặt khỏi các hoạt động ngoại khóa, dần dà xa cách với bạn học, thậm chí bị coi là cô độc lập dị, nhưng em không hề bận tâm, tự lực trưởng thành với tâm hồn chín chắn, có trách nhiệm hơn nhiều bạn bè đồng trang lứa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.73.1">So với Di, Tiểu Văn hầu như không bị ảnh hưởng vì cái chết của bố, lớn lên vô tư lự giữa vòng tay chở che của mẹ và chị.</span></p>
+
+  <p><span class="koboSpan" id="kobo.74.1">Với Di mà nói, năm năm trung học không hề dễ dàng, nhưng cô không những vượt qua mà còn đứng đầu lớp, điểm thi đủ để lên thẳng dự bị đại học</span><a href="#id14" epub:type="noteref" id="b14"><span class="koboSpan" id="kobo.75.1">*</span></a><span class="koboSpan" id="kobo.76.1">, giáo viên chủ nhiệm còn đánh giá là cô có khả năng thi đỗ đại học hàng đầu. </span><span class="koboSpan" id="kobo.76.2">Nhưng mặc các thầy cô hết lòng khuyên nhủ, Di vẫn bỏ ngoài tai, quyết định học xong cấp ba thì đi làm. </span><span class="koboSpan" id="kobo.76.3">Khi bố qua đời, cô đã nhủ với lòng, bất kể thành tích ra sao cũng không học đại học, tập trung san sẻ gánh nặng kiếm tiền nuôi gia đình với mẹ.</span></p>
+
+  <aside epub:type="footnote" id="id14">
+    <a href="#b14" style="display: none;"><span class="koboSpan" id="kobo.77.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.78.1">Trước năm 2012, Hồng Kông vẫn áp dụng chế độ giáo dục 5 năm trung học, 2 năm dự bị đại học, 3 năm đại học theo kiểu của Anh. </span><span class="koboSpan" id="kobo.78.2">Sau này mới đổi thành hình thức ba-ba-bốn (tức 3 năm trung học cơ sở, 3 năm trung học phổ thông và 4 năm cao đẳng/đại học) như bây giờ. </span><i><span class="koboSpan" id="kobo.79.1">(Chú thích của tác giả - T.</span><span class="koboSpan" id="kobo.79.2">G)</span></i></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.80.1">“Mẹ ơi, con đi làm thì nhà mình sẽ có thêm thu nhập, mẹ cũng được thoải mái hơn.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.81.1">“Chỉ thêm mấy năm thôi mà. </span><span class="koboSpan" id="kobo.81.2">Mẹ nghe nói đại học có các chương trình hỗ trợ, chắc học phí không đáng lo quá đâu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.82.1">“Không phải, đại học tuy có cho vay học phí nhưng đến khi tốt nghiệp đi làm vẫn phải trả lại tiền. </span><span class="koboSpan" id="kobo.82.2">Hiện nay mức lương khởi điểm của cử nhân không cao, chưa kể con học khoa học xã hội nên rất ít lựa chọn công việc. </span><span class="koboSpan" id="kobo.82.3">Đi làm với thu nhập thấp, hằng tháng lại phải trả nợ, số tiền dư ra chẳng còn mấy đồng. </span><span class="koboSpan" id="kobo.82.4">Hơn nữa, con mà học đại học, năm năm tới nhà mình chỉ trông cậy vào mỗi thu nhập của mẹ, đến lúc con tốt nghiệp, trừ tiền trả nợ xong không còn bao nhiêu để đưa mẹ, chưa biết chừng mẹ lại phải cầm cự thêm năm sáu năm nữa. </span><span class="koboSpan" id="kobo.82.5">Mẹ, năm nay mẹ đã 40 rồi, chẳng lẽ mẹ muốn tiếp tục đầu tắt mặt tối đến tận 50 tuổi sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.83.1">Trăn không nói lại được câu nào.</span></p>
+
+  <p><span class="koboSpan" id="kobo.84.1">“Nhưng nếu bây giờ con đi làm, mọi chuyện sẽ khác.” </span><span class="koboSpan" id="kobo.84.2">Di tiếp tục. </span><span class="koboSpan" id="kobo.84.3">“Một là con không cần chờ tận năm năm mới có tháng lương đầu tiên đưa mẹ chi tiêu hằng ngày, hai là con khỏi phải nợ chính phủ học phí, ba là con có thể tích lũy kinh nghiệm làm việc từ lúc còn trẻ. </span><span class="koboSpan" id="kobo.84.4">Quan trọng hơn cả, chỉ cần mẹ con mình cần cù làm việc, đến lúc Tiểu Văn tốt nghiệp trung học thì chúng ta cũng có tiền tiết kiệm, Tiểu Văn sẽ không gặp phải buồn phiền giống con hôm nay, có thể toàn tâm toàn ý học tập, biết đâu còn đi du học nước ngoài ấy chứ.” </span><span class="koboSpan" id="kobo.84.5">Di xưa nay không giỏi ăn nói, lần này lại trình bày rất lưu loát.</span></p>
+
+  <p><span class="koboSpan" id="kobo.85.1">Rốt cuộc Trăn cũng đồng ý, dù lòng đầy bứt rứt, cảm thấy tại mình vô dụng nên con gái cả mới phải hi sinh tương lai vì con gái út.</span></p>
+
+  <p><span class="koboSpan" id="kobo.86.1">“Mẹ hãy tin con, tất cả đều đáng.” </span><span class="koboSpan" id="kobo.86.2">Năm năm trung học kết thúc, Di cũng đã tính toán xong xuôi đầu ra. </span><span class="koboSpan" id="kobo.86.3">Vì phải trông nhà và chăm em, thú tiêu khiển duy nhất của Di là đọc sách. </span><span class="koboSpan" id="kobo.86.4">Mà vì nhà nghèo, phần lớn sách cô đọc đều mượn ở thư viện, thế nên cô rất mong được làm việc ở đây. </span><span class="koboSpan" id="kobo.86.5">Di ứng tuyển và được LSCD</span><a href="#id15" epub:type="noteref" id="b15"><span class="koboSpan" id="kobo.87.1">*</span></a><span class="koboSpan" id="kobo.88.1"> nhận vào làm thủ thư hợp đồng tại Thư viện Trung ương Hồng Kông, phía Đông Vịnh Causeway.</span></p>
+
+  <aside epub:type="footnote" id="id15">
+    <a href="#b15" style="display: none;"><span class="koboSpan" id="kobo.89.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.90.1">Leisure and Cultural Services Department. </span><span class="koboSpan" id="kobo.90.2">Sở Dịch vụ Văn hóa và Giải trí, phụ trách tổng thể các hoạt động, dịch vụ liên quan đến thể thao giải trí và văn hóa văn nghệ tại Hồng Kông, bao gồm cả việc quản lý các thư viện công cộng.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.91.1">Mang tiếng làm việc cho chính phủ, nhưng Di không phải công chức nên không được hưởng phụ cấp riêng. </span><span class="koboSpan" id="kobo.91.2">Để tiết kiệm chi phí, chính phủ Hồng Kông cũng không tuyển dụng nhân viên dài hạn mà chỉ thuê theo hình thức hợp đồng giống các công ty tư nhân. </span><span class="koboSpan" id="kobo.91.3">Hợp đồng thường có kì hạn hai năm, hết hợp đồng nhân viên tự động bị sa thải, bên thuê không cần lo ngại những rắc rối và tổn thất do việc cắt giảm nhân sự mang lại. </span><span class="koboSpan" id="kobo.91.4">Họ nắm trong tay toàn quyền kiểm soát, làm ăn sa sút sẽ để nhân viên “ra đi tự nhiên”, còn không lại kí hợp đồng tiếp. </span><span class="koboSpan" id="kobo.91.5">Trên thực tế, chính phủ cũng thuê công ty tư nhân làm một số công đoạn, nên nhân viên thư viện công cộng cũng có thể chỉ là nhân viên bán thời gian của công ty nào đó, đãi ngộ họ nhận được còn kém cả nhân viên hợp đồng. </span><span class="koboSpan" id="kobo.91.6">Di đi làm rồi mới biết chuyện, không khỏi nhớ đến vụ tai nạn bất hạnh của bố, cô như nhìn thấy bóng dáng bố mình năm xưa từ mấy bác bảo vệ già của thư viện.</span></p>
+
+  <p><span class="koboSpan" id="kobo.92.1">Nhưng Di không bất mãn. </span><span class="koboSpan" id="kobo.92.2">Dù vị trí thấp, lương tháng của cô vẫn xấp xỉ 10 nghìn đô</span><a href="#id16" epub:type="noteref" id="b16"><span class="koboSpan" id="kobo.93.1">*</span></a><span class="koboSpan" id="kobo.94.1">, góp phần đáng kể vào việc cải thiện đời sống gia đình. </span><span class="koboSpan" id="kobo.94.2">Trăn không phải đi làm thêm, gánh nặng trên vai nhẹ đi rất nhiều. </span><span class="koboSpan" id="kobo.94.3">Tuy vẫn đến quán trà, nhưng thời gian Trăn ở nhà nhiều hơn. </span><span class="koboSpan" id="kobo.94.4">Trách nhiệm chăm sóc Tiểu Văn giờ đang học lớp Bốn dần chuyển từ Di sang mẹ. </span><span class="koboSpan" id="kobo.94.5">Di làm theo ca nên thời gian ở nhà không cố định, ít được chơi cùng em gái. </span><span class="koboSpan" id="kobo.94.6">Cô đi làm về mệt mỏi, em gái vẫn hay bám lấy nói đủ thứ chuyện trên trời dưới bể, nhưng chỉ được thời gian đầu. </span><span class="koboSpan" id="kobo.94.7">Về sau có vẻ cô bé đã chấp nhận sự thật là chị gái bận rộn công việc nên không dính chị như keo nữa. </span><span class="koboSpan" id="kobo.94.8">Cuộc sống của ba mẹ con dần dần yên ổn.</span></p>
+
+  <aside epub:type="footnote" id="id16">
+    <a href="#b16" style="display: none;"><span class="koboSpan" id="kobo.95.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.96.1">Khoảng 30 triệu đồng Việt Nam.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.97.1">Năm năm sau khi Di đi làm, sự yên ổn ấy chấm dứt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.98.1">Tháng Ba năm ngoái, Trăn ngã cầu thang ở quán trà, gãy xương đùi phải. </span><span class="koboSpan" id="kobo.98.2">Nhận được tin, Di cuống cuồng xin nghỉ, chạy vội đến bệnh viện. </span><span class="koboSpan" id="kobo.98.3">Chờ đợi cô ở bệnh viện lại là một tin còn đáng sợ hơn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.99.1">“Bà Trăn không phải gãy xương vì bị ngã, mà là ngã vì gãy xương.” </span><span class="koboSpan" id="kobo.99.2">Bác sĩ khám chính nói với Di. </span><span class="koboSpan" id="kobo.99.3">“Tôi ngờ là bà ấy mắc bệnh đa u tủy xương, phải kiểm tra chi tiết hơn.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.100.1">“Đa gì cơ?” </span><span class="koboSpan" id="kobo.100.2">Di ngớ ra trước cụm từ lạ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.101.1">“Đa u tủy xương… một dạng ung thư máu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.102.1">Sau hai ngày nơm nớp chờ đợi, Di nhận được kết quả chẩn đoán. </span><span class="koboSpan" id="kobo.102.2">Trăn bị ung thư, hơn nữa còn là giai đoạn cuối, hóa trị hay cấy ghép tế bào gốc tạo máu đều vô ích. </span><span class="koboSpan" id="kobo.102.3">Bác sĩ dự đoán chỉ sống được nửa năm nữa là nhiều.</span></p>
+
+  <p><span class="koboSpan" id="kobo.103.1">Thật ra Trăn đã thấy không khỏe từ lâu nhưng phớt lờ. </span><span class="koboSpan" id="kobo.103.2">Các triệu chứng của đa u tủy như thiếu máu, nhức xương, cơ thể mệt mỏi, Trăn lại nghĩ là viêm khớp và suy nhược do làm việc quá sức. </span><span class="koboSpan" id="kobo.103.3">Chị từng đi khám vì đau khớp, bác sĩ cũng chỉ chữa như các bệnh viêm và thoái hóa sụn thông thường, dù sao đa u tủy xương chủ yếu gặp ở đàn ông cao tuổi, chứ phụ nữ mới ngoài tứ tuần mắc bệnh này khá hiếm.</span></p>
+
+  <p><span class="koboSpan" id="kobo.104.1">Di không ngờ mẹ lại mắc bệnh nan y. </span><span class="koboSpan" id="kobo.104.2">Trong mắt cô, Trăn mạnh mẽ hệt như bà Ursula vợ Jose Arcadio Buendia trong </span><i><span class="koboSpan" id="kobo.105.1">Trăm năm cô đơn</span></i><span class="koboSpan" id="kobo.106.1">, cho dù không sống được 100 tuổi thì cũng phải già đi thành cụ bà khỏe mạnh, chứng kiến con cháu trưởng thành và tự lập. </span><span class="koboSpan" id="kobo.106.2">Ngắm nhìn người mẹ đang nằm trên giường bệnh, cô giật mình nhận ra mẹ đã suýt soát 50 tuổi, không còn trẻ nữa, những vất vả bao năm qua đã ăn mòn cơ thể mẹ, vết chân chim hằn sâu như vết nứt trên vỏ cây khô héo. </span><span class="koboSpan" id="kobo.106.3">Cô nắm tay mẹ lặng lẽ ứa nước mắt, nhưng Trăn lại bình thản như không.</span></p>
+
+  <p><span class="koboSpan" id="kobo.107.1">“Di, đừng khóc. </span><span class="koboSpan" id="kobo.107.2">May mà con khăng khăng đi làm luôn sau khi tốt nghiệp trung học, mẹ có ra đi cũng không lo hai chị em ăn không đủ no, mặc không đủ ấm…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.108.1">“Không, không, như vậy không được đâu…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.109.1">“Di, hứa với mẹ, con phải mạnh mẽ lên. </span><span class="koboSpan" id="kobo.109.2">Tiểu Văn là đứa mềm yếu, từ giờ việc chăm sóc em giao cả cho con.” </span><span class="koboSpan" id="kobo.109.3">Trăn không sợ chết, chị biết chồng chị đang đợi ở bờ bên kia. </span><span class="koboSpan" id="kobo.109.4">Điều duy nhất khiến chị nặng lòng là hai cô con gái.</span></p>
+
+  <p><span class="koboSpan" id="kobo.110.1">Hai tháng sau Trăn qua đời, sớm hơn tiên lượng của bác sĩ. </span><span class="koboSpan" id="kobo.110.2">Chị gặp biến chứng do nồng độ canxi trong máu tăng cao, suy thận và đau tim dẫn đến tử vong.</span></p>
+
+  <p><span class="koboSpan" id="kobo.111.1">Di nén nước mắt trong lễ tang. </span><span class="koboSpan" id="kobo.111.2">Giờ phút này, cô hoàn toàn hiểu tâm trạng của mẹ khi tiễn đưa bố: </span><span class="koboSpan" id="kobo.111.3">dẫu đau buồn xót xa đến mấy thì vẫn phải gắng gượng chèo chống, bởi từ nay trở đi Tiểu Văn chỉ có thể nương tựa vào mình cô. </span><span class="koboSpan" id="kobo.111.4">Nhìn Tiểu Văn, Di như thấy hình ảnh mình trong đám tang mười năm về trước với ánh mắt trống rỗng vô định.</span></p>
+
+  <p><span class="koboSpan" id="kobo.112.1">Tiểu Văn còn sốc vì cái chết của mẹ hơn cả Di năm xưa khi bố mất. </span><span class="koboSpan" id="kobo.112.2">Sau khi mẹ qua đời, cô bé ít nói và thu mình lại khác hẳn trước kia. </span><span class="koboSpan" id="kobo.112.3">Ngay cả ăn cơm với nhau, Di mà không chủ động hỏi han, Tiểu Văn sẽ chỉ lặng lẽ gảy từng hột, ăn xong buông một câu “Em no rồi” và rút về phòng mình lướt điện thoại với vẻ mặt vô cảm. </span><span class="koboSpan" id="kobo.112.4">“Phòng” đây là khoảng không gian riêng tư nho nhỏ cho các con gái do Trăn ngăn ra bằng cách tận dụng các tủ và giá sách trong nhà.</span></p>
+
+  <p><span class="koboSpan" id="kobo.113.1">Cho con bé thêm thời gian vậy, Di nghĩ. </span><span class="koboSpan" id="kobo.113.2">Cô không muốn ép em gái thay đổi, hơn nữa Tiểu Văn mới 14 tuổi, còn đang độ ẩm ương, càng bắt buộc cứng cáp lên có khi càng phản tác dụng. </span><span class="koboSpan" id="kobo.113.3">Di tin rằng, chẳng bao lâu nữa Tiểu Văn sẽ thoát ra khỏi màn sương tăm tối.</span></p>
+
+  <p><span class="koboSpan" id="kobo.114.1">Nửa năm sau khi mẹ qua đời, Tiểu Văn quả thật dần lấy lại tinh thần, thi thoảng Di còn trông thấy nụ cười trên môi em gái. </span><span class="koboSpan" id="kobo.114.2">Nhưng cả hai chị em đều không ngờ, bất hạnh của gia đình vẫn chưa chấm dứt.</span></p>
+
+  <p class="center"><span class="koboSpan" id="kobo.115.1">* * *</span></p>
+
+  <p><span class="koboSpan" id="kobo.116.1">Thứ Sáu, mùng 7 tháng Mười một, năm 2014.</span></p>
+
+  <p><span class="koboSpan" id="kobo.117.1">Tầm hơn 6 giờ chiều, Di nhận được điện thoại, liền lo lắng tới đồn cảnh sát Cửu Long Thành. </span><span class="koboSpan" id="kobo.117.2">Cảnh sát dẫn cô vào văn phòng Ban Điều tra Hình sự. </span><span class="koboSpan" id="kobo.117.3">Tiểu Văn mặc đồng phục đang ngồi cùng một nữ cảnh sát trên băng ghế ở góc phòng. </span><span class="koboSpan" id="kobo.117.4">Vừa nhìn thấy Tiểu Văn, Di lập tức lao tới ôm chầm lấy em. </span><span class="koboSpan" id="kobo.117.5">Tiểu Văn không phản ứng, lơ đãng mặc cho chị gái ôm mình.</span></p>
+
+  <p><span class="koboSpan" id="kobo.118.1">“Tiểu Văn…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.119.1">Di buông em gái ra toan hỏi han, Tiểu Văn mới như bừng tỉnh, ôm chầm lấy Di rồi vùi mặt vào ngực cô khóc nức nở đến gần mười phút. </span><span class="koboSpan" id="kobo.119.2">Nữ cảnh sát ngồi bên bèn khuyên nhủ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.120.1">“Em gái đừng sợ, chị em đã đến đây rồi, em hãy kể cho bọn chị nghe đầu đuôi sự việc đi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.121.1">Nhận thấy Tiểu Văn thoáng do dự, Di bèn nắm chặt tay em thầm khích lệ. </span><span class="koboSpan" id="kobo.121.2">Tiểu Văn nhìn nữ cảnh sát, lại nhìn tờ khai đã điền thông tin tên tuổi trên bàn, thở dài rồi ngập ngừng kể lại chuyện xảy ra hơn một tiếng trước.</span></p>
+
+  <p><span class="koboSpan" id="kobo.122.1">Tiểu Văn theo học trung học Enoch trên đường Waterloo, thuộc học khu</span><a href="#id17" epub:type="noteref" id="b17"><span class="koboSpan" id="kobo.123.1">*</span></a><span class="koboSpan" id="kobo.124.1"> Du Ma Địa, gần các trường Wah Yan Cửu Long, trung học nữ sinh True Light, trung học tín hữu Cơ đốc ELCHK… Tuy thành tích học sinh không bằng mấy trường nổi tiếng như Wah Yan hay True Light, nhưng Enoch vẫn được xem như một trường dòng “hot” trong khu. </span><span class="koboSpan" id="kobo.124.2">Không những thế, nhà trường còn khởi xướng vận dụng các ứng dụng khoa học công nghệ như mạng Internet và máy tính bảng vào học tập, khá có tiếng tăm trong ngành giáo dục.</span></p>
+
+  <aside epub:type="footnote" id="id17">
+    <a href="#b17" style="display: none;"><span class="koboSpan" id="kobo.125.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.126.1">Khu vực tập trung nhiều trường học.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.127.1">Hằng ngày đến trường, trước tiên Tiểu Văn phải bắt buýt mini xanh từ cư xá Lạc Hoa tới ga tàu điện ngầm Quan Đường, ngồi tàu nửa tiếng mới tới ga Du Ma Địa; tan học lại bắt tàu đến ga Quan Đường rồi chuyển sang buýt mini. </span><span class="koboSpan" id="kobo.127.2">Trung học Enoch tan học từ 4 giờ chiều, nhưng thỉnh thoảng Tiểu Văn sẽ nán lại thư viện làm bài tập về nhà. </span><span class="koboSpan" id="kobo.127.3">Ví như hôm nay, mùng 7 tháng Mười một, Tiểu Văn về muộn hơn mọi hôm, khoảng 5 giờ mới ra khỏi trường.</span></p>
+
+  <p><span class="koboSpan" id="kobo.128.1">Bắt đầu từ tháng Chín, người dân Hồng Kông phát động biểu tình phản đối chính sách cải cách bầu cử mà chính phủ đề ra. </span><span class="koboSpan" id="kobo.128.2">Khi chính phủ xua cảnh sát chống bạo động ra trấn áp, tình hình càng không thể cứu vãn, đông đảo dân chúng bất mãn tràn ra đường, chiếm đóng các tuyến đường lớn ở Kim Chung, Vượng Giác và Vịnh Causeway gây tắc nghẽn, khiến giao thông tê liệt cục bộ. </span><span class="koboSpan" id="kobo.128.3">Các phương tiện trên mặt đất phải thay đổi lộ trình, thậm chí tạm dừng hoạt động, nên người dân lũ lượt kéo nhau đi tàu điện ngầm.</span></p>
+
+  <p><span class="koboSpan" id="kobo.129.1">Số hành khách bắt tàu tăng đột biến, sân ga giờ cao điểm chật kín những người đã chờ hai, ba lượt vẫn chưa lên được tàu, còn trong toa là cảnh tượng chen chúc nghẹt thở, hành khách muốn xoay người cũng khó chứ đừng nói kiếm được chỗ bám tay tử tế. </span><span class="koboSpan" id="kobo.129.2">Thậm chí họ phải nhón chân đứng sát rạt nhau, người nghiêng ngả theo mỗi lần đoàn tàu tăng giảm tốc độ. </span><span class="koboSpan" id="kobo.129.3">Cũng may vì quá chật nên không lo ngã.</span></p>
+
+  <p><span class="koboSpan" id="kobo.130.1">Tiểu Văn lên tàu ở ga Du Ma Địa, đứng nép sát vào cánh cửa bên trái cuối toa số bốn. </span><span class="koboSpan" id="kobo.130.2">Tàu tuyến Quan Đường chỉ mở cửa trái khi đến ga Vượng Giác và ga Prince Edward, còn lại hành khách đều lên xuống cửa phải, thành ra sau khi đi qua ga Prince Edward, chỗ Tiểu Văn đứng không khác nào góc chết của toa. </span><span class="koboSpan" id="kobo.130.3">Cô bé đã quen đứng ở vị trí này vì không phải mất công di chuyển nhường chỗ cho khách lên xuống mỗi lần vào ga, dù sao mãi đến Quan Đường cô bé mới phải xuống tàu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.131.1">Hôm nay tàu vừa rời ga Prince Edward, Tiểu Văn đã phát hiện có điều bất thường.</span></p>
+
+  <p><span class="koboSpan" id="kobo.132.1">“Em… em cảm thấy có người sờ soạng em…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.133.1">“Sờ chỗ nào của em?” </span><span class="koboSpan" id="kobo.133.2">Nữ cảnh sát hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.134.1">“Sờ… mông.” </span><span class="koboSpan" id="kobo.134.2">Tiểu Văn lắp bắp trình bày, lúc ấy cô bé ôm cặp đứng quay mặt ra cửa sổ nên không biết ai ở sau lưng, chỉ biết có người đang sờ mông mình. </span><span class="koboSpan" id="kobo.134.3">Ngoái đầu lại nhìn thì không thấy ai khả nghi, toàn những gương mặt rất bình thường. </span><span class="koboSpan" id="kobo.134.4">Một nhân viên văn phòng béo ục ịch đang gà gật, một bác gái tóc xoăn đang nói điện thoại rất to, mấy người nước ngoài đang tán gẫu, còn lại đều cắm cúi lướt điện thoại, toa chật như nêm cũng không ngăn nổi họ tranh thủ lên mạng xã hội, chat chit, xem phim hoặc chơi game.</span></p>
+
+  <p><span class="koboSpan" id="kobo.135.1">“Ban, ban đầu em nghĩ chắc là em hiểu lầm…” Giọng Tiểu Văn lí nhí như tiếng muỗi vo ve. </span><span class="koboSpan" id="kobo.135.2">“Toa tàu rất chật, có lẽ ai đó móc điện thoại trong túi ra chẳng may chạm phải em… Nhưng một lát sau, em phát hiện… hu hu…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.136.1">“Em bị sờ mông thật?” </span><span class="koboSpan" id="kobo.136.2">Di hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.137.1">Tiểu Văn căng thẳng gật đầu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.138.1">Nữ cảnh sát gặng hỏi, Tiểu Văn mặt đỏ bừng miêu tả lại quá trình bị sàm sỡ. </span><span class="koboSpan" id="kobo.138.2">Cảm thấy bàn tay lạ chậm rãi xoa bóp mông phải của mình, cô bé vội quài tay ra chặn, nhưng vô ích vì tàu lúc đó quá chật chội. </span><span class="koboSpan" id="kobo.138.3">Không xoay người lại được, chỉ còn cách ngoái đầu lườm cảnh cáo tên yêu râu xanh. </span><span class="koboSpan" id="kobo.138.4">Nhưng ngoái đầu xong, cô bé lại không biết thủ phạm là người đàn ông mặc Âu phục đứng áp lưng vào mình, hay ông cụ trọc đầu đứng bên cạnh, hay một kẻ nào đó đứng khuất tầm mắt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.139.1">“Em không kêu cứu sao?” </span><span class="koboSpan" id="kobo.139.2">Vừa dứt lời, Di hối hận ngay vì thấy giọng mình sặc mùi trách móc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.140.1">Tiểu Văn lắc đầu, “Em… em sợ gặp rắc rối…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.141.1">Không phải Di không hiểu cảm xúc của em gái. </span><span class="koboSpan" id="kobo.141.2">Cô từng tận mắt chứng kiến một vụ quấy rối trên tàu điện ngầm, có điều khi nữ sinh kêu cứu và kẻ háo sắc bị bắt, người xung quanh lại nhìn nạn nhân với ánh mắt xem thường, đã thế thủ phạm còn lớn tiếng mỉa mai, “Mày tưởng mày là ngôi sao hay thần tượng hả? </span><span class="koboSpan" id="kobo.141.3">Việc quái gì tao phải sờ ngực mày?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.142.1">Tiểu Văn tạm dừng mấy phút để trấn tĩnh rồi mới từ từ đi vào chi tiết. </span><span class="koboSpan" id="kobo.142.2">Nữ cảnh sát hí hoáy ghi chép vào bản khai khẩu cung. </span><span class="koboSpan" id="kobo.142.3">Tiểu Văn kể, đang hoảng loạn thì đột nhiên bàn tay lạ biến mất, mới thở phào vì tưởng thoát nạn thì nó lại vén váy của cô bé lên sờ hẳn vào bắp đùi. </span><span class="koboSpan" id="kobo.142.4">Dù ghê rợn như bị sâu róm bò trên người, nhưng ngoài thấp thỏm cầu mong bàn tay lạ đừng nhích lên thêm thì cô bé cũng chẳng ngọ nguậy hay làm gì được.</span></p>
+
+  <p><span class="koboSpan" id="kobo.143.1">Tất nhiên, cầu mong vô ích. </span><span class="koboSpan" id="kobo.143.2">Tên dê xồm nắn mông Tiểu Văn, ngón tay móc mép quần lót từ từ nhích tới vùng kín. </span><span class="koboSpan" id="kobo.143.3">Tiểu Văn sợ đến mức không dám cất tiếng, ra sức lấy tay đè váy xuống ngăn hắn lại.</span></p>
+
+  <p><span class="koboSpan" id="kobo.144.1">“Em, em không rõ hắn sờ bao lâu… Em chỉ biết âm thầm van xin hắn dừng tay…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.145.1">Tiểu Văn run rẩy kể, Di không khỏi xót xa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.146.1">“Sau đó, chính bác đã cứu em.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.147.1">“Bác?” </span><span class="koboSpan" id="kobo.147.2">Di hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.148.1">“Vài người dân tốt bụng đã bắt tên yêu râu xanh lại.” </span><span class="koboSpan" id="kobo.148.2">Nữ cảnh sát nói với Di.</span></p>
+
+  <p><span class="koboSpan" id="kobo.149.1">Khi tàu sắp tới ga Cửu Long Đường, một bác gái đột nhiên oang oang quát kẻ đứng sau lưng Tiểu Văn, “Anh kia! </span><span class="koboSpan" id="kobo.149.2">Anh làm gì đấy!” </span><span class="koboSpan" id="kobo.149.3">Chính là bác gái nói điện thoại rất to mà Tiểu Văn nhắc tới ban nãy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.150.1">“Bác vừa lên tiếng thì cái tay lập tức rút lại…” Tiểu Văn e dè kể tiếp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.151.1">Sau tiếng quát của bác gái, cả toa tàu nhốn nháo.</span></p>
+
+  <p><span class="koboSpan" id="kobo.152.1">“Tôi bảo anh đấy! </span><span class="koboSpan" id="kobo.152.2">Anh vừa làm gì hả?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.153.1">Bác gái quát tên đàn ông cao to đứng phía sau bên phải Tiểu Văn. </span><span class="koboSpan" id="kobo.153.2">Từ chỗ bác đến chỗ hắn là hai, ba người khác. </span><span class="koboSpan" id="kobo.153.3">Tên này khoảng 40 tuổi, da vàng ệch, gò má cao, mũi tẹt, môi mỏng, mắt lấm la lấm lét. </span><span class="koboSpan" id="kobo.153.4">Hắn mặc sơ mi xanh lam xỉn màu, tương phản rõ rệt với nước da.</span></p>
+
+  <p><span class="koboSpan" id="kobo.154.1">“Chị gọi tôi?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.155.1">“Chính anh! </span><span class="koboSpan" id="kobo.155.2">Tôi hỏi vừa rồi anh làm cái trò gì?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.156.1">“Tôi làm gì chứ?” </span><span class="koboSpan" id="kobo.156.2">Mặt tên đàn ông lộ vẻ căng thẳng. </span><span class="koboSpan" id="kobo.156.3">Hắn trả lời đúng lúc tàu vào ga Cửu Long Đường. </span><span class="koboSpan" id="kobo.156.4">Khi tàu dừng lại, cửa bên phải chầm chậm mở ra.</span></p>
+
+  <p><span class="koboSpan" id="kobo.157.1">“Tôi hỏi, có phải đồ dê xồm nhà anh vừa sàm sỡ cô bé này không!” </span><span class="koboSpan" id="kobo.157.2">Bác gái đánh mắt về phía Tiểu Văn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.158.1">“Con mẹ điên.” </span><span class="koboSpan" id="kobo.158.2">Tên đàn ông lắc đầu, định lỉnh khỏi toa theo dòng người xuống tàu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.159.1">“Đừng hòng chạy!” </span><span class="koboSpan" id="kobo.159.2">Bác gái không nhượng bộ, nhân lúc hành khách di chuyển tạo ra khoảng trống bèn tiến lại gần túm lấy cánh tay hắn. </span><span class="koboSpan" id="kobo.159.3">“Cháu gái, cháu nói đi, vừa nãy có người sờ mông cháu phải không?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.160.1">Tiểu Văn cắn môi, ánh mắt do dự không biết có nên nói thật không.</span></p>
+
+  <p><span class="koboSpan" id="kobo.161.1">“Cháu gái đừng sợ, bác làm chứng cho! </span><span class="koboSpan" id="kobo.161.2">Cháu nói ra là được!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.162.1">Tiểu Văn lúng túng gật đầu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.163.1">“Các người là một lũ điên! </span><span class="koboSpan" id="kobo.163.2">Đừng cản tôi xuống tàu nữa!” </span><span class="koboSpan" id="kobo.163.3">Tên đàn ông gào lên. </span><span class="koboSpan" id="kobo.163.4">Tất cả hành khách nhìn họ chằm chằm, có người còn bấm nút khẩn cấp và thông báo tình hình với lái tàu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.164.1">“Tôi thấy tận mắt! </span><span class="koboSpan" id="kobo.164.2">Anh đừng chống chế! </span><span class="koboSpan" id="kobo.164.3">Theo chúng tôi tới đồn cảnh sát!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.165.1">“Tôi, tôi chỉ chẳng may đụng phải nó thôi! </span><span class="koboSpan" id="kobo.165.2">Loại như nó ai mà thèm sờ mông chứ! </span><span class="koboSpan" id="kobo.165.3">Chị không cho tôi đi, tôi sẽ tố cáo chị giam giữ người trái phép!” </span><span class="koboSpan" id="kobo.165.4">Tên đàn ông đẩy bác gái ra, tìm cách chạy khỏi toa tàu. </span><span class="koboSpan" id="kobo.165.5">Không ngờ vừa xoay người đã bị một anh cao to lực lưỡng đứng lẫn trong đám đông hiếu kì tóm gọn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.166.1">“Anh có làm hay không, cứ đến đồn cảnh sát đã rồi tính.” </span><span class="koboSpan" id="kobo.166.2">Anh cao to nghiêm giọng nói.</span></p>
+
+  <p><span class="koboSpan" id="kobo.167.1">Giữa cảnh lộn xộn, Tiểu Văn nép vào góc toa tàu. </span><span class="koboSpan" id="kobo.167.2">Các hành khách săm soi cô bé bằng những ánh mắt khác nhau, có cảm thông, có hóng hớt, nhưng nhiều nhất là tò mò. </span><span class="koboSpan" id="kobo.167.3">Đặc biệt, cái nhìn của một vài hành khách nam cứ như đang vặn hỏi “Vừa rồi em bị sàm sỡ à?”</span><span class="koboSpan" id="kobo.167.4">, “Cảm thấy thế nào?”</span><span class="koboSpan" id="kobo.167.5">, “Có thấy nhục không?”</span><span class="koboSpan" id="kobo.167.6">, “Có thấy sướng không?”</span><span class="koboSpan" id="kobo.167.7">, làm Tiểu Văn vô cùng khó chịu. </span><span class="koboSpan" id="kobo.167.8">Hai chân mềm nhũn, cô bé ngã bệt xuống đất, bắt đầu khóc nức nở.</span></p>
+
+  <p><span class="koboSpan" id="kobo.168.1">“Cháu gái đừng khóc, có bác ở đây rồi…” Bác gái oang oang nói.</span></p>
+
+  <p><span class="koboSpan" id="kobo.169.1">Cuối cùng thì bác gái, anh trai cao to và một chị nhân viên văn phòng hào hiệp cùng đến đồn cảnh sát cung cấp lời khai. </span><span class="koboSpan" id="kobo.169.2">Theo lời bác gái, tất cả hành khách trên tàu đều bận lướt điện thoại, chỉ mình bác phát hiện ra sắc mặt Tiểu Văn rất lạ. </span><span class="koboSpan" id="kobo.169.3">Lúc đổi khách ở ga Thạch Hiệp Vỹ, thoáng thấy váy đồng phục của Tiểu Văn bị nhấc lên, mông bị bóp lấy, bác định im lặng chờ tàu đến ga Cửu Long Đường rồi xông lên bắt tận tay thủ phạm. </span><span class="koboSpan" id="kobo.169.4">Nhưng nhìn vẻ mặt kinh hoàng của Tiểu Văn, bác buộc phải đánh động sớm để tên yêu râu xanh dừng lại. </span><span class="koboSpan" id="kobo.169.5">Một số hành khách nghe bác hét đã lấy điện thoại quay đầy đủ vụ to tiếng trên tàu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.170.1">Người đàn ông bị bắt tên là Thiệu Đức Bình, 43 tuổi, làm chủ một tiệm văn phòng phẩm ở khu nhà xã hội Hoàng Đại Tiên. </span><span class="koboSpan" id="kobo.170.2">Tại đồn cảnh sát, hắn phủ nhận cáo buộc, liên tục nhấn mạnh mình chỉ vô tình đụng phải Tiểu Văn, tại Tiểu Văn từng có khúc mắc với hắn nên ôm hận vu cáo mà thôi. </span><span class="koboSpan" id="kobo.170.3">Theo như Bình khai, Tiểu Văn cứ lề mề ở quầy thanh toán của cửa hàng tiện lợi ga Du Ma Địa, khiến khách hàng khác phải chờ lâu. </span><span class="koboSpan" id="kobo.170.4">Bình đứng ngay sau Tiểu Văn, thấy thế bèn mắng vốn mấy câu, Tiểu Văn không chịu thua kém liền quay ra cãi cự. </span><span class="koboSpan" id="kobo.170.5">Sau này gặp nhau trên tàu, Tiểu Văn mới khai báo bị sàm sỡ để vu oan cho hắn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.171.1">Nhân viên cửa hàng tiện lợi xác nhận với cảnh sát rằng, đúng là hai người có lời qua tiếng lại ở chỗ họ, sau khi Tiểu Văn rời đi, Bình còn than phiền, “Thanh niên thời nay rặt một lũ trẻ trâu, toàn vô cớ gây chuyện, phá hoại Hồng Kông.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.172.1">Tuy nhiên cảnh sát không tìm được bằng chứng nào cho thấy Tiểu Văn thù dai nên vu cáo Bình. </span><span class="koboSpan" id="kobo.172.2">Trong khi đó, các hành động của Bình lại vô tình chứng tỏ hắn chính là thủ phạm: </span><span class="koboSpan" id="kobo.172.3">ủ mưu lỉnh khỏi hiện trường trước khi cảnh sát đến, cư xử thô lỗ xấu tính, và nhất là xuống tàu khi còn cách nhà những hai ga. </span><span class="koboSpan" id="kobo.172.4">Theo điều tra, chiều hôm đó Bình hẹn bạn ở Du Ma Địa, chia tay bạn xong phải về trông tiệm thay vợ nên xuống tàu ngang đường như thế là quá vô lý.</span></p>
+
+  <p><span class="koboSpan" id="kobo.173.1">“Em gái, em xem lời khai này có chỗ nào sai sót hoặc chưa thỏa đáng không.” </span><span class="koboSpan" id="kobo.173.2">Nữ cảnh sát đặt biên bản xuống trước mặt Tiểu Văn. </span><span class="koboSpan" id="kobo.173.3">“Thấy ổn rồi thì em kí tên xác nhận vào đây.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.174.1">Tiểu Văn cầm bút bi, lo lắng viết tên mình vào khung chữ kí. </span><span class="koboSpan" id="kobo.174.2">Đây là lần đầu tiên Di nhìn thấy biên bản ghi lời khai của cảnh sát, bên trên khung chữ kí là lời cam đoan của nhân chứng, “Tôi hiểu nếu lời khai ở đây là giả hoặc không đáng tin, tôi có thể bị truy cứu trách nhiệm hình sự.” </span><span class="koboSpan" id="kobo.174.3">Dòng chữ này khiến cô cảm thấy thật nặng nề. </span><span class="koboSpan" id="kobo.174.4">Bản thân cô còn rất ít khi phải kí tên vào giấy tờ liên quan đến pháp luật, thế mà Tiểu Văn đang tuổi thiếu niên đã phải tự mình chịu trách nhiệm theo quy định của xã hội pháp quyền rồi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.175.1">Sau sự cố này, Tiểu Văn lại quay về kiệm lời như trước. </span><span class="koboSpan" id="kobo.175.2">Di chẳng biết an ủi em gái thế nào ngoài mấy lời sáo rỗng “Đừng sợ, chị đòi lại công bằng cho em”, “Tên khốn kia sẽ bị pháp luật trừng trị”. </span><span class="koboSpan" id="kobo.175.3">Do nửa năm trước đã dùng gần hết số ngày phép lo hậu sự cho mẹ, cô không thể xin nghỉ để ở bên em gái, mà chỉ còn mỗi cách về nhà thật nhanh sau mỗi ca làm.</span></p>
+
+  <p><span class="koboSpan" id="kobo.176.1">Vụ việc được tiến hành theo trình tự tư pháp, truyền thông bắt đầu xuất hiện vài bài báo lẻ tẻ, gọi Tiểu Văn là “Cô A”. </span><span class="koboSpan" id="kobo.176.2">Phóng viên khui tin tiệm Bình ngoài văn phòng phẩm thì còn bán cả sách báo, trong đó có sách ảnh nữ sinh Nhật Bản, đồng thời chỉ ra Bình là người thích chụp ảnh, thường xuyên rủ đám bạn phó nhòm hẹn người mẫu chụp ảnh mát mẻ, cho thấy sở thích khá suy đồi. </span><span class="koboSpan" id="kobo.176.3">Các bài viết này chỉ chiếm một góc nhỏ trên báo, ít được độc giả quan tâm vì là dạng tin hầu như ngày nào cũng có, chưa kể báo chí còn phải dành phần lớn diện tích cho các cuộc biểu tình chiếm đóng và các tin tức chính trị liên quan.</span></p>
+
+  <p><span class="koboSpan" id="kobo.177.1">Mùng 9 tháng Hai bắt đầu mở phiên tòa xét xử, Bình bị khép vào tội dâm ô. </span><span class="koboSpan" id="kobo.177.2">Bị cáo phủ nhận cáo buộc, luật sư bào chữa viện lý do truyền thông đưa tin tiêu cực làm ảnh hưởng đến tính công bằng của quá trình điều tra, vì thế nộp đơn xin hoãn vĩnh viễn công tác xét xử, nhưng thẩm phán bác bỏ. </span><span class="koboSpan" id="kobo.177.3">Phiên tòa sẽ tiếp tục vào cuối tháng Hai, công tố viên báo với Di rằng Tiểu Văn sẽ phải ra đối chất, nhưng bên công tố có thể sắp xếp lấy lời khai qua video hoặc lập vách ngăn trên tòa. </span><span class="koboSpan" id="kobo.177.4">Việc này càng khiến Di lo lắng, vì bước vào phòng xét xử, Tiểu Văn buộc phải tự mình xoay xở với hàng tá câu chất vấn, thể nào luật sư bào chữa cũng vặn hỏi chi tiết vụ việc và các vấn đề riêng tư một cách không khoan nhượng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.178.1">Nhưng mọi lo lắng của Di đều thừa thãi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.179.1">Ngày 26 tháng Hai, ở phiên tòa tiếp theo, bị cáo Thiệu Đức Bình bất ngờ đổi giọng nhận tội, các nhân chứng không cần lên làm chứng, giờ chỉ chờ thẩm phán xem xét hồ sơ sức khỏe tâm thần của bị cáo để cân nhắc mức độ hình phạt. </span><span class="koboSpan" id="kobo.179.2">Sau khi tham khảo án lệ, ngày 16 tháng Ba tòa tuyên án Thiệu Đức Bình phải chịu mức phạt ba tháng tù, nhưng vì bị cáo đã nhận tội và tỏ ra ăn năn nên thời gian thi hành án giảm một phần ba, chỉ còn hai tháng tù giam, chấp hành ngay lập tức.</span></p>
+
+  <p><span class="koboSpan" id="kobo.180.1">Di cứ tưởng mọi chuyện đã chấm dứt, Tiểu Văn sẽ quên đi nỗi đau và dần dần hồi phục tinh thần. </span><span class="koboSpan" id="kobo.180.2">Nhưng một tháng sau khi Bình vào tù, cơn ác mộng đẩy em gái cô tới bước đường cùng mới thực sự bắt đầu.</span></p>
+
+  <p><span class="koboSpan" id="kobo.181.1">Thứ Sáu, mùng 10 tháng Tư, một tuần trước sinh nhật 15 tuổi của Tiểu Văn, trên diễn đàn Củ Lạc, một diễn đàn trực tuyến Hồng Kông, xuất hiện bài viết có tên “Con khốn 14 tuổi hại cậu tôi ngồi tù”.</span></p>
+
+  <div class="web">
+    <p class="top"><i><span class="koboSpan" id="kobo.182.1">Diễn đàn:</span></i><span class="koboSpan" id="kobo.183.1"> Củ Lạc</span></p>
+
+    <p class="top"><i><span class="koboSpan" id="kobo.184.1">Người đăng:</span></i><span class="koboSpan" id="kobo.185.1"> kidkit727</span></p>
+
+    <p class="top"><i><span class="koboSpan" id="kobo.186.1">Tiêu đề:</span></i><span class="koboSpan" id="kobo.187.1"> Con khốn 14 tuổi hại cậu tôi ngồi tù!</span></p>
+
+    <p class="top"><i><span class="koboSpan" id="kobo.188.1">Thời gian:</span></i><span class="koboSpan" id="kobo.189.1"> 10/04/2015 22:</span><span class="koboSpan" id="kobo.189.2">18</span></p>
+
+    <p><span class="koboSpan" id="kobo.190.1">Hôm nay tôi thực sự không chịu nổi nữa, nên phải lấy lại công bằng cho cậu tôi!</span></p>
+
+    <p><span class="koboSpan" id="kobo.191.1">Cậu tôi năm nay 43 tuổi, cậu mợ có một tiệm văn phòng phẩm ở Hoàng Đại Tiên, ngày ngày chăm chỉ làm việc nhặt vài cắc lẻ nuôi gia đình. </span><span class="koboSpan" id="kobo.191.2">Cậu không học rộng tài cao, hết cấp hai là nghỉ học đi làm thuê cho tiệm văn phòng phẩm, sau nhờ tính thật thà đứng đắn mà được ông chủ sang nhượng lại tiệm luôn. </span><span class="koboSpan" id="kobo.191.3">Cậu chưa bao giờ gian trá, bán hàng luôn đúng giá, hàng xóm láng giềng đều có thể chứng thực. </span><span class="koboSpan" id="kobo.191.4">Thế mà giờ lại ngồi tù, vì bị một con khốn 14 tuổi vu oan.</span></p>
+
+    <p><span class="koboSpan" id="kobo.192.1">Sự việc bắt đầu vào tháng Mười một năm ngoái. </span><span class="koboSpan" id="kobo.192.2">Một nữ sinh 14 tuổi đã tố cáo cậu sàm sỡ nó, sờ mông nó trên tàu điện ngầm tuyến Quan Đường. </span><span class="koboSpan" id="kobo.192.3">Thật ra cậu tôi không làm gì cả! </span><span class="koboSpan" id="kobo.192.4">Con bé đó chỉ muốn trả thù thôi! </span><span class="koboSpan" id="kobo.192.5">Trước khi đón tàu, cậu vào cửa hàng tiện lợi ga Du Ma Địa mua thuốc lá, xếp hàng ngay sau con bé kia. </span><span class="koboSpan" id="kobo.192.6">Hình như nó mua thẻ nạp điện thoại, đến lúc thanh toán moi mãi không đủ tiền lẻ, lục lọi cặp sách rõ lâu làm hàng người phía sau càng lúc càng dài. </span><span class="koboSpan" id="kobo.192.7">Cậu tôi giục thì nó quay ngoắt lại lườm, còn lẩm bẩm chửi bậy. </span><span class="koboSpan" id="kobo.192.8">Cậu bèn nạt vài câu nữa cho nó im tịt. </span><span class="koboSpan" id="kobo.192.9">Nhưng người ta vẫn bảo chó không sủa mới là chó cắn người, con khốn đó chính là ví dụ. </span><span class="koboSpan" id="kobo.192.10">Lúc cậu tôi nạt thì chẳng nói chẳng rằng, đến lúc lên tàu mới trả thù, hãm hại cậu tôi bằng cách độc ác này.</span></p>
+
+    <p><span class="koboSpan" id="kobo.193.1">Cậu tôi vốn không làm gì nên đương nhiên sẽ không nhận tội. </span><span class="koboSpan" id="kobo.193.2">Nhưng phóng viên đưa tin phiến diện làm cậu mợ tôi hết sức kinh hãi. </span><span class="koboSpan" id="kobo.193.3">Cậu tôi thích chụp ảnh, có thể nói đó là đam mê duy nhất, do gia đình không khá giả nên toàn dùng thiết bị rẻ tiền và đồ đã qua sử dụng. </span><span class="koboSpan" id="kobo.193.4">Cậu bán sách ảnh trong tiệm, cũng đi chụp phong cảnh và chân dung cùng một số người bạn chung sở thích, chỉ thế thôi mà báo chí mô tả cậu như một kẻ ái nhi, chụp ảnh vì muốn thả dê người mẫu. </span><span class="koboSpan" id="kobo.193.5">Trời ạ! </span><span class="koboSpan" id="kobo.193.6">Tiệm của cậu bán mấy chục cuốn sách ảnh khác nhau, phóng viên cứ nhằm một, hai cuốn chụp nữ sinh mặc đồng phục để viết bài. </span><span class="koboSpan" id="kobo.193.7">Cậu và bạn bè hẹn người mẫu chụp ảnh cùng lắm một năm đôi ba lần, phóng viên lại phóng đại như thể tháng nào cũng kiếm gái bao!</span></p>
+
+    <p><span class="koboSpan" id="kobo.194.1">Cậu tôi sợ những bài viết này sẽ ảnh hưởng đến cách nhìn nhận của thẩm phán. </span><span class="koboSpan" id="kobo.194.2">Cậu biết bỏ chạy khi bị vu oan là việc làm ngu ngốc. </span><span class="koboSpan" id="kobo.194.3">Luật sư bảo chính vì cậu có ý định bỏ chạy, cộng thêm tình tiết người bị hại chưa đủ 16 tuổi, rất có thể tòa vẫn sẽ phán quyết có tội dù là cậu trong sạch. </span><span class="koboSpan" id="kobo.194.4">Nếu nhận tội may ra được giảm nhẹ hình phạt, còn nếu không nhận, cậu sẽ phải gánh trách nhiệm ép người bị hại ra tòa làm chứng, tòa sẽ cho rằng cậu không biết hối lỗi và kéo dài thời gian thi hành án. </span><span class="koboSpan" id="kobo.194.5">Cậu tôi định kiên quyết không nhận, nhưng cuối cùng vẫn phải chịu thua. </span><span class="koboSpan" id="kobo.194.6">Sức khỏe mợ tôi yếu ớt, cậu lo mợ chịu đựng một mình, chẳng thà để sự việc mau chóng lắng xuống còn hơn. </span><span class="koboSpan" id="kobo.194.7">Từ ngày báo đăng tin thất thiệt, hôm nào cũng có người chỉ chỉ trỏ trỏ mỗi lúc mợ tôi mở cửa bán hàng. </span><span class="koboSpan" id="kobo.194.8">Vì rất yêu mợ tôi, cậu chấp nhận ngồi tù oan, khuất phục trước phán quyết bất công.</span></p>
+
+    <p><span class="koboSpan" id="kobo.195.1">Một người đàn ông tình cảm trách nhiệm như thế sao có thể táy máy tay chân với nữ sinh trên tàu điện ngầm cơ chứ!</span></p>
+
+    <p><span class="koboSpan" id="kobo.196.1">Vụ án này có rất nhiều điểm đáng ngờ:</span></p>
+
+    <p><span class="koboSpan" id="kobo.197.1">1. </span><span class="koboSpan" id="kobo.197.2">Cậu tôi cao 1m80, nữ sinh kia cao chưa tới 1m60, hai người họ chênh nhau khoảng 20 centimet. </span><span class="koboSpan" id="kobo.197.3">Theo biên bản của cảnh sát, bên nguyên nói cậu tôi vén váy nó lên sờ mông, có điều thò tay xuống thấp như vậy ắt hẳn rất khó, chẳng lẽ người bên cạnh không phát hiện ra?</span></p>
+
+    <p><span class="koboSpan" id="kobo.198.1">2. </span><span class="koboSpan" id="kobo.198.2">Việc cậu tôi muốn bỏ chạy là lẽ thường tình. </span><span class="koboSpan" id="kobo.198.3">Tự nhiên bị một kẻ xấu tính xấu nết từ đâu chui ra vu oan, có ai lại ngoan ngoãn để mặc người ta ức hiếp cơ chứ? </span><span class="koboSpan" id="kobo.198.4">Hồng Kông bây giờ phải trái lẫn lộn, cường quyền áp đảo công lý, trắng bị nói thành đen, có lý cũng chẳng ai nghe!</span></p>
+
+    <p><span class="koboSpan" id="kobo.199.1">3. </span><span class="koboSpan" id="kobo.199.2">Vì người bị hại chưa đủ 16 tuổi nên cảnh sát coi đây là vụ việc nghiêm trọng, vậy tại sao họ không lập tức thu thập chứng cứ? </span><span class="koboSpan" id="kobo.199.3">Nếu cậu tôi sờ quần lót người ta, trên ngón tay cậu chắc có sợi vải, còn quần lót nữ sinh sẽ dính mồ hôi tay của cậu tôi, họ có thể xét nghiệm ADN.</span></p>
+
+    <p><span class="koboSpan" id="kobo.200.1">Quan trọng hơn cả, cậu tôi không ngu xuẩn đến mức bất chấp gia đình và danh dự để xâm hại một cô gái vị thành niên có nhan sắc trung bình!</span></p>
+
+    <p><span class="koboSpan" id="kobo.201.1">Cậu tôi vì muốn sự việc lắng xuống mới nhận tội, lẽ ra tôi cũng nên để tất cả sớm kết thúc theo ý cậu. </span><span class="koboSpan" id="kobo.201.2">Tuy nhiên, hôm nay tôi tình cờ biết một số chuyện, thế là lửa giận bùng lên.</span></p>
+
+    <p><span class="koboSpan" id="kobo.202.1">Một đứa bạn tôi đã khui ra lai lịch nữ sinh 14 tuổi kia. </span><span class="koboSpan" id="kobo.202.2">Nó là đồ trơ trẽn xấu tính, thích đâm chọc sau lưng người ta, ngoài mặt giả vờ thân thiết nhưng thực chất toàn gài bẫy đặt điều. </span><span class="koboSpan" id="kobo.202.3">Nó từng giật bồ người ta, giật xong chơi chán rồi đá, thế nên không có bạn thân, đến bạn cùng lớp cũng né xa! </span><span class="koboSpan" id="kobo.202.4">Nó còn qua lại với một số thành phần bất hảo ngoài trường, chưa thành niên đã uống rượu, chưa biết chừng còn cắn thuốc, làm gái bao cũng nên.</span></p>
+
+    <p><span class="koboSpan" id="kobo.203.1">Nghe bạn học của nó kể, nó lớn lên trong cảnh mồ côi cha, năm ngoái mẹ già cũng chết, không có người lớn bảo ban nên ngày càng hư thân mất nết. </span><span class="koboSpan" id="kobo.203.2">Theo tôi thấy, nó coi cậu tôi là nơi xả bất mãn, biến tàu điện ngầm thành sân khấu, tự sắm vai nạn nhân yếu đuối, tranh thủ sự thương hại của người khác. </span><span class="koboSpan" id="kobo.203.3">Nhưng cậu tôi nào đã làm gì sai? </span><span class="koboSpan" id="kobo.203.4">Tại sao lại bắt cậu và người nhà hi sinh hạnh phúc chỉ để thỏa mãn tâm lý cá nhân của nó chứ?</span></p>
+
+    <p><span class="koboSpan" id="kobo.204.1">Xin lỗi cậu, cháu biết cậu muốn nhân nhượng cho yên thân, nhưng cháu không nuốt trôi cục tức này!</span></p>
+  </div>
+
+  <p><span class="koboSpan" id="kobo.205.1">Xuất hiện trên diễn đàn chưa đầy một ngày, bài viết “Con khốn 14 tuổi hại cậu tôi ngồi tù” đã trở thành bài viết nóng nhất, được cộng đồng mạng lũ lượt chia sẻ lên Facebook và các trang mạng xã hội khác. </span><span class="koboSpan" id="kobo.205.2">Trong suốt thời gian diễn ra biểu tình chiếm đóng, người dân thường xuyên nghi ngờ cảnh sát lạm quyền, lạm dụng vũ lực, móc ngoặc với xã hội đen. </span><span class="koboSpan" id="kobo.205.3">Những người chống đối còn coi bộ máy tư pháp như công cụ đàn áp tiếng nói của nhân dân để phục vụ chính quyền. </span><span class="koboSpan" id="kobo.205.4">Giữa bầu không khí xã hội ấy, cộng đồng mạng trên diễn đàn Củ Lạc nghiêng hẳn sang ủng hộ người viết bài, chỉ trích ngành tư pháp bất công, cảnh sát tắc trách khi tìm kiếm bằng chứng, cho rằng Bình ngồi tù oan, đồng thời viết bài lên án “Cô A”, dọa sẽ công khai danh tính cô ấy. </span><span class="koboSpan" id="kobo.205.5">Hôm sau, một người dùng tìm được ảnh của Tiểu Văn trên mạng liền đăng trên chính diễn đàn này, tiết lộ tên tuổi, địa chỉ nhà và tên trường học của Tiểu Văn. </span><span class="koboSpan" id="kobo.205.6">Công khai thông tin của nạn nhân vị thành niên trong vụ án hình sự là hành vi phạm pháp, admin diễn đàn đã nhanh chóng xóa bài viết. </span><span class="koboSpan" id="kobo.205.7">Nhưng admin nhanh đến mấy cũng không bằng đông đảo cư dân mạng. </span><span class="koboSpan" id="kobo.205.8">Họ đã lưu lại toàn bộ nội dung, đăng các bài viết chỉ trích chửi bới nhưng cố tình xóa một hai chữ để lách luật, chẳng hạn gọi Tiểu Văn là “Con khốn Âu X Văn trường X ở Du Ma Địa”, hoặc “Con cặn bã X Văn 14 tuổi ở cư xá Lạc X”, thậm chí còn sử dụng phần mềm chỉnh sửa để cắt ghép ảnh, ra sức bôi nhọ và giễu cợt Tiểu Văn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.206.1">Di chỉ thích đọc sách báo, có thể nói là mù vi tính, đã thế còn ít bạn bè. </span><span class="koboSpan" id="kobo.206.2">Với cô mà nói, mạng xã hội và các diễn đàn trực tuyến chẳng khác nào một thế giới xa lạ. </span><span class="koboSpan" id="kobo.206.3">Vì yêu cầu công việc, cô phải học cách sử dụng thư điện tử ở thư viện đã là giỏi lắm rồi. </span><span class="koboSpan" id="kobo.206.4">Bởi vậy, khi cô biết chuyện qua lời kể của đồng nghiệp thì đã là thứ Hai, ba ngày sau khi bài viết đăng trên mạng. </span><span class="koboSpan" id="kobo.206.5">Lúc này, cô mới hiểu nguyên nhân khiến Tiểu Văn như người mất hồn, trốn biệt trong nhà mấy hôm cuối tuần.</span></p>
+
+  <p><span class="koboSpan" id="kobo.207.1">Mượn máy tính bảng của đồng nghiệp để đọc toàn bộ bài viết xong, Di nổi cơn thịnh nộ, căm phẫn bức xúc trước những chỉ trích sai sự thật cùng những lời bôi nhọ “cắn thuốc, làm gái bao”. </span><span class="koboSpan" id="kobo.207.2">Đến khi bình tĩnh lại, hiểu được mức độ nghiêm trọng của sự việc, Di phát hoảng, không biết phải làm thế nào. </span><span class="koboSpan" id="kobo.207.3">Cô muốn gọi điện cho Tiểu Văn, nhưng nghĩ em gái đang trên lớp khó lòng nghe máy, cô đành gọi đến phòng giáo vụ tìm cô Viên chủ nhiệm. </span><span class="koboSpan" id="kobo.207.4">Cô Viên cũng vừa biết chuyện, bảo rằng nhà trường đã bắt tay hành động, thành lập một nhóm nhỏ để ứng phó. </span><span class="koboSpan" id="kobo.207.5">“Chị Di cứ yên tâm, hôm nay Văn lên lớp không có gì bất thường, tôi sẽ để ý em ấy thật kĩ, cũng sẽ sắp xếp nhân viên xã hội chuyện trò với em ấy.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.208.1">Vừa tan ca, Di nóng lòng về nhà để an ủi em gái. </span><span class="koboSpan" id="kobo.208.2">Nhưng phản ứng của Tiểu Văn hoàn toàn nằm ngoài dự tính của cô.</span></p>
+
+  <p><span class="koboSpan" id="kobo.209.1">“Chị, em không muốn nói chuyện.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.210.1">“Nhưng…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.211.1">“Hôm nay em đã bị giáo viên dội bom tới tấp cả ngày trời đến mệt lả rồi, em không muốn nhắc lại nữa.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.212.1">“Tiểu Văn, chị nghĩ…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.213.1">“Em không muốn nói! </span><span class="koboSpan" id="kobo.213.2">Tóm lại chị đừng đả động đến nữa!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.214.1">Thái độ trốn tránh của Tiểu Văn làm Di kinh ngạc. </span><span class="koboSpan" id="kobo.214.2">Lúc mới đọc bài đăng, cô tin chắc toàn bộ nội dung cháu trai Bình viết đều là nhảm nhí. </span><span class="koboSpan" id="kobo.214.3">Đến lúc về nhà thấy thái độ Tiểu Văn là lạ, Di không khỏi dao động. </span><span class="koboSpan" id="kobo.214.4">Dẫu cô không tin em gái mình đặt điều hãm hại người khác, nhưng những lời miêu tả Tiểu Văn trong bài viết liệu có 1% chân thực nào không?</span></p>
+
+  <p><span class="koboSpan" id="kobo.215.1">Lòng nghi ngờ như hạt cây tầm gửi, một khi gieo xuống là sẽ âm thầm bén rễ vào tâm trí rồi lan rộng lúc nào không hay.</span></p>
+
+  <p><span class="koboSpan" id="kobo.216.1">Ngoài bài viết chính, Di còn mất ngủ vì những bình luận trên mạng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.217.1">Nhờ đồng nghiệp chỉ dẫn, Di đã biết cách lướt các diễn đàn và trang mạng xã hội. </span><span class="koboSpan" id="kobo.217.2">Hằng ngày đợi Tiểu Văn ngủ say, cô lén lút mở chiếc máy tính cổ lỗ sĩ trong nhà, chăm chú đọc từng bình luận của cư dân mạng. </span><span class="koboSpan" id="kobo.217.3">Di hiểu người bình thường ai cũng có mặt tối. </span><span class="koboSpan" id="kobo.217.4">Nhưng cô chưa bao giờ nghĩ mặt tối đó khi lên mạng Internet lại quá đà, thiếu tỉnh táo và bành trướng theo cấp số nhân thế này.</span></p>
+
+  <div class="web1">
+    <p><span class="koboSpan" id="kobo.218.1">&gt;&gt; Hàng họ như thế mà cũng có hứng à?</span></p>
+
+    <p><span class="koboSpan" id="kobo.219.1">&gt;&gt; Điện nước bình thường, nhưng vẫn chơi ngon.</span></p>
+
+    <p><span class="koboSpan" id="kobo.220.1">&gt;&gt; Cũng chỉ là một gái bao, 300 đô là chịch được rồi.</span></p>
+
+    <p><span class="koboSpan" id="kobo.221.1">&gt;&gt; Thứ con gái dễ dãi, có cho thêm 300 tao cũng không thèm.</span></p>
+
+    <p><span class="koboSpan" id="kobo.222.1">&gt;&gt; Loại rác rưởi này, nhẹ nhàng đem chôn là được.</span></p>
+  </div>
+
+  <p><span class="koboSpan" id="kobo.223.1">Di choáng váng khi em gái mình lại trở thành đối tượng chịu nhục mạ, bới móc công khai của một đống người lạ. </span><span class="koboSpan" id="kobo.223.2">Rõ ràng chưa gặp Tiểu Văn bao giờ, thế mà cư dân mạng làm như hiểu em gái cô lắm, áp đặt suy nghĩ của họ lên con bé rồi công kích, chế giễu một cách trắng trợn. </span><span class="koboSpan" id="kobo.223.3">Họ sử dụng đầy rẫy lời lẽ ti tiện bẩn thỉu trong bình luận, như thể đường dây cáp quang cho họ cái quyền tự do nhận xét người khác bằng mọi ngôn từ đê tiện tục tĩu, ngay cả khi đối phương chỉ là một cô bé vị thành niên. </span><span class="koboSpan" id="kobo.223.4">Hoặc giả, chính vì Tiểu Văn là trẻ vị thành niên, họ cho rằng pháp luật quá thiên vị Tiểu Văn nên họ càng phải bảo vệ chính nghĩa một cách “công bằng”.</span></p>
+
+  <p><span class="koboSpan" id="kobo.224.1">Ngoài những phát ngôn dơ dáy vô liêm sỉ, trên các diễn đàn còn xuất hiện kha khá “thám tử” nghiên cứu tình tiết vụ án và “chuyên gia tâm lý” phân tích động cơ vu cáo người khác của Tiểu Văn, sau đó quả quyết rằng con bé mắc bệnh tâm lý và có khiếm khuyết về mặt nhân cách. </span><span class="koboSpan" id="kobo.224.2">Thỉnh thoảng cũng có người phát biểu ý kiến từ góc độ khách quan, nhưng thường sẽ bị người khác phản pháo bằng lời lẽ bất lịch sự, phần bình luận thành nơi công kích cá nhân và chửi bới vô nghĩa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.225.1">Di có cảm giác bản tính trần trụi của con người đang phơi bày trước mắt cô theo một cách quá quắt nhất. </span><span class="koboSpan" id="kobo.225.2">Tiểu Văn có lỗi gì để mà bị cuốn vào vòng xoáy này.</span></p>
+
+  <p><span class="koboSpan" id="kobo.226.1">Suốt hai tuần tiếp theo, không khí bất an bao trùm gia đình Di. </span><span class="koboSpan" id="kobo.226.2">Sau bài đăng trên diễn đàn, truyền thông lại để ý đến vụ án của Tiểu Văn, thậm chí còn quan tâm rầm rộ hơn trước. </span><span class="koboSpan" id="kobo.226.3">Phóng viên gõ cửa hỏi thăm hai chị em không chỉ một lần nhưng đều bị sập cửa vào mặt vì Tiểu Văn từ chối lên tiếng. </span><span class="koboSpan" id="kobo.226.4">Một vài phóng viên chạy đến khu nhà ở xã hội Hoàng Đại Tiên phỏng vấn vợ Bình cũng gặp kết quả tương tự, vợ Bình tạm đóng cửa tiệm để né tránh. </span><span class="koboSpan" id="kobo.226.5">Báo chí lên bài đa chiều về vụ việc, có bài hùa theo cư dân mạng chỉ trích ngành tư pháp còn thiếu sót, có bài chỉ trích hành vi xét xử trên mạng này chẳng khác gì bắt nạt. </span><span class="koboSpan" id="kobo.226.6">Nhưng bất kể tích cực hay tiêu cực, cũng không thay đổi được sự thật là Tiểu Văn bị ép trở thành nhân vật công chúng, bị dân tình soi mói, ngày nào đến trường hay về nhà cũng có người quen chỉ trỏ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.227.1">Di lại chẳng làm được gì trước vô vàn sức ép ấy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.228.1">Cô từng nghĩ tới việc cho Tiểu Văn nghỉ học tạm thời, nhưng con bé cực lực phản đối, cho rằng cần duy trì cuộc sống bình thường, không để những chuyện “vớ vẩn” làm xáo trộn nếp sinh hoạt. </span><span class="koboSpan" id="kobo.228.2">Di không muốn lộ vẻ yếu đuối trước mặt em gái nên toàn kìm nén cảm xúc, nở nụ cười khích lệ trước thái độ tích cực của em. </span><span class="koboSpan" id="kobo.228.3">Nhưng không biết đã bao lần cô phải trốn vào nhà vệ sinh lặng lẽ rơi nước mắt.</span></p>
+
+  <p><span class="koboSpan" id="kobo.229.1">Sang tháng Năm, số bài báo giảm dần, cư dân mạng bớt soi mói, Tiểu Văn cũng dần trở lại như trước. </span><span class="koboSpan" id="kobo.229.2">Tuy gầy đi trông thấy, ánh mắt có phần dao động, nhưng đã kiên trì chịu đựng suốt ba tuần vừa rồi, sau này hẳn con bé cũng vượt qua được thôi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.230.1">Nhưng Di đã lầm. </span><span class="koboSpan" id="kobo.230.2">Giữa lúc cô tưởng mọi việc sắp yên ổn, Tiểu Văn lại nhảy lầu tự sát.</span></p>
+
+  <p><span class="koboSpan" id="kobo.231.1">Di không tin em gái muốn tìm đến cái chết. </span><span class="koboSpan" id="kobo.231.2">Với cô, mọi chuyện nên từ từ lắng xuống, cuộc sống nên dần dần trở về quỹ đạo, chứ không phải đột ngột mất kiểm soát đến mức này.</span></p>
+
+  <p><span class="koboSpan" id="kobo.232.1">“Tiểu Văn không tự sát! </span><span class="koboSpan" id="kobo.232.2">Nhất định có kẻ bám theo con bé rồi ra tay ám hại…” Tại nhà xác, Di gân cổ phủ định kết luận của cơ quan điều tra.</span></p>
+
+  <p><span class="koboSpan" id="kobo.233.1">“Không, chúng tôi có đầy đủ bằng chứng chứng minh em gái cô tự sát.” </span><span class="koboSpan" id="kobo.233.2">Cảnh viên Trình nói.</span></p>
+
+  <p><span class="koboSpan" id="kobo.234.1">Hôm Tiểu Văn bỏ mạng, bác Trần hàng xóm tình cờ hẹn thợ đến sửa cửa. </span><span class="koboSpan" id="kobo.234.2">Họ tận mắt trông thấy Tiểu Văn về nhà một mình lúc 5 giờ 10 phút, còn chào cô bé. </span><span class="koboSpan" id="kobo.234.3">Lúc 6 giờ 8 phút, tức thời điểm Tiểu Văn nhảy lầu, hai cư dân không quen biết nhau sống ở tòa nhà An Hoa đã chứng kiến tận mắt toàn bộ sự việc. </span><span class="koboSpan" id="kobo.234.4">Tòa nhà An Hoa đối diện tòa nhà Hoán Hoa, cứ chiều chiều lại có các cụ già ngồi bên cửa sổ ngắm nhìn phố xá. </span><span class="koboSpan" id="kobo.234.5">Đúng hôm ấy, có hai cụ nhìn thấy toàn cảnh Tiểu Văn mở cửa sổ, leo lên bệ cửa rồi nhảy xuống. </span><span class="koboSpan" id="kobo.234.6">Một trong hai cụ sợ đến mức ngất xỉu, cụ còn lại hô hoán người nhà báo cảnh sát. </span><span class="koboSpan" id="kobo.234.7">Cả hai chỉ rõ, lúc Tiểu Văn nhảy xuống không có bất cứ ai đứng sau lưng, tự cô bé trèo lên cửa sổ lao ra ngoài. </span><span class="koboSpan" id="kobo.234.8">Quan trọng hơn cả, cư xá Lạc Hoa từng xảy ra nhiều vụ ném đồ từ trên cao xuống, cảnh sát phải lắp đặt hệ thống giám sát trên nóc các tòa nhà cao tầng hòng tìm ra thủ phạm và ngăn chặn triệt để hành vi này. </span><span class="koboSpan" id="kobo.234.9">Trong đó, có một camera đã quay được quá trình Tiểu Văn tự sát. </span><span class="koboSpan" id="kobo.234.10">Đoạn băng hoàn toàn ăn khớp với lời khai của các nhân chứng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.235.1">Đến Di cũng phải thừa nhận trong nhà không có dấu vết vật lộn. </span><span class="koboSpan" id="kobo.235.2">Lúc cô mở cửa vào, phòng ốc vẫn y hệt mọi khi. </span><span class="koboSpan" id="kobo.235.3">Di hiểu, hiện thực không giống tiểu thuyết, không có chuyện hung thủ giết người xong lại bày mưu tính kế ngụy tạo thành hiện trường tự sát, mà dù có thật cũng không thể xảy ra với cô bé 15 tuổi rất đỗi bình thường như Tiểu Văn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.236.1">Điểm đáng ngờ duy nhất là Tiểu Văn không để lại di thư.</span></p>
+
+  <p><span class="koboSpan" id="kobo.237.1">“Tự sát không để lại di thư không phải hiếm, một số người vì xúc động nhất thời mới tìm đến cái chết nên không kịp viết di thư.” </span><span class="koboSpan" id="kobo.237.2">Cảnh viên Trình chậm rãi giải thích. </span><span class="koboSpan" id="kobo.237.3">“Cô Di, mấy tháng nay em gái cô đã phải chịu sức ép cực kì lớn, rất giống những vụ án tôi từng gặp. </span><span class="koboSpan" id="kobo.237.4">Cô hãy tin tưởng kết quả điều tra của cảnh sát, chuyện gia đình cô mới đây còn ầm ĩ như thế, chúng tôi sẽ không làm việc qua loa.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.238.1">Thâm tâm Di hiểu bất cứ cô bé 15 tuổi nào từng phải chịu sức ép khổng lồ từ dư luận đều có nguy cơ tìm đến cái chết, nhưng cô không chấp nhận nổi. </span><span class="koboSpan" id="kobo.238.2">Cô không chấp nhận tai bay vạ gió từ đâu ập tới khiến Tiểu Văn bị những kẻ không quen biết bắt nạt tới chết. </span><span class="koboSpan" id="kobo.238.3">Cô hận tất cả đám cư dân mạng phát ngôn tùy tiện và vô trách nhiệm. </span><span class="koboSpan" id="kobo.238.4">Mỗi kẻ rảnh rỗi viết bừa vài chữ thôi, gộp lại còn sắc lạnh hơn lưỡi dao đoạn đầu đài. </span><span class="koboSpan" id="kobo.238.5">Tiểu Văn như bị người lạ tùng xẻo mỗi ngày, bị xé rứt từng mảnh thịt trên thân, bị tra tấn từ từ cho đến lúc lìa đời.</span></p>
+
+  <p><span class="koboSpan" id="kobo.239.1">Di muốn đòi lại công bằng từ những kẻ trên mạng đã góp phần sát hại Tiểu Văn, nhưng cô biết mình không làm được. </span><span class="koboSpan" id="kobo.239.2">Dù cố đến mấy, cô cũng không thể tính sổ từng tên một.</span></p>
+
+  <p><span class="koboSpan" id="kobo.240.1">“Vậy… vậy hung thủ chính là kẻ đăng bài viết! </span><span class="koboSpan" id="kobo.240.2">Cháu trai của Thiệu Đức Bình! </span><span class="koboSpan" id="kobo.240.3">Chính gã đã khiến Tiểu Văn tự sát!” </span><span class="koboSpan" id="kobo.240.4">Di nghiến răng nghiến lợi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.241.1">Cảnh viên Trình thở dài, “Cô nói tác giả bài viết là hung thủ, nhưng người ta có làm gì hơn là đưa ra ý kiến cá nhân đâu, cùng lắm thì kiện được tội phỉ báng mà thôi… Có điều em cô đã qua đời, tôi không rõ cô có được phép thay mặt khởi kiện không nữa. </span><span class="koboSpan" id="kobo.241.2">Cô Di, tôi nghĩ cô nên tìm luật sư xin lời khuyên về mặt pháp lý, song trước mắt điều cô cần là tư vấn tâm lý đấy.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.242.1">Cảnh viên Trình ân cần khuyên nhủ, nhưng Di đều không để vào tai.</span></p>
+
+  <p><span class="koboSpan" id="kobo.243.1">Hai tuần tiếp theo, một mình Di lo liệu toàn bộ việc hậu sự: </span><span class="koboSpan" id="kobo.243.2">nhận xác Tiểu Văn, đăng kí lễ viếng với nhà tang lễ, đặt lịch hẹn hỏa táng… Khách đến viếng thưa thớt, linh đường vắng tanh, thay vào đó bên ngoài lại chật kín phóng viên, liên tục làm phiền Di với những câu hỏi thiếu tế nhị. </span><span class="koboSpan" id="kobo.243.3">“Hiện giờ tâm trạng cô thế nào?” </span><span class="koboSpan" id="kobo.243.4">“Cô nghĩ sao về việc em gái tự sát?” </span><span class="koboSpan" id="kobo.243.5">“Cô có cho rằng cư dân mạng là hung thủ không?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.244.1">Sau cái chết của Tiểu Văn, một tạp chí còn làm hẳn chuyên đề “Thiếu nữ 15 tuổi nhảy lầu: </span><span class="koboSpan" id="kobo.244.2">dùng cái chết để tố cáo hay sợ tội tự sát?”</span><span class="koboSpan" id="kobo.244.3">. </span><span class="koboSpan" id="kobo.244.4">Góc bài đăng ảnh Tiểu Văn (đã làm nhòe). </span><span class="koboSpan" id="kobo.244.5">Di đi ngang qua sạp báo trông thấy mà điên tiết, suýt nữa thì xé toạc cả chồng tạp chí.</span></p>
+
+  <p><span class="koboSpan" id="kobo.245.1">Đối với Di, phóng viên về cơ bản chẳng khác gì cư dân mạng. </span><span class="koboSpan" id="kobo.245.2">Họ lấy danh nghĩa “công chúng có quyền được biết” để cướp đi những giây phút yên bình của Tiểu Văn, tất cả chỉ nhằm mục đích tăng lượng tiêu thụ. </span><span class="koboSpan" id="kobo.245.3">Nếu cư dân mạng là hung thủ thì đám phóng viên chính là đồng lõa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.246.1">Tang lễ của mẹ Trăn năm ngoái còn tạm coi là đông. </span><span class="koboSpan" id="kobo.246.2">Đồng nghiệp và ông chủ quán trà chỗ làm, hàng xóm láng giềng vẫn gặp gỡ tán dóc thường ngày và bạn cũ ở vịnh Thổ Qua đều đến viếng, thậm chí bác Ngưu, đàn anh cũ của bố Huy cũng tới chia buồn. </span><span class="koboSpan" id="kobo.246.3">Khách đến tiễn đưa Tiểu Văn hôm nay thật ít ỏi so với hồi đó. </span><span class="koboSpan" id="kobo.246.4">Điều làm Di khó hiểu nhất là đến tận chiều tối vẫn không thấy bóng dáng bạn bè Tiểu Văn đâu, chỉ thấy mỗi cô Viên chủ nhiệm lớp.</span></p>
+
+  <p><span class="koboSpan" id="kobo.247.1">Chẳng lẽ… Tiểu Văn thực sự bị tẩy chay ở trường?</span></p>
+
+  <p><span class="koboSpan" id="kobo.248.1">Di nhớ lại đoạn miêu tả Tiểu Văn không có bạn bè trong bài viết trên diễn đàn nọ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.249.1">Không thể nào, nhất định không phải đâu, Tiểu Văn hoạt bát khéo ăn nói, không thể không có bạn được. </span><span class="koboSpan" id="kobo.249.2">Ngồi tại khu vực cho gia quyến, Di càng lúc càng bứt rứt. </span><span class="koboSpan" id="kobo.249.3">Cô không sợ Tiểu Văn không có bạn, mà sợ nội dung bài viết là sự thật.</span></p>
+
+  <p><span class="koboSpan" id="kobo.250.1">May mà 7 giờ 30 phút tối, hai học sinh mặc đồng phục lò dò xuất hiện, xóa bỏ nghi ngờ trong lòng Di.</span></p>
+
+  <p><span class="koboSpan" id="kobo.251.1">Một nam sinh dìu một nữ sinh tóc ngắn chậm rãi đến cúi đầu trước linh cữu. </span><span class="koboSpan" id="kobo.251.2">Di thấy mắt cô bé sưng húp, chứng tỏ vừa khóc một trận. </span><span class="koboSpan" id="kobo.251.3">Di khá ấn tượng với hai bạn nhỏ này. </span><span class="koboSpan" id="kobo.251.4">Cô nhớ đêm trước Giáng sinh năm kia, hai người cùng đưa Tiểu Văn về nhà, nói Tiểu Văn đang dự tiệc thì thấy không khỏe, hôm đó mẹ còn thức suốt đêm chăm sóc Tiểu Văn. </span><span class="koboSpan" id="kobo.251.5">Lần này, hai bạn không nói gì với Di, chỉ lẳng lặng gật đầu rồi rời đi. </span><span class="koboSpan" id="kobo.251.6">Sau đó còn có thêm một học sinh nữa. </span><span class="koboSpan" id="kobo.251.7">Di nghĩ, có lẽ vì tang lễ cử hành vào thứ Năm, hôm sau còn phải đi học nên lớp chỉ cử đại diện tới viếng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.252.1">Hoàn thành tang lễ, hỏa táng thi thể rồi đặt tro cốt Tiểu Văn cạnh tro cốt bố mẹ, nỗi đau trong lòng Di lại trào dâng lần nữa. </span><span class="koboSpan" id="kobo.252.2">Hai tuần vừa rồi cô chạy đôn chạy đáo lo hậu sự cho em gái, không rảnh rỗi suy nghĩ vẩn vơ. </span><span class="koboSpan" id="kobo.252.3">Nay mọi việc đã xong xuôi, Di ủ ê vô cùng khi phải đối diện với căn nhà trống hoác. </span><span class="koboSpan" id="kobo.252.4">Trân trân nhìn từng góc nhà, cô như thấy lại những tháng ngày gia đình quây quần bên nhau: </span><span class="koboSpan" id="kobo.252.5">Tiểu Văn bé xíu ngồi xổm trước sofa chơi búp bê, mẹ xào rau trong bếp, còn bố ngồi cạnh Di trò chuyện thật to với mẹ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.253.1">“Tiểu Văn… Mẹ… Bố…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.254.1">Đêm đến, Di ôm kỉ niệm đẹp đẽ chìm vào giấc ngủ cô độc. </span><span class="koboSpan" id="kobo.254.2">Kỉ niệm về một thời nghèo khó nhưng vui vẻ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.255.1">Nhưng thông báo xuất hiện trong thùng thư vài ngày sau đã tước đoạt nốt ốc đảo cuối cùng trong tâm hồn Di. </span><span class="koboSpan" id="kobo.255.2">Sở Nhà đất yêu cầu Di phải rời khỏi căn hộ ở tòa nhà Hoán Hoa.</span></p>
+
+  <p><span class="koboSpan" id="kobo.256.1">“Cô Di, mong cô hiểu cho. </span><span class="koboSpan" id="kobo.256.2">Chúng tôi chỉ làm theo quy định chung.” </span><span class="koboSpan" id="kobo.256.3">Một trưởng ban trả lời Di ở phòng tiếp dân của Sở Nhà đất tại Hà Văn Điền</span><a href="#id18" epub:type="noteref" id="b18"><span class="koboSpan" id="kobo.257.1">*</span></a><span class="koboSpan" id="kobo.258.1">. </span><span class="koboSpan" id="kobo.258.2">Di đã xin hẹn gặp họ để tỏ thái độ phản đối.</span></p>
+
+  <aside epub:type="footnote" id="id18">
+    <a href="#b18" style="display: none;"><span class="koboSpan" id="kobo.259.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.260.1">Ho Man Tin. </span><span class="koboSpan" id="kobo.260.2">Một khu dân cư lớn ở Hồng Kông.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.261.1">“Tôi, tôi đã ở căn hộ hiện giờ từ nhỏ, vì sao tôi phải dọn đi?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.262.1">“Cô Di này, tôi xin nói thẳng.” </span><span class="koboSpan" id="kobo.262.2">Trưởng ban vừa giở tài liệu vừa giải thích, “Hiện tại cô chỉ ở một mình, mà căn hộ tòa nhà Hoán Hoa dành cho gia đình từ hai đến ba người, theo quy định của Sở Nhà đất, căn hộ cho một người không thể vượt quá 20m</span><sup><span class="koboSpan" id="kobo.263.1">2</span></sup><span class="koboSpan" id="kobo.264.1">. </span><span class="koboSpan" id="kobo.264.2">Bây giờ cô đã thuộc diện “hộ mở rộng”</span><a href="#id19" epub:type="noteref" id="b19"><span class="koboSpan" id="kobo.265.1">*</span></a><span class="koboSpan" id="kobo.266.1">, không đủ điều kiện ở căn hộ này nữa. </span><span class="koboSpan" id="kobo.266.2">Tất nhiên chúng tôi sẽ cung cấp cho cô căn hộ mới.”</span></p>
+
+  <aside epub:type="footnote" id="id19">
+    <a href="#b19" style="display: none;"><span class="koboSpan" id="kobo.267.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.268.1">Hộ có người bị xóa tên khỏi hộ khẩu (do di cư, qua đời, kết hôn…) dẫn đến diện tích ở trung bình của các thành viên còn lại trong gia đình vượt quá quy định cho phép. </span><span class="koboSpan" id="kobo.268.2">Khi đó “hộ mở rộng” sẽ phải chuyển tới sống tại căn hộ nhỏ hơn phù hợp quy định.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.269.1">“Nhưng đây là nhà tôi! </span><span class="koboSpan" id="kobo.269.2">Sống trong căn nhà này tôi mới có thể nhớ đến người thân của tôi!” </span><span class="koboSpan" id="kobo.269.3">Di kích động chất vấn, “Vì người nhà tôi chết hết rồi nên các anh muốn đuổi tôi đi sao? </span><span class="koboSpan" id="kobo.269.4">Sở Nhà đất làm việc không có tình người như thế sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.270.1">“Cô Di,” trưởng ban mặc Âu phục thẳng thớm, đeo kính viền vàng ngẩng đầu lên nhìn thẳng vào mắt Di. </span><span class="koboSpan" id="kobo.270.2">“Tôi rất thông cảm với hoàn cảnh của cô, nhưng cô biết hiện nay có bao nhiêu gia đình đang chờ suất nhà ở xã hội không? </span><span class="koboSpan" id="kobo.270.3">Nếu chúng tôi không mau chóng xử lý từng trường hợp một, các gia đình đó chỉ còn nước tiếp tục sống trong những căn hộ nhỏ hẹp xuống cấp. </span><span class="koboSpan" id="kobo.270.4">Cô nói chúng tôi không có tình người, trong khi cô không thèm quan tâm những người dân chờ đợi bao năm vẫn chưa được đổi nhà, như vậy chẳng phải còn ích kỉ hơn sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.271.1">Mặt Di ửng đỏ rồi tái mét, không phản bác được câu nào.</span></p>
+
+  <p><span class="koboSpan" id="kobo.272.1">“Thật ra chúng tôi đâu vô tình đến thế. </span><span class="koboSpan" id="kobo.272.2">Chúng tôi sẽ để cô ở thêm ba tháng nữa, cô cũng có quyền chọn chỗ mới trong danh sách chúng tôi cung cấp. </span><span class="koboSpan" id="kobo.272.3">Khu ở mới có thể khá xa, quận Nguyên Lãng hoặc quận Bắc khu Tân Giới</span><a href="#id20" epub:type="noteref" id="b20"><span class="koboSpan" id="kobo.273.1">*</span></a><span class="koboSpan" id="kobo.274.1"> chẳng hạn, nhưng đều là nhà mới xây, bài trí tử tế hơn cư xá Lạc Hoa nhiều. </span><span class="koboSpan" id="kobo.274.2">Có tin gì mới chúng tôi sẽ lại báo cho cô. </span><span class="koboSpan" id="kobo.274.3">Nếu cô định rời Hồng Kông trong thời gian ngắn, nhớ liên lạc với chúng tôi.”</span></p>
+
+  <aside epub:type="footnote" id="id20">
+    <a href="#b20" style="display: none;"><span class="koboSpan" id="kobo.275.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.276.1">Một trong ba khu vực lớn nhất của Hồng Kông, bao gồm 9 quận hành chính, trong đó quận Bắc nằm ở cực Bắc và quận Nguyên Lãng phía Tây Bắc Tân Giới đều nằm cách khá xa trung tâm Hồng Kông.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.277.1">Thái độ dứt khoát của trưởng ban ám chỉ cuộc gặp đến đây là kết thúc, mời Di đi cho.</span></p>
+
+  <p><span class="koboSpan" id="kobo.278.1">Di bất đắc dĩ đứng lên, đang định quay người đi thì trưởng ban bỏ kính xuống nói tiếp, “Cô Di, cô chớ tưởng tôi lương thưởng hậu hĩnh, thật ra tôi cũng phải đau đầu vì tiền thuê nhà hằng tháng. </span><span class="koboSpan" id="kobo.278.2">Thời buổi bây giờ, ngay cả tòa nhà tư nhân từng có người chết cũng hét giá vài triệu, môi trường sống ở Hồng Kông tệ như thế đấy. </span><span class="koboSpan" id="kobo.278.3">Sống ở đây, chúng ta chỉ còn cách ngậm bồ hòn làm ngọt. </span><span class="koboSpan" id="kobo.278.4">Sự đời chưa chắc đã như mong muốn, làm việc gì cũng đừng cố chấp quá.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.279.1">Câu nói sau cùng của trưởng ban đã khơi lên ấm ức và phẫn nộ trong lòng Di suốt quãng đường về nhà. </span><span class="koboSpan" id="kobo.279.2">Lời ông ta như muốn dạy đời cô phải cam chịu số phận, chấp nhận tất thảy những gì trời cao xếp đặt. </span><span class="koboSpan" id="kobo.279.3">Tai nạn của bố, căn bệnh của mẹ, cái chết của em gái, tất cả đều là ý trời, người trần không được làm trái, cũng không thể làm trái. </span><span class="koboSpan" id="kobo.279.4">Di không biết vẻ mặt cô khi ngồi trên xe buýt làm người ta khiếp sợ nhường nào: </span><span class="koboSpan" id="kobo.279.5">lông mày rúm ró, hai mắt đỏ lựng, răng nghiến chặt kiềm chế nỗi uất ức sắp bùng nổ tới nơi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.280.1">Còn lâu tôi mới cam chịu số phận! </span><span class="koboSpan" id="kobo.280.2">Di nhớ lại tâm trạng mình khi gặp cảnh viên Trình ở nhà xác, tâm trạng hỗn độn vì bất bình, cay đắng và bi thương. </span><span class="koboSpan" id="kobo.280.3">Hung thủ chính là kẻ đăng tải bài viết! </span><span class="koboSpan" id="kobo.280.4">Cháu trai của Thiệu Đức Bình! </span><span class="koboSpan" id="kobo.280.5">Chính gã đã khiến Tiểu Văn tự sát!</span></p>
+
+  <p><span class="koboSpan" id="kobo.281.1">Mình muốn gặp cháu trai Bình. </span><span class="koboSpan" id="kobo.281.2">Trong đầu Di nảy ra ý nghĩ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.282.1">Cô không biết mình gặp kẻ đăng bài làm gì, hay đúng hơn, cô không biết nên làm gì sau khi gặp gã. </span><span class="koboSpan" id="kobo.282.2">Nhiếc móc gã là tên hung thủ máu lạnh? </span><span class="koboSpan" id="kobo.282.3">Bắt gã đến trước linh vị Tiểu Văn quỳ lạy nhận lỗi? </span><span class="koboSpan" id="kobo.282.4">Nện gã một trận nhừ tử? </span><span class="koboSpan" id="kobo.282.5">Hay bắt gã đền mạng, nợ máu phải trả bằng máu?</span></p>
+
+  <p><span class="koboSpan" id="kobo.283.1">Nhưng Di biết, gặp mặt gã là điều duy nhất cô muốn làm. </span><span class="koboSpan" id="kobo.283.2">Là cách cô chứng tỏ mình không “cam chịu số phận”, là hành động phản kháng nhỏ nhoi trước hiện thực tàn khốc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.284.1">Chị Wendy làm cùng thư viện có người thân mở văn phòng thám tử, năm ngoái Di từng nghe chị nhắc qua khi thư viện đang thanh lý một số tiểu thuyết trinh thám. </span><span class="koboSpan" id="kobo.284.2">Di bèn hỏi thăm Wendy xem thám tử có nhận những vụ thế này không, thuê mất bao nhiêu tiền. </span><span class="koboSpan" id="kobo.284.3">Yêu cầu của Di thật ra rất đơn giản, cô chỉ muốn điều tra xem cháu trai Bình là ai, đi làm hoặc theo học ở đâu, mặt mũi thế nào, sau đó tìm cơ hội “đánh úp” gã để nói chuyện cho ra nhẽ. </span><span class="koboSpan" id="kobo.284.4">Nghe không khác gì những yêu cầu điều tra bình thường khác, hơn nữa Bình còn từng bị truyền thông viết cả tá bài, muốn điều tra lại càng dễ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.285.1">“Mấy vụ kiểu này thường 3000 đô một ngày, khoảng năm, sáu ngày là có kết quả, các chi phí khác thanh toán theo thực chi, tổng cộng khoảng 20 nghìn đô. </span><span class="koboSpan" id="kobo.285.2">Cô Di là đồng nghiệp của Wendy, tôi cũng rất thông cảm với hoàn cảnh của cô nên sẽ lấy rẻ hơn một chút, 2000 một ngày thôi, cô chuẩn bị tầm 12 nghìn đô là đủ.” </span><span class="koboSpan" id="kobo.285.3">Thám tử Mạc báo giá. </span><span class="koboSpan" id="kobo.285.4">Di chấp nhận ngay, vì tuy đã tốn một khoản kha khá lo tang lễ cho mẹ và em gái, nhưng cô vẫn còn dư hơn 80 nghìn vốn dĩ để dành cho Tiểu Văn học hành.</span></p>
+
+  <p><span class="koboSpan" id="kobo.286.1">Bốn ngày sau, chiều mùng 5 tháng Sáu, thám tử Mạc gọi điện hẹn Di vì có chuyện muốn nói.</span></p>
+
+  <p><span class="koboSpan" id="kobo.287.1">“Cô Di.” </span><span class="koboSpan" id="kobo.287.2">Chờ trợ lý bưng cà phê lên cho Di rồi đi ra ngoài, thám tử Mạc mới nghiêm trang nói, “Chúng tôi gặp phải một số rắc rối trong quá trình điều tra.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.288.1">“Là… vấn đề tiền nong ạ?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.289.1">“Không phải.” </span><span class="koboSpan" id="kobo.289.2">Thám tử Mạc mỉm cười. </span><span class="koboSpan" id="kobo.289.3">“Vụ này do chính tôi điều tra, căn bản bình thường toàn được yêu cầu bắt bồ bịch, hiếm lắm mới nhận một vụ hay ho, tôi không muốn đẩy xuống cấp dưới. </span><span class="koboSpan" id="kobo.289.4">Mấy hôm trước tôi và trợ lý đã đến hỏi han hàng xóm nhà Bình ở Hoàng Đại Tiên. </span><span class="koboSpan" id="kobo.289.5">Thông tin tìm ra rất nhanh, nhưng để xác nhận lại, tôi điều tra thêm hai ngày nữa.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.290.1">“Ông tìm thấy cháu trai của Bình rồi?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.291.1">“Đây chính là rắc rối mà tôi nói.” </span><span class="koboSpan" id="kobo.291.2">Thám tử Mạc mở túi hồ sơ lấy một xấp ảnh và tài liệu. </span><span class="koboSpan" id="kobo.291.3">“Bình là con một, không có chị em.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.292.1">“Hả?” </span><span class="koboSpan" id="kobo.292.2">Di hoang mang.</span></p>
+
+  <p><span class="koboSpan" id="kobo.293.1">“Bình vốn không có cháu đằng ngoại nào.” </span><span class="koboSpan" id="kobo.293.2">Thám tử Mạc chỉ vài tấm ảnh. </span><span class="koboSpan" id="kobo.293.3">“Cha hắn qua đời bốn năm trước, hiện hắn đang sống cùng vợ và mẹ già 70 tuổi ở tầng mười tòa Long Cát khu nhà ở xã hội Hoàng Đại Tiên. </span><span class="koboSpan" id="kobo.293.4">Hắn không có chị em ruột nên không có ai gọi hắn là ‘cậu’. </span><span class="koboSpan" id="kobo.293.5">Hắn cũng không có chị em họ đằng nội hoặc đằng ngoại, cậu em họ duy nhất đã di cư sang Úc nhiều năm, tôi còn điều tra được cậu em này không có con nối dõi… Kể cả có cũng nên gọi là ‘bác’ chứ không phải ‘cậu’.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.294.1">Di há hốc miệng nhìn thám tử Mạc, “Thế đứa cháu đăng bài viết kia rốt cuộc là ai?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.295.1">“Không biết, ngay cả gia đình Bình cũng không biết.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.296.1">Di sửng sốt không thốt nên lời.</span></p>
+
+  <p><span class="koboSpan" id="kobo.297.1">“Tôi đã xác nhận với một hàng xóm khá thân mẹ Bình, họ không biết gì hết.” </span><span class="koboSpan" id="kobo.297.2">Thám tử Mạc nhún vai. </span><span class="koboSpan" id="kobo.297.3">“Tôi cũng lấy làm lạ là sao lại có kẻ mạo danh cháu trai Bình viết bài đó. </span><span class="koboSpan" id="kobo.297.4">Tôi còn nghi ngờ do vợ hoặc mẹ Bình viết, nhưng nếu là họ, đáng lẽ phải tranh thủ chạy ra kể lể minh oan lúc phóng viên ập đến phỏng vấn, chứ không phải đóng cửa im ỉm đuổi khách thế.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.298.1">“Ông Mạc… Vậy ông có thể giúp tôi tìm tên kidkit727 đã đăng bài không?” </span><span class="koboSpan" id="kobo.298.2">Di hỏi, mắt đăm đăm nhìn ảnh chụp và tài liệu trên bàn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.299.1">“Việc này hơi khó.” </span><span class="koboSpan" id="kobo.299.2">Thám tử Mạc thở dài. </span><span class="koboSpan" id="kobo.299.3">“Công ty thám tử chúng tôi toàn nhận những vụ điều tra theo phương pháp truyền thống. </span><span class="koboSpan" id="kobo.299.4">Muốn bắt kẻ giấu mặt trên mạng, chúng tôi lại không có đồ nghề phù hợp, cùng lắm chỉ tổng hợp được một số đặc trưng bề nổi. </span><span class="koboSpan" id="kobo.299.5">Tôi đã điều tra sơ sơ diễn đàn đăng bài, cảm thấy sự việc có nhiều điểm kì lạ: </span><span class="koboSpan" id="kobo.299.6">kidkit727 chỉ đăng bài viết ở mỗi diễn đàn Củ Lạc, tài khoản cũng mới lập cùng ngày, sau khi đăng bài thì không đăng nhập lại nữa, như thể mục đích gã tồn tại cốt là để giải oan cho Bình. </span><span class="koboSpan" id="kobo.299.7">Cô Di, tôi điều tra được đến đây thôi.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.300.1">“Ông Mạc, nếu ông muốn tăng phí điều tra, tôi rất sẵn lòng…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.301.1">“Không phải đâu,” thám tử Mạc ngắt lời Di. </span><span class="koboSpan" id="kobo.301.2">“Không phải vấn đề tiền bạc. </span><span class="koboSpan" id="kobo.301.3">Chính ra tôi còn không xứng nhận thù lao vì điều tra thất bại ấy chứ. </span><span class="koboSpan" id="kobo.301.4">Tất nhiên 4000 đô cọc trước thì không thể hoàn trả, tôi miễn phí được nhưng trợ lý của tôi không làm không công. </span><span class="koboSpan" id="kobo.301.5">Tôi cũng gọi là có chút tiếng tăm trong giới, làm được sẽ cố hết sức, còn nếu bó tay sẽ không thu thêm đồng nào.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.302.1">“Vậy…” Di ngơ ngác nhìn thám tử Mạc, rồi lại nhìn xấp tài liệu trên bàn. </span><span class="koboSpan" id="kobo.302.2">Cảm giác bất lực trào dâng trong lồng ngực rồi lan tới tứ chi làm cô cảm thấy tất cả đều uổng công. </span><span class="koboSpan" id="kobo.302.3">Lời nói của ông trưởng ban ở Sở Nhà đất lại văng vẳng bên tai. </span><i><span class="koboSpan" id="kobo.303.1">Sống ở đây, chúng ta chỉ còn cách ngậm bồ hòn làm ngọt.</span></i></p>
+
+  <p><span class="koboSpan" id="kobo.304.1">“Cô đừng buồn.” </span><span class="koboSpan" id="kobo.304.2">Thấy thám tử Mạc đưa khăn giấy, Di mới nhận ra nước mắt mình đang lặng lẽ lăn dài.</span></p>
+
+  <p><span class="koboSpan" id="kobo.305.1">“Tôi… tôi thực sự chỉ còn cách cam chịu số phận thôi sao?” </span><span class="koboSpan" id="kobo.305.2">Di hỏi thám tử Mạc. </span><span class="koboSpan" id="kobo.305.3">Kì thực cô không mong câu trả lời, chẳng qua không kìm nén nổi nên mới thốt ra tiếng lòng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.306.1">Thám tử Mạc nhìn Di, vẻ mặt muốn nói lại thôi. </span><span class="koboSpan" id="kobo.306.2">Cuối cùng ông gãi gãi đầu, lấy một tấm danh thiếp của mình, cầm bút bi viết vài chữ lên đấy rồi đặt danh thiếp xuống trước mặt Di.</span></p>
+
+  <p><span class="koboSpan" id="kobo.307.1">“Cô Di, nếu thiết tha muốn tìm ra tác giả bài viết, cô có thể đến địa chỉ ghi ở đây tìm người này.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.308.1">“Người này? </span><span class="koboSpan" id="kobo.308.2">Tên là Nem sao?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.309.1">“Đúng. </span><span class="koboSpan" id="kobo.309.2">Cậu ta là chuyên gia sử dụng công nghệ cao để điều tra. </span><span class="koboSpan" id="kobo.309.3">Có điều tính nết cậu ta kì quặc, chưa chắc đã chịu nhận yêu cầu của cô, mà dù có nhận, tôi cũng không biết cậu ta sẽ ra giá bao nhiêu.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.310.1">“Anh ta cũng là thám tử?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.311.1">“Cứ cho là thế đi.” </span><span class="koboSpan" id="kobo.311.2">Thám tử Mạc cười gượng. </span><span class="koboSpan" id="kobo.311.3">“Nhưng hành nghề chui.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.312.1">“Chui? </span><span class="koboSpan" id="kobo.312.2">Có… đáng tin cậy không?” </span><span class="koboSpan" id="kobo.312.3">Di nhíu mày.</span></p>
+
+  <p><span class="koboSpan" id="kobo.313.1">“Cô Di, khi gặp phải việc gì không giải quyết được, cần nhờ người khác điều tra, cô sẽ tìm ai?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.314.1">“Tìm… ông?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.315.1">“Đúng, tìm thám tử.” </span><span class="koboSpan" id="kobo.315.2">Thám tử Mạc lại cười. </span><span class="koboSpan" id="kobo.315.3">“Nhưng cô đã bao giờ nghĩ, nếu thám tử chúng tôi gặp phải việc bế tắc, chúng tôi sẽ tìm ai không?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.316.1">Di ngẩn người, cúi đầu nhìn tấm danh thiếp trước mặt, “Tìm Nem?”</span></p>
+
+  <p><span class="koboSpan" id="kobo.317.1">Thám tử Mạc không trả lời, nhưng nụ cười của ông đã xác nhận đáp án, “Tôi nhắc lại, tôi không chắc cậu ta có nhận vụ của cô không, song cô giơ danh thiếp của tôi ra chắc sẽ có ích phần nào.” </span><span class="koboSpan" id="kobo.317.2">Thám tử Mạc gõ gõ đầu ngón tay lên tấm danh thiếp trên bàn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.318.1">Di cầm danh thiếp lên, cảm thấy lạ lùng và ngờ vực ngập lòng. </span><span class="koboSpan" id="kobo.318.2">Nhưng riêng việc thám tử Mạc không bảo “hãy cam chịu số phận đi” đã tiếp thêm cho Di hi vọng đấu tranh, như vậy là đủ đáng quý với cô rồi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.319.1">Lúc Di đứng lên đi về, đích thân thám tử Mạc tiễn cô ra tận cửa, “Cô Di, ban nãy tôi quên chưa nói một điều.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.320.1">“Chuyện gì vậy?” </span><span class="koboSpan" id="kobo.320.2">Di đứng ở cửa ngoái lại hỏi.</span></p>
+
+  <p><span class="koboSpan" id="kobo.321.1">“Tôi đã nghĩ đến một khả năng: </span><span class="koboSpan" id="kobo.321.2">người đăng bài viết có mục đích khác không liên quan đến Bình.” </span><span class="koboSpan" id="kobo.321.3">Thám tử Mạc nói giọng nghiêm túc. </span><span class="koboSpan" id="kobo.321.4">“Mục tiêu gã nhắm tới chính là em gái cô. </span><span class="koboSpan" id="kobo.321.5">Gã viết bài không phải để minh oan cho Bình, mà cố tình khiến dư luận chĩa mũi dùi vào Tiểu Văn. </span><span class="koboSpan" id="kobo.321.6">Thế nên một người lạ như gã mới phải giả danh cháu trai Bình hòng tăng thêm mức độ hợp lý và chính đáng cho luận điểm của mình. </span><span class="koboSpan" id="kobo.321.7">Nói cách khác, tác giả bài viết không hề có ý định đòi lại công lý cho Bình mà chỉ đơn giản muốn bôi nhọ em gái cô, khiến con bé sụp đổ vì không chịu nổi sức ép tinh thần.”</span></p>
+
+  <p><span class="koboSpan" id="kobo.322.1">Lời thám tử Mạc như lưỡi dao sắc bén đâm thẳng vào tim Di, làm một cơn ớn lạnh chạy dọc sống lưng cô.</span></p>
+
+  <p><span class="koboSpan" id="kobo.323.1">“Nếu thật thế,” thám tử Mạc lại thở dài. </span><span class="koboSpan" id="kobo.323.2">“Thì cũng có thể coi là cố ý giết người.”</span></p>
+</div></div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // shrink  menu
+      // $(document).ready(function() {
+      // $('li').click(function(e) {
+      // e.stopPropagation();
+      // $(this).next('ul').slideToggle(100);
+      // });
+      // });
+
+      $(document).ready(function() {
+
+
+				window.addEventListener("beforeprint", function(event) {
+					$(".main").animate({ margin: "0 auto", marginLeft: 0 }, "linear");
+					$(".sidebar").hide()
+
+				});
+				window.addEventListener("afterprint", function(event) { 
+					$(".sidebar").show()
+					$(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+				});
+      //fixed定位 高度满屏
+      $(".sidebar").height($(window).height());
+
+      //实现显示隐藏可以删除
+      $(".sidebar").on("mouseover", function() {
+        $(".closeMenu > span").css({
+          opacity: 1
+        });
+      });
+      $(".sidebar").on("mouseleave blur", function() {
+        $(".closeMenu > span").css({
+          opacity: 0
+        });
+      });
+
+      var moveLeft = $("#list_left").width();
+
+      //设置内容快初始位置
+      $(".main").css({ marginLeft: moveLeft });
+
+      //判断隐藏显示核心代码
+      var isShow = true;
+      $(".closeMenu span").click(function() {
+        $(this)
+          .hide()
+          .siblings()
+          .show();
+        if (isShow) {
+          $("#list_left").animate(
+            {
+              marginLeft: -(moveLeft - 30) //30 刚好显示icon图标
+            },
+            200,
+            "linear",
+            function() {
+              isShow = false;
+              $(".closeMenu > span").css({
+                opacity: 1
+              });
+            }
+          );
+          $(".main").animate({ margin: "0 auto", marginLeft: 15 }, "linear");
+        } else {
+          $("#list_left").animate(
+            {
+              marginLeft: 0
+            },
+            200,
+            "linear",
+            function() {
+              isShow = true;
+            }
+          );
+          $(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+        }
+      });
+
+      $(window).resize(function() {
+        $("#list_left").height($(window).height());
+      });
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

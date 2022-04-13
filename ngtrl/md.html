@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<title>ntl - Mở đầu</title>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+		<link rel="stylesheet" href="kte-css/stylehacks.css" />
+
+    <!-- <link rel="stylesheet" href="./stylesheet.css" /> -->
+    <script
+      src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/css">
+     html body {
+        font-family: Consolas, FangSong, Lantinghei SC, Helvetica Neue,
+          Helvetica, Arial, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1,
+          STHeitiSC-Light, simsun, \\5b8b\4f53, WenQuanYi Zen Hei,
+          WenQuanYi Micro Hei, "sans-serif" !important;
+          /* -webkit-font-smoothing: antialiased  !important; */
+          font-size: 18px !important;
+          height: 100% !important;
+      }
+		 	pre {
+        font-size: 20px !important;
+			}
+      .sidebar {
+        font-size: 15px !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        background-color: #324057;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        width: 300px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        -webkit-box-shadow: #ccc 0 0 10px;
+        box-shadow: #ccc 0 0 10px;
+        box-sizing: border-box;
+      }
+      .main {
+        margin-left: 0;
+        height: 100%;
+      }
+
+      /*菜单显示按钮*/
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 25px;
+        color: #bfcbd9;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -25px;
+        padding-top: 3px;
+        padding-left: 9px;
+        transform-origin: 20px 20px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      .sidebar > .closeMenu > span:last-child {
+        display: none;
+      }
+      /* Sidebar navigation */
+      .nav-sidebar {
+        margin-right: 30px;
+        padding: 20px 0;
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+      .nav-sidebar > li > a {
+        color: #337ab7;
+      }
+      .menuItem:hover > a {
+        background-color: #eee;
+      }
+      .nav .active > a,
+      .nav-sidebar .active:hover > a {
+        background-color: #428bca;
+        color: #fff;
+      }
+			.lightli {
+
+        color: red;
+			}
+      .index {
+        /* position: relative; */
+        /* top: 45%; */
+        /* text-align: center; */
+        /* font-size: 38px; */
+        /* color: #ccc; */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="list_left">
+      <ul class="nav nav-sidebar ">
+<li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/></svg> </a></li>
+<li><a href="md.html">Mở đầu</a></li>
+<li><a href="ch01.html">1.</a></li>
+<li><a href="ch02.html">2.</a></li>
+<li><a href="ch03.html">3.</a></li>
+<li><a href="ch04.html">4.</a></li>
+<li><a href="ch05.html">5.</a></li>
+<li><a href="ch06.html">6.</a></li>
+<li><a href="ch07.html">7.</a></li>
+<li><a href="ch08.html">8.</a></li>
+<li><a href="ch09.html">9.</a></li>
+<li><a href="ch10.html">10.</a></li>
+<li><a href="pk.html">Phần kết</a></li>
+<li><a href="lb.html">Lời bạt</a></li>
+</ul>
+      <div class="closeMenu">
+        <span class="glyphicon glyphicon-triangle-left"></span>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="index">
+        <div><div id="book-columns"><div id="book-inner">
+  <h1 style="text-align: center; margin-right: 0;" title="Mở đầu"><span class="koboSpan" id="kobo.1.1">MỞ ĐẦU</span></h1>
+
+  <p><span class="koboSpan" id="kobo.2.1">8 giờ sáng sửa soạn đi làm, Di không hề biết hôm nay sẽ là ngày thay đổi cuộc đời cô.</span></p>
+
+  <p><span class="koboSpan" id="kobo.3.1">Tưởng đâu chỉ cần cắn răng chịu đựng, bao khốn khổ dồn dập ập xuống suốt một năm qua sẽ chấm dứt, ắt có ngày mưa tạnh trời quang. </span><span class="koboSpan" id="kobo.3.2">Thế nhưng số phận biến động khôn lường, ông trời không chỉ thích đùa giỡn người trần, mà còn đùa toàn những trò thảm khốc.</span></p>
+
+  <p><span class="koboSpan" id="kobo.4.1">Hơn 6 giờ chiều, Di lê tấm thân mệt mỏi từ bến xe buýt mini xanh</span><a href="#id1" epub:type="noteref" id="b1"><span class="koboSpan" id="kobo.5.1">*</span></a><span class="koboSpan" id="kobo.6.1"> về khu nhà ở xã hội, vừa đi vừa nhẩm tính xem thức ăn trong tủ lạnh có đủ nấu một bữa cho hai người không.</span></p>
+
+  <aside epub:type="footnote" id="id1">
+    <a href="#b1" style="display: none;"><span class="koboSpan" id="kobo.7.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.8.1">Xe buýt loại nhỏ chỉ dừng ở điểm quy định, phân biệt với xe buýt mini đỏ cho phép khách xuống dọc đường.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.9.1">Mấy năm nay giá cả đắt đỏ khủng khiếp. </span><span class="koboSpan" id="kobo.9.2">Ngày xưa một cân</span><a href="#id2" epub:type="noteref" id="b2"><span class="koboSpan" id="kobo.10.1">*</span></a><span class="koboSpan" id="kobo.11.1"> thịt cùng lắm hơn 20 đô</span><a href="#id3" epub:type="noteref" id="b3"><span class="koboSpan" id="kobo.12.1">*</span></a><span class="koboSpan" id="kobo.13.1">, bây giờ ngần ấy tiền chỉ mua được nửa cân. </span><span class="koboSpan" id="kobo.13.2">Gọi là “ngày xưa” nhưng cũng mới bảy, tám năm trước thôi. </span><span class="koboSpan" id="kobo.13.3">Thịt thà rau dưa giờ tăng giá gấp đôi là ít, nhưng lương lậu của giai cấp vô sản thì vẫn còm cõi như cũ. </span><span class="koboSpan" id="kobo.13.4">Giá thực phẩm tăng vọt không đơn giản vì giá bán buôn tăng. </span><span class="koboSpan" id="kobo.13.5">Di từng nghe một hàng xóm lớn tuổi nói đùa, “Người Hồng Kông không ăn cơm mà ăn gạch</span><a href="#id4" epub:type="noteref" id="b4"><span class="koboSpan" id="kobo.14.1">*</span></a><span class="koboSpan" id="kobo.15.1">.” </span><span class="koboSpan" id="kobo.15.2">Sau khi chính phủ bán chợ và cửa hàng bách hóa ở khu nhà xã hội cho doanh nghiệp tư nhân, các hộ kinh doanh phải đối mặt với áp lực tiền thuê tăng.</span></p>
+
+  <aside epub:type="footnote" id="id2">
+    <a href="#b2" style="display: none;"><span class="koboSpan" id="kobo.16.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.17.1">1 cân Hồng Kông tương đương 600 g.</span></p>
+  </aside>
+
+  <aside epub:type="footnote" id="id3">
+    <a href="#b3" style="display: none;"><span class="koboSpan" id="kobo.18.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.19.1">Đô la Hồng Kông. </span><span class="koboSpan" id="kobo.19.2">Từ đây đến cuối sách, nếu chỉ nói “đô” không, tức là đô la Hồng Kông.</span></p>
+  </aside>
+
+  <aside epub:type="footnote" id="id4">
+    <a href="#b4" style="display: none;"><span class="koboSpan" id="kobo.20.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.21.1">Ngụ ý giá nhà đất quá cao nên ảnh hưởng nặng nề đến miếng cơm manh áo.</span></p>
+  </aside>
+
+  <p><span class="koboSpan" id="kobo.22.1">Để có thêm thu nhập đập vào tiền thuê đắt đỏ, đương nhiên họ sẽ đẩy gánh nặng lên người mua hàng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.23.1">Di nhớ trong tủ lạnh còn vài lạng thịt và cải bó xôi. </span><span class="koboSpan" id="kobo.23.2">Làm món thịt xào cải bó xôi với gừng, thêm đĩa trứng hấp là được bữa tối đơn giản giàu dinh dưỡng. </span><span class="koboSpan" id="kobo.23.3">Tiểu Văn, cô em nhỏ hơn Di tám tuổi, từ bé đã thích ăn trứng hấp. </span><span class="koboSpan" id="kobo.23.4">Mỗi khi nhà thiếu thức ăn, Di lại lấy hai quả trứng gà ra hấp, rắc ít hành lá, rưới chút nước tương, bưng lên bàn ăn trông vừa ngon vừa đẹp. </span><span class="koboSpan" id="kobo.23.5">Quan trọng là rất rẻ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.24.1">Bữa tối nay thế là đủ rồi, nhưng Di vẫn định đi chợ xem thế nào. </span><span class="koboSpan" id="kobo.24.2">Vốn tính lo xa, cô rất sợ cảnh tủ lạnh trống trơn. </span><span class="koboSpan" id="kobo.24.3">Hơn nữa, khá nhiều quầy thực phẩm giảm giá trước giờ đóng cửa, tranh thủ dạo một vòng có khi lại kiếm được đồ rẻ, mai khỏi phải đau đầu nhức óc chuyện ăn uống.</span></p>
+
+  <p><span class="koboSpan" id="kobo.25.1">Úúúú…</span></p>
+
+  <p><span class="koboSpan" id="kobo.26.1">Xe cảnh sát thình lình lao vụt qua cạnh Di, tiếng còi đinh tai nhức óc kéo suy nghĩ của cô từ hàng giảm giá về thực tại. </span><span class="koboSpan" id="kobo.26.2">Cô dõi mắt nhìn thì thấy một đám đông đang xúm xít trước tòa nhà Hoán Hoa mình ở.</span></p>
+
+  <p><span class="koboSpan" id="kobo.27.1">Có chuyện gì sao? </span><span class="koboSpan" id="kobo.27.2">Di nghĩ thầm, nhưng vốn không phải dạng ưa hóng chuyện nên chân vẫn bước rất thong thả.</span></p>
+
+  <p><span class="koboSpan" id="kobo.28.1">“Á, Di! </span><span class="koboSpan" id="kobo.28.2">Di ơi…” Trong đám đông, một bác gái tầm 50 tuổi, tóc xoăn, người đậm, đang cuống cuồng vẫy gọi. </span><span class="koboSpan" id="kobo.28.3">Di biết người này, đây là bác gái họ Trần thuê nhà cùng tầng 22 với cô, bình thường chạm mặt ngoài hành lang vẫn gật đầu chào hỏi. </span><span class="koboSpan" id="kobo.28.4">Song trừ biết tên và thi thoảng xã giao dăm ba câu thì đôi bên chẳng qua lại mấy.</span></p>
+
+  <p><span class="koboSpan" id="kobo.29.1">Chỉ còn cách nhau một quãng ngắn thôi, nhưng bác Trần vẫn sốt ruột chạy lại túm tay lôi tuột Di về phía tòa nhà. </span><span class="koboSpan" id="kobo.29.2">Di không nghe rõ bác nói gì. </span><span class="koboSpan" id="kobo.29.3">Ngoại trừ tên mình, cô thấy những lời tuôn ra từ miệng bác chẳng khác nào tiếng nước ngoài. </span><span class="koboSpan" id="kobo.29.4">Mất mấy giây định thần, cô mới vỡ lẽ bác Trần hoảng quá nói chẳng nên lời. </span><span class="koboSpan" id="kobo.29.5">Vỡ lẽ xong, cô nghe thêm được hai chữ “em gái”.</span></p>
+
+  <p><span class="koboSpan" id="kobo.30.1">Di bước tới gần đám đông. </span><span class="koboSpan" id="kobo.30.2">Cảnh tượng quái dị hiện ra trước mắt cô, dưới trời chiều còn chưa tắt nắng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.31.1">Dân tình đang túm tụm quanh khoảnh sân xi măng trước cửa chính cư xá Hoán Hoa. </span><span class="koboSpan" id="kobo.31.2">Thường ngày sân trống trơn, nhưng hôm nay lại có cô bé mười mấy tuổi mặc đồng phục trắng nằm ngửa ở đó, tóc rối tung phủ lên mặt, chất lỏng đỏ sậm rỉ ra từ cổ đọng thành vũng nhỏ.</span></p>
+
+  <p><span class="koboSpan" id="kobo.32.1">Suy nghĩ đầu tiên vụt qua óc Di là, đó chẳng phải đồng phục trường Tiểu Văn sao?</span></p>
+
+  <p><span class="koboSpan" id="kobo.33.1">Hai giây sau Di nhận ra, cô bé nằm bất động trên sân kia, chẳng phải chính là Tiểu Văn sao?</span></p>
+
+  <p><span class="koboSpan" id="kobo.34.1">Người thân của cô.</span></p>
+
+  <p><span class="koboSpan" id="kobo.35.1">Người thân duy nhất.</span></p>
+
+  <p><span class="koboSpan" id="kobo.36.1">Khoảnh khắc ấy, Di cảm thấy mọi thứ quanh mình thật lạ lẫm. </span><span class="koboSpan" id="kobo.36.2">Mình đang nằm mơ ư? </span><span class="koboSpan" id="kobo.36.3">Chắc là mơ rồi. </span><span class="koboSpan" id="kobo.36.4">Di quay sang nhìn bên cạnh, toàn những gương mặt quen thuộc, nhưng giờ phút này lại xa lạ vô cùng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.37.1">“Di! </span><span class="koboSpan" id="kobo.37.2">Di ơi!” </span><span class="koboSpan" id="kobo.37.3">Bác Trần tóm bả vai Di lắc mạnh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.38.1">“Tiểu… Tiểu Văn?” </span><span class="koboSpan" id="kobo.38.2">Di lắp bắp gọi tên, không tài nào liên hệ nổi vật thể hình người dưới đất với em gái mình.</span></p>
+
+  <p><span class="koboSpan" id="kobo.39.1">Đáng lẽ giờ này Tiểu Văn phải ở nhà, chờ Di về nấu cơm cho nó ăn chứ. </span><span class="koboSpan" id="kobo.39.2">Đấy mới là “hiện thực bình thường” đối với Di.</span></p>
+
+  <p><span class="koboSpan" id="kobo.40.1">“Lùi lại nào, lùi lại.” </span><span class="koboSpan" id="kobo.40.2">Một cảnh sát ăn mặc chỉnh tề chen vào giữa đám đông, ra hiệu bảo mọi người đứng giãn ra. </span><span class="koboSpan" id="kobo.40.3">Cùng lúc, hai nhân viên y tế đẩy xe cáng từ phía sau vượt lên trên Di rồi ngồi xổm xuống cạnh Tiểu Văn. </span><span class="koboSpan" id="kobo.40.4">Nhân viên y tế lớn tuổi hơn kiểm tra hơi thở của cô bé, ấn ngón tay lên cổ tay trái cô, sau đó lần túi lấy đèn pin khám, tay trái vạch mắt tay phải rọi đèn soi đồng tử. </span><span class="koboSpan" id="kobo.40.5">Chuỗi hành động diễn ra chỉ vỏn vẹn vài giây, nhưng trong mắt Di từng động tác của nhân viên y tế lại ì trệ như những khung hình tĩnh.</span></p>
+
+  <p><span class="koboSpan" id="kobo.41.1">Di không còn nhận thức về thời gian nữa. </span><span class="koboSpan" id="kobo.41.2">Hay nói cách khác, tiềm thức Di muốn ngăn cô đối mặt với hiện thực.</span></p>
+
+  <p><span class="koboSpan" id="kobo.42.1">Nhân viên y tế đứng lên, lắc đầu với đồng nghiệp đẩy xe cáng và mấy cảnh sát đang chắn đám đông.</span></p>
+
+  <p><span class="koboSpan" id="kobo.43.1">“Mọi người lùi lại, đừng cản trở quá trình điều tra…” Lúc cảnh sát nói câu này, hai nhân viên y tế nghiêm mặt lại, từ từ rời khỏi chỗ Tiểu Văn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.44.1">“Tiểu… Tiểu Văn? </span><span class="koboSpan" id="kobo.44.2">Tiểu Văn! </span><span class="koboSpan" id="kobo.44.3">Tiểu Văn!” </span><span class="koboSpan" id="kobo.44.4">Di hất tay bác Trần đang giữ vai mình, chạy tới chỗ Tiểu Văn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.45.1">“Cô gái!” </span><span class="koboSpan" id="kobo.45.2">Một cảnh sát cao to nhanh nhẹn giơ tay ngang hông chặn Di lại.</span></p>
+
+  <p><span class="koboSpan" id="kobo.46.1">“Tiểu Văn!” </span><span class="koboSpan" id="kobo.46.2">Di vừa giãy giụa vừa ngoảnh nhìn cảnh sát, nôn nóng nói, “Đó, đó là em tôi, cứu con bé với!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.47.1">“Thưa cô, cô bình tĩnh đã…” Cảnh sát cố trấn an Di, nhưng anh ta biết lời mình nói không mấy tác dụng.</span></p>
+
+  <p><span class="koboSpan" id="kobo.48.1">“Xin, xin anh cứu con bé! </span><span class="koboSpan" id="kobo.48.2">Bác sĩ ơi!” </span><span class="koboSpan" id="kobo.48.3">Mặt mày tái nhợt, Di bỗng xoay phắt lại, hét lên với hai nhân viên y tế đang chăm chú nhìn mình. </span><span class="koboSpan" id="kobo.48.4">“Sao không đỡ Tiểu Văn lên xe? </span><span class="koboSpan" id="kobo.48.5">Nhanh lên! </span><span class="koboSpan" id="kobo.48.6">Mau cứu Tiểu Văn đi!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.49.1">Hai nhân viên y tế đứng lặng cạnh xe cứu thương lộ vẻ khó xử. </span><span class="koboSpan" id="kobo.49.2">Người lớn tuổi hơn rất muốn nói thẳng sự thật với cô, nhưng dù gặp cảnh sinh ly tử biệt mỗi ngày, anh vẫn không đành lòng làm cô gái mới đôi mươi này đau đớn.</span></p>
+
+  <p><span class="koboSpan" id="kobo.50.1">“Cô là chị của em này sao? </span><span class="koboSpan" id="kobo.50.2">Cô bình tĩnh lại đã…” Anh cảnh sát chặn Di thử nhẹ nhàng khuyên bảo.</span></p>
+
+  <p><span class="koboSpan" id="kobo.51.1">“Tiểu Văn…” Di ngoảnh nhìn em gái nằm trơ như tượng dưới đất, thì thấy hai cảnh sát khác cầm khung kim loại và vải bạt chống thấm màu xanh sẫm đến dựng lều nhỏ xung quanh che Tiểu Văn lại. </span><span class="koboSpan" id="kobo.51.2">“Các… các người làm gì thế? </span><span class="koboSpan" id="kobo.51.3">Dừng tay! </span><span class="koboSpan" id="kobo.51.4">Dừng tay đi!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.52.1">“Cô gái! </span><span class="koboSpan" id="kobo.52.2">Cô gái à!”</span></p>
+
+  <p><span class="koboSpan" id="kobo.53.1">“Đừng che người nó! </span><span class="koboSpan" id="kobo.53.2">Nó còn thở! </span><span class="koboSpan" id="kobo.53.3">Nhất định tim nó còn đập!” </span><span class="koboSpan" id="kobo.53.4">Di yếu ớt nhoài người tới trước. </span><span class="koboSpan" id="kobo.53.5">Anh cảnh sát vốn có nhiệm vụ ngăn cản đề phòng cô phá hỏng hiện trường, giờ trở thành điểm tựa duy nhất đỡ lấy cô. </span><span class="koboSpan" id="kobo.53.6">“Cứu em gái tôi với! </span><span class="koboSpan" id="kobo.53.7">Xin các anh cứu em tôi… Tôi xin các anh đấy… Nó, nó là em gái tôi, là em gái duy nhất của tôi…”</span></p>
+
+  <p><span class="koboSpan" id="kobo.54.1">Xế chiều một ngày thứ Ba bình thường, tại khoảnh sân trống trước tòa nhà Hoán Hoa thuộc cư xá Lạc Hoa</span><a href="#id5" epub:type="noteref" id="b5"><span class="koboSpan" id="kobo.55.1">*</span></a><span class="koboSpan" id="kobo.56.1"> quận Quan Đường, những cư dân thường ngày ưa ngồi lê đôi mách giờ đều nín lặng. </span><span class="koboSpan" id="kobo.56.2">Giữa những tòa nhà lạnh lẽo, chỉ còn vang vọng tiếng khóc thống thiết của một người chị, tựa tiếng gió len vào tai mỗi người, để lại từng giọt buồn không thể xua đi.</span></p>
+
+  <aside epub:type="footnote" id="id5">
+    <a href="#b5" style="display: none;"><span class="koboSpan" id="kobo.57.1">•</span></a>
+
+    <p style="text-indent: 0;"><span class="koboSpan" id="kobo.58.1">Lok Wah. </span><span class="koboSpan" id="kobo.58.2">Khu nhà ở xã hội thuộc quận Quan Đường, bán đảo Cửu Long, nổi tiếng với bãi để xe có kiến trúc ô cửa sổ tròn sơn xanh độc đáo rất thu hút khách du lịch.</span></p>
+  </aside>
+</div></div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // shrink  menu
+      // $(document).ready(function() {
+      // $('li').click(function(e) {
+      // e.stopPropagation();
+      // $(this).next('ul').slideToggle(100);
+      // });
+      // });
+
+      $(document).ready(function() {
+
+
+				window.addEventListener("beforeprint", function(event) {
+					$(".main").animate({ margin: "0 auto", marginLeft: 0 }, "linear");
+					$(".sidebar").hide()
+
+				});
+				window.addEventListener("afterprint", function(event) { 
+					$(".sidebar").show()
+					$(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+				});
+      //fixed定位 高度满屏
+      $(".sidebar").height($(window).height());
+
+      //实现显示隐藏可以删除
+      $(".sidebar").on("mouseover", function() {
+        $(".closeMenu > span").css({
+          opacity: 1
+        });
+      });
+      $(".sidebar").on("mouseleave blur", function() {
+        $(".closeMenu > span").css({
+          opacity: 0
+        });
+      });
+
+      var moveLeft = $("#list_left").width();
+
+      //设置内容快初始位置
+      $(".main").css({ marginLeft: moveLeft });
+
+      //判断隐藏显示核心代码
+      var isShow = true;
+      $(".closeMenu span").click(function() {
+        $(this)
+          .hide()
+          .siblings()
+          .show();
+        if (isShow) {
+          $("#list_left").animate(
+            {
+              marginLeft: -(moveLeft - 30) //30 刚好显示icon图标
+            },
+            200,
+            "linear",
+            function() {
+              isShow = false;
+              $(".closeMenu > span").css({
+                opacity: 1
+              });
+            }
+          );
+          $(".main").animate({ margin: "0 auto", marginLeft: 15 }, "linear");
+        } else {
+          $("#list_left").animate(
+            {
+              marginLeft: 0
+            },
+            200,
+            "linear",
+            function() {
+              isShow = true;
+            }
+          );
+          $(".main").animate({ marginLeft: moveLeft + 15 }, "linear");
+        }
+      });
+
+      $(window).resize(function() {
+        $("#list_left").height($(window).height());
+      });
+      });
+
+
+
+
+    </script>
+  </body>
+</html>
