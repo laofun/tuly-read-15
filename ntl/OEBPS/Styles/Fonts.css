@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  margin: 0;
+  font-family: "Vollkorn", serif;
+}
+@font-face {
+  font-family: "UTM NguyenHa 02";
+  src: url(../Fonts/UTM_NguyenHa_02.ttf);
+}
